@@ -2065,16 +2065,11 @@ delete this[t])},_configureProperties:function(e,t){for(var n in e){var r=e[n];i
     <app-location route="{{route}}"></app-location>
     <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
-    <app-paper-header-panel class="flex">
-        <app-paper-toolbar>
-          <div>Interdigitize</div>
-        </app-paper-toolbar>
-    </app-paper-header-panel>
 
     <app-drawer-layout fullbleed="">
       
       <app-drawer>
-        
+        <app-toolbar>Menu</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="view1" href="/view1">View One</a>
           <a name="view2" href="/view2">View Two</a>
