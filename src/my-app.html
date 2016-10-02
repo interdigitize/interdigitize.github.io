@@ -583,6 +583,855 @@ delete this[t])},_configureProperties:function(e,t){for(var n in e){var r=e[n];i
   }
 
 </style>
+<dom-module id="paper-header-panel" assetpath="../bower_components/paper-header-panel/">
+  <template>
+    <style>
+      :host {
+        @apply(--layout-vertical);
+
+        position: relative;
+        height: 100%;
+
+        @apply(--paper-header-panel);
+      }
+
+      #mainContainer {
+        @apply(--layout-flex);
+
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #mainPanel {
+        @apply(--layout-vertical);
+        @apply(--layout-flex);
+
+        position: relative;
+        min-height: 0;
+
+        @apply(--paper-header-panel-body);
+      }
+
+      /*
+       * mode: scroll
+       */
+      :host([mode=scroll]) #mainContainer {
+        @apply(--paper-header-panel-scroll-container);
+
+        overflow: visible;
+      }
+
+      :host([mode=scroll]) {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /*
+       * mode: cover
+       */
+      :host([mode=cover]) #mainContainer {
+        @apply(--paper-header-panel-cover-container);
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      :host([mode=cover]) #mainPanel {
+        position: static;
+      }
+
+      /*
+       * mode: standard
+       */
+      :host([mode=standard]) #mainContainer {
+        @apply(--paper-header-panel-standard-container);
+      }
+
+      /*
+       * mode: seamed
+       */
+      :host([mode=seamed]) #mainContainer {
+        @apply(--paper-header-panel-seamed-container);
+      }
+
+
+      /*
+       * mode: waterfall
+       */
+      :host([mode=waterfall]) #mainContainer {
+        @apply(--paper-header-panel-waterfall-container);
+      }
+
+      /*
+       * mode: waterfall-tall
+       */
+      :host([mode=waterfall-tall]) #mainContainer {
+        @apply(--paper-header-panel-waterfall-tall-container);
+      }
+
+      #dropShadow {
+        transition: opacity 0.5s;
+        height: 6px;
+        box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+
+        @apply(--paper-header-panel-shadow);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #dropShadow.has-shadow {
+        opacity: 1;
+      }
+    </style>
+
+    <content id="headerContent" select="paper-toolbar, .paper-header"></content>
+
+    <div id="mainPanel">
+      <div id="mainContainer" class$="[[_computeMainContainerClass(mode)]]">
+        <content id="mainContent" select="*"></content>
+      </div>
+      <div id="dropShadow"></div>
+    </div>
+  </template>
+
+  <script>!function(){"use strict";var t=1,e=2,s={outerScroll:{scroll:!0},shadowMode:{standard:e,waterfall:t,"waterfall-tall":t},tallMode:{"waterfall-tall":!0}};Polymer({is:"paper-header-panel",properties:{mode:{type:String,value:"standard",observer:"_modeChanged",reflectToAttribute:!0},shadow:{type:Boolean,value:!1},tallClass:{type:String,value:"tall"},atTop:{type:Boolean,value:!0,notify:!0,readOnly:!0,reflectToAttribute:!0}},observers:["_computeDropShadowHidden(atTop, mode, shadow)"],ready:function(){this.scrollHandler=this._scroll.bind(this)},attached:function(){this._addListener(),this._keepScrollingState()},detached:function(){this._removeListener()},get header(){return Polymer.dom(this.$.headerContent).getDistributedNodes()[0]},get scroller(){return this._getScrollerForMode(this.mode)},get visibleShadow(){return this.$.dropShadow.classList.contains("has-shadow")},_computeDropShadowHidden:function(o,l,a){var r=s.shadowMode[l];this.shadow?this.toggleClass("has-shadow",!0,this.$.dropShadow):r===e?this.toggleClass("has-shadow",!0,this.$.dropShadow):r!==t||o?this.toggleClass("has-shadow",!1,this.$.dropShadow):this.toggleClass("has-shadow",!0,this.$.dropShadow)},_computeMainContainerClass:function(t){var e={};return e.flex="cover"!==t,Object.keys(e).filter(function(t){return e[t]}).join(" ")},_addListener:function(){this.scroller.addEventListener("scroll",this.scrollHandler,!1)},_removeListener:function(){this.scroller.removeEventListener("scroll",this.scrollHandler)},_modeChanged:function(t,e){var o=s,l=this.header,a=200;l&&(o.tallMode[e]&&!o.tallMode[t]?(l.classList.remove(this.tallClass),this.async(function(){l.classList.remove("animate")},a)):this.toggleClass("animate",o.tallMode[t],l)),this._keepScrollingState()},_keepScrollingState:function(){var t=this.scroller,e=this.header;this._setAtTop(0===t.scrollTop),e&&this.tallClass&&s.tallMode[this.mode]&&this.toggleClass(this.tallClass,this.atTop||e.classList.contains(this.tallClass)&&t.scrollHeight<this.offsetHeight,e)},_scroll:function(){this._keepScrollingState(),this.fire("content-scroll",{target:this.scroller},{bubbles:!1})},_getScrollerForMode:function(t){return s.outerScroll[t]?this:this.$.mainContainer}})}();</script>
+</dom-module>
+<style is="custom-style">
+
+  :root {
+
+    /* Material Design color palette for Google products */
+
+    --google-red-100: #f4c7c3;
+    --google-red-300: #e67c73;
+    --google-red-500: #db4437;
+    --google-red-700: #c53929;
+
+    --google-blue-100: #c6dafc;
+    --google-blue-300: #7baaf7;
+    --google-blue-500: #4285f4;
+    --google-blue-700: #3367d6;
+
+    --google-green-100: #b7e1cd;
+    --google-green-300: #57bb8a;
+    --google-green-500: #0f9d58;
+    --google-green-700: #0b8043;
+
+    --google-yellow-100: #fce8b2;
+    --google-yellow-300: #f7cb4d;
+    --google-yellow-500: #f4b400;
+    --google-yellow-700: #f09300;
+
+    --google-grey-100: #f5f5f5;
+    --google-grey-300: #e0e0e0;
+    --google-grey-500: #9e9e9e;
+    --google-grey-700: #616161;
+    
+    /* Material Design color palette from online spec document */
+
+    --paper-red-50: #ffebee;
+    --paper-red-100: #ffcdd2;
+    --paper-red-200: #ef9a9a;
+    --paper-red-300: #e57373;
+    --paper-red-400: #ef5350;
+    --paper-red-500: #f44336;
+    --paper-red-600: #e53935;
+    --paper-red-700: #d32f2f;
+    --paper-red-800: #c62828;
+    --paper-red-900: #b71c1c;
+    --paper-red-a100: #ff8a80;
+    --paper-red-a200: #ff5252;
+    --paper-red-a400: #ff1744;
+    --paper-red-a700: #d50000;
+ 
+    --paper-pink-50: #fce4ec;
+    --paper-pink-100: #f8bbd0;
+    --paper-pink-200: #f48fb1;
+    --paper-pink-300: #f06292;
+    --paper-pink-400: #ec407a;
+    --paper-pink-500: #e91e63;
+    --paper-pink-600: #d81b60;
+    --paper-pink-700: #c2185b;
+    --paper-pink-800: #ad1457;
+    --paper-pink-900: #880e4f;
+    --paper-pink-a100: #ff80ab;
+    --paper-pink-a200: #ff4081;
+    --paper-pink-a400: #f50057;
+    --paper-pink-a700: #c51162;
+ 
+    --paper-purple-50: #f3e5f5;
+    --paper-purple-100: #e1bee7;
+    --paper-purple-200: #ce93d8;
+    --paper-purple-300: #ba68c8;
+    --paper-purple-400: #ab47bc;
+    --paper-purple-500: #9c27b0;
+    --paper-purple-600: #8e24aa;
+    --paper-purple-700: #7b1fa2;
+    --paper-purple-800: #6a1b9a;
+    --paper-purple-900: #4a148c;
+    --paper-purple-a100: #ea80fc;
+    --paper-purple-a200: #e040fb;
+    --paper-purple-a400: #d500f9;
+    --paper-purple-a700: #aa00ff;
+ 
+    --paper-deep-purple-50: #ede7f6;
+    --paper-deep-purple-100: #d1c4e9;
+    --paper-deep-purple-200: #b39ddb;
+    --paper-deep-purple-300: #9575cd;
+    --paper-deep-purple-400: #7e57c2;
+    --paper-deep-purple-500: #673ab7;
+    --paper-deep-purple-600: #5e35b1;
+    --paper-deep-purple-700: #512da8;
+    --paper-deep-purple-800: #4527a0;
+    --paper-deep-purple-900: #311b92;
+    --paper-deep-purple-a100: #b388ff;
+    --paper-deep-purple-a200: #7c4dff;
+    --paper-deep-purple-a400: #651fff;
+    --paper-deep-purple-a700: #6200ea;
+ 
+    --paper-indigo-50: #e8eaf6;
+    --paper-indigo-100: #c5cae9;
+    --paper-indigo-200: #9fa8da;
+    --paper-indigo-300: #7986cb;
+    --paper-indigo-400: #5c6bc0;
+    --paper-indigo-500: #3f51b5;
+    --paper-indigo-600: #3949ab;
+    --paper-indigo-700: #303f9f;
+    --paper-indigo-800: #283593;
+    --paper-indigo-900: #1a237e;
+    --paper-indigo-a100: #8c9eff;
+    --paper-indigo-a200: #536dfe;
+    --paper-indigo-a400: #3d5afe;
+    --paper-indigo-a700: #304ffe;
+ 
+    --paper-blue-50: #e3f2fd;
+    --paper-blue-100: #bbdefb;
+    --paper-blue-200: #90caf9;
+    --paper-blue-300: #64b5f6;
+    --paper-blue-400: #42a5f5;
+    --paper-blue-500: #2196f3;
+    --paper-blue-600: #1e88e5;
+    --paper-blue-700: #1976d2;
+    --paper-blue-800: #1565c0;
+    --paper-blue-900: #0d47a1;
+    --paper-blue-a100: #82b1ff;
+    --paper-blue-a200: #448aff;
+    --paper-blue-a400: #2979ff;
+    --paper-blue-a700: #2962ff;
+ 
+    --paper-light-blue-50: #e1f5fe;
+    --paper-light-blue-100: #b3e5fc;
+    --paper-light-blue-200: #81d4fa;
+    --paper-light-blue-300: #4fc3f7;
+    --paper-light-blue-400: #29b6f6;
+    --paper-light-blue-500: #03a9f4;
+    --paper-light-blue-600: #039be5;
+    --paper-light-blue-700: #0288d1;
+    --paper-light-blue-800: #0277bd;
+    --paper-light-blue-900: #01579b;
+    --paper-light-blue-a100: #80d8ff;
+    --paper-light-blue-a200: #40c4ff;
+    --paper-light-blue-a400: #00b0ff;
+    --paper-light-blue-a700: #0091ea;
+ 
+    --paper-cyan-50: #e0f7fa;
+    --paper-cyan-100: #b2ebf2;
+    --paper-cyan-200: #80deea;
+    --paper-cyan-300: #4dd0e1;
+    --paper-cyan-400: #26c6da;
+    --paper-cyan-500: #00bcd4;
+    --paper-cyan-600: #00acc1;
+    --paper-cyan-700: #0097a7;
+    --paper-cyan-800: #00838f;
+    --paper-cyan-900: #006064;
+    --paper-cyan-a100: #84ffff;
+    --paper-cyan-a200: #18ffff;
+    --paper-cyan-a400: #00e5ff;
+    --paper-cyan-a700: #00b8d4;
+ 
+    --paper-teal-50: #e0f2f1;
+    --paper-teal-100: #b2dfdb;
+    --paper-teal-200: #80cbc4;
+    --paper-teal-300: #4db6ac;
+    --paper-teal-400: #26a69a;
+    --paper-teal-500: #009688;
+    --paper-teal-600: #00897b;
+    --paper-teal-700: #00796b;
+    --paper-teal-800: #00695c;
+    --paper-teal-900: #004d40;
+    --paper-teal-a100: #a7ffeb;
+    --paper-teal-a200: #64ffda;
+    --paper-teal-a400: #1de9b6;
+    --paper-teal-a700: #00bfa5;
+ 
+    --paper-green-50: #e8f5e9;
+    --paper-green-100: #c8e6c9;
+    --paper-green-200: #a5d6a7;
+    --paper-green-300: #81c784;
+    --paper-green-400: #66bb6a;
+    --paper-green-500: #4caf50;
+    --paper-green-600: #43a047;
+    --paper-green-700: #388e3c;
+    --paper-green-800: #2e7d32;
+    --paper-green-900: #1b5e20;
+    --paper-green-a100: #b9f6ca;
+    --paper-green-a200: #69f0ae;
+    --paper-green-a400: #00e676;
+    --paper-green-a700: #00c853;
+ 
+    --paper-light-green-50: #f1f8e9;
+    --paper-light-green-100: #dcedc8;
+    --paper-light-green-200: #c5e1a5;
+    --paper-light-green-300: #aed581;
+    --paper-light-green-400: #9ccc65;
+    --paper-light-green-500: #8bc34a;
+    --paper-light-green-600: #7cb342;
+    --paper-light-green-700: #689f38;
+    --paper-light-green-800: #558b2f;
+    --paper-light-green-900: #33691e;
+    --paper-light-green-a100: #ccff90;
+    --paper-light-green-a200: #b2ff59;
+    --paper-light-green-a400: #76ff03;
+    --paper-light-green-a700: #64dd17;
+ 
+    --paper-lime-50: #f9fbe7;
+    --paper-lime-100: #f0f4c3;
+    --paper-lime-200: #e6ee9c;
+    --paper-lime-300: #dce775;
+    --paper-lime-400: #d4e157;
+    --paper-lime-500: #cddc39;
+    --paper-lime-600: #c0ca33;
+    --paper-lime-700: #afb42b;
+    --paper-lime-800: #9e9d24;
+    --paper-lime-900: #827717;
+    --paper-lime-a100: #f4ff81;
+    --paper-lime-a200: #eeff41;
+    --paper-lime-a400: #c6ff00;
+    --paper-lime-a700: #aeea00;
+ 
+    --paper-yellow-50: #fffde7;
+    --paper-yellow-100: #fff9c4;
+    --paper-yellow-200: #fff59d;
+    --paper-yellow-300: #fff176;
+    --paper-yellow-400: #ffee58;
+    --paper-yellow-500: #ffeb3b;
+    --paper-yellow-600: #fdd835;
+    --paper-yellow-700: #fbc02d;
+    --paper-yellow-800: #f9a825;
+    --paper-yellow-900: #f57f17;
+    --paper-yellow-a100: #ffff8d;
+    --paper-yellow-a200: #ffff00;
+    --paper-yellow-a400: #ffea00;
+    --paper-yellow-a700: #ffd600;
+ 
+    --paper-amber-50: #fff8e1;
+    --paper-amber-100: #ffecb3;
+    --paper-amber-200: #ffe082;
+    --paper-amber-300: #ffd54f;
+    --paper-amber-400: #ffca28;
+    --paper-amber-500: #ffc107;
+    --paper-amber-600: #ffb300;
+    --paper-amber-700: #ffa000;
+    --paper-amber-800: #ff8f00;
+    --paper-amber-900: #ff6f00;
+    --paper-amber-a100: #ffe57f;
+    --paper-amber-a200: #ffd740;
+    --paper-amber-a400: #ffc400;
+    --paper-amber-a700: #ffab00;
+ 
+    --paper-orange-50: #fff3e0;
+    --paper-orange-100: #ffe0b2;
+    --paper-orange-200: #ffcc80;
+    --paper-orange-300: #ffb74d;
+    --paper-orange-400: #ffa726;
+    --paper-orange-500: #ff9800;
+    --paper-orange-600: #fb8c00;
+    --paper-orange-700: #f57c00;
+    --paper-orange-800: #ef6c00;
+    --paper-orange-900: #e65100;
+    --paper-orange-a100: #ffd180;
+    --paper-orange-a200: #ffab40;
+    --paper-orange-a400: #ff9100;
+    --paper-orange-a700: #ff6500;
+ 
+    --paper-deep-orange-50: #fbe9e7;
+    --paper-deep-orange-100: #ffccbc;
+    --paper-deep-orange-200: #ffab91;
+    --paper-deep-orange-300: #ff8a65;
+    --paper-deep-orange-400: #ff7043;
+    --paper-deep-orange-500: #ff5722;
+    --paper-deep-orange-600: #f4511e;
+    --paper-deep-orange-700: #e64a19;
+    --paper-deep-orange-800: #d84315;
+    --paper-deep-orange-900: #bf360c;
+    --paper-deep-orange-a100: #ff9e80;
+    --paper-deep-orange-a200: #ff6e40;
+    --paper-deep-orange-a400: #ff3d00;
+    --paper-deep-orange-a700: #dd2c00;
+ 
+    --paper-brown-50: #efebe9;
+    --paper-brown-100: #d7ccc8;
+    --paper-brown-200: #bcaaa4;
+    --paper-brown-300: #a1887f;
+    --paper-brown-400: #8d6e63;
+    --paper-brown-500: #795548;
+    --paper-brown-600: #6d4c41;
+    --paper-brown-700: #5d4037;
+    --paper-brown-800: #4e342e;
+    --paper-brown-900: #3e2723;
+ 
+    --paper-grey-50: #fafafa;
+    --paper-grey-100: #f5f5f5;
+    --paper-grey-200: #eeeeee;
+    --paper-grey-300: #e0e0e0;
+    --paper-grey-400: #bdbdbd;
+    --paper-grey-500: #9e9e9e;
+    --paper-grey-600: #757575;
+    --paper-grey-700: #616161;
+    --paper-grey-800: #424242;
+    --paper-grey-900: #212121;
+ 
+    --paper-blue-grey-50: #eceff1;
+    --paper-blue-grey-100: #cfd8dc;
+    --paper-blue-grey-200: #b0bec5;
+    --paper-blue-grey-300: #90a4ae;
+    --paper-blue-grey-400: #78909c;
+    --paper-blue-grey-500: #607d8b;
+    --paper-blue-grey-600: #546e7a;
+    --paper-blue-grey-700: #455a64;
+    --paper-blue-grey-800: #37474f;
+    --paper-blue-grey-900: #263238;
+
+    /* opacity for dark text on a light background */
+    --dark-divider-opacity: 0.12;
+    --dark-disabled-opacity: 0.38; /* or hint text or icon */
+    --dark-secondary-opacity: 0.54;
+    --dark-primary-opacity: 0.87;
+
+    /* opacity for light text on a dark background */
+    --light-divider-opacity: 0.12;
+    --light-disabled-opacity: 0.3; /* or hint text or icon */
+    --light-secondary-opacity: 0.7;
+    --light-primary-opacity: 1.0;
+
+  }
+
+</style>
+<style is="custom-style">
+
+  :root {
+    /*
+     * You can use these generic variables in your elements for easy theming.
+     * For example, if all your elements use `--primary-text-color` as its main
+     * color, then switching from a light to a dark theme is just a matter of
+     * changing the value of `--primary-text-color` in your application.
+     */
+    --primary-text-color: var(--light-theme-text-color);
+    --primary-background-color: var(--light-theme-background-color);
+    --secondary-text-color: var(--light-theme-secondary-color);
+    --disabled-text-color: var(--light-theme-disabled-color);
+    --divider-color: var(--light-theme-divider-color);
+    --error-color: var(--paper-deep-orange-a700);
+
+    /*
+     * Primary and accent colors. Also see color.html for more colors.
+     */
+    --primary-color: var(--paper-indigo-500);
+    --light-primary-color: var(--paper-indigo-100);
+    --dark-primary-color: var(--paper-indigo-700);
+
+    --accent-color: var(--paper-pink-a200);
+    --light-accent-color: var(--paper-pink-a100);
+    --dark-accent-color: var(--paper-pink-a400);
+
+
+    /*
+     * Material Design Light background theme
+     */
+    --light-theme-background-color: #ffffff;
+    --light-theme-base-color: #000000;
+    --light-theme-text-color: var(--paper-grey-900);
+    --light-theme-secondary-color: #737373;  /* for secondary text and icons */
+    --light-theme-disabled-color: #9b9b9b;  /* disabled/hint text */
+    --light-theme-divider-color: #dbdbdb;
+
+    /*
+     * Material Design Dark background theme
+     */
+    --dark-theme-background-color: var(--paper-grey-900);
+    --dark-theme-base-color: #ffffff;
+    --dark-theme-text-color: #ffffff;
+    --dark-theme-secondary-color: #bcbcbc;  /* for secondary text and icons */
+    --dark-theme-disabled-color: #646464;  /* disabled/hint text */
+    --dark-theme-divider-color: #3c3c3c;
+
+    /*
+     * Deprecated values because of their confusing names.
+     */
+    --text-primary-color: var(--dark-theme-text-color);
+    --default-primary-color: var(--primary-color);
+
+  }
+
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
+<style is="custom-style">
+
+  :root {
+
+    /* Shared Styles */
+    --paper-font-common-base: {
+      font-family: 'Roboto', 'Noto', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    };
+
+    --paper-font-common-code: {
+      font-family: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+      -webkit-font-smoothing: antialiased;
+    };
+
+    --paper-font-common-expensive-kerning: {
+      text-rendering: optimizeLegibility;
+    };
+
+    --paper-font-common-nowrap: {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    };
+
+    /* Material Font Styles */
+
+    --paper-font-display4: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 112px;
+      font-weight: 300;
+      letter-spacing: -.044em;
+      line-height: 120px;
+    };
+
+    --paper-font-display3: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 56px;
+      font-weight: 400;
+      letter-spacing: -.026em;
+      line-height: 60px;
+    };
+
+    --paper-font-display2: {
+      @apply(--paper-font-common-base);
+
+      font-size: 45px;
+      font-weight: 400;
+      letter-spacing: -.018em;
+      line-height: 48px;
+    };
+
+    --paper-font-display1: {
+      @apply(--paper-font-common-base);
+
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: -.01em;
+      line-height: 40px;
+    };
+
+    --paper-font-headline: {
+      @apply(--paper-font-common-base);
+
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -.012em;
+      line-height: 32px;
+    };
+
+    --paper-font-title: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    };
+
+    --paper-font-subhead: {
+      @apply(--paper-font-common-base);
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    };
+
+    --paper-font-body2: {
+      @apply(--paper-font-common-base);
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+    };
+
+    --paper-font-body1: {
+      @apply(--paper-font-common-base);
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    };
+
+    --paper-font-caption: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.011em;
+      line-height: 20px;
+    };
+
+    --paper-font-menu: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 24px;
+    };
+
+    --paper-font-button: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.018em;
+      line-height: 24px;
+      text-transform: uppercase;
+    };
+
+    --paper-font-code2: {
+      @apply(--paper-font-common-code);
+
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+    };
+
+    --paper-font-code1: {
+      @apply(--paper-font-common-code);
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    };
+
+  }
+
+</style>
+<dom-module id="paper-toolbar" assetpath="../bower_components/paper-toolbar/">
+  <template>
+    <style>
+      :host {
+        --calculated-paper-toolbar-height: var(--paper-toolbar-height, 64px);
+        --calculated-paper-toolbar-sm-height: var(--paper-toolbar-sm-height, 56px);
+
+        /* technical */
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+
+        /* size */
+        height: var(--calculated-paper-toolbar-height);
+
+        background: var(--paper-toolbar-background, --primary-color);
+        color: var(--paper-toolbar-color, --dark-theme-text-color);
+
+        @apply(--paper-toolbar);
+      }
+
+      :host(.animate) {
+        /* transition */
+        transition: var(--paper-toolbar-transition, height 0.18s ease-in);
+      }
+
+      :host(.medium-tall) {
+        height: calc(var(--calculated-paper-toolbar-height) * 2);
+        @apply(--paper-toolbar-medium);
+      }
+
+      :host(.tall) {
+        height: calc(var(--calculated-paper-toolbar-height) * 3);
+        @apply(--paper-toolbar-tall);
+      }
+
+      .toolbar-tools {
+        position: relative;
+        height: var(--calculated-paper-toolbar-height);
+        padding: 0 16px;
+        pointer-events: none;
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        @apply(--paper-toolbar-content);
+      }
+
+      /*
+       * TODO: Where should media query breakpoints live so they can be shared between elements?
+       */
+
+      @media (max-width: 600px) {
+        :host {
+          height: var(--calculated-paper-toolbar-sm-height);
+        }
+
+        :host(.medium-tall) {
+          height: calc(var(--calculated-paper-toolbar-sm-height) * 2);
+        }
+
+        :host(.tall) {
+          height: calc(var(--calculated-paper-toolbar-sm-height) * 3);
+        }
+
+        .toolbar-tools {
+          height: var(--calculated-paper-toolbar-sm-height);
+        }
+      }
+
+      #topBar {
+        position: relative;
+      }
+
+      /* middle bar */
+      #middleBar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+
+      :host(.tall) #middleBar,
+      :host(.medium-tall) #middleBar {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+
+      /* bottom bar */
+      #bottomBar {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      /*
+       * make elements (e.g. buttons) respond to mouse/touch events
+       *
+       * `.toolbar-tools` disables touch events so multiple toolbars can stack and not
+       * absorb events. All children must have pointer events re-enabled to work as
+       * expected.
+       */
+      .toolbar-tools > ::content > *:not([disabled]) {
+        pointer-events: auto;
+      }
+
+      .toolbar-tools > ::content .title {
+        @apply(--paper-font-common-base);
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+        pointer-events: none;
+
+        @apply(--layout-flex);
+      }
+
+      .toolbar-tools > ::content > .title {
+        margin-left: 56px;
+      }
+
+      .toolbar-tools > ::content > paper-icon-button + .title {
+        margin-left: 0;
+      }
+
+      /**
+       * The --paper-toolbar-title mixin is applied here instead of above to
+       * fix the issue with margin-left being ignored due to css ordering.
+       */
+      .toolbar-tools > ::content .title {
+        @apply(--paper-toolbar-title);
+      }
+
+      .toolbar-tools > ::content paper-icon-button[icon=menu] {
+        margin-right: 24px;
+      }
+
+      .toolbar-tools > ::content > .fit {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        margin: 0;
+      }
+
+      /* TODO(noms): Until we have a better solution for classes that don't use
+       * /deep/ create our own.
+       */
+      .start-justified {
+        @apply(--layout-start-justified);
+      }
+
+      .center-justified {
+        @apply(--layout-center-justified);
+      }
+
+      .end-justified {
+        @apply(--layout-end-justified);
+      }
+
+      .around-justified {
+        @apply(--layout-around-justified);
+      }
+
+      .justified {
+        @apply(--layout-justified);
+      }
+    </style>
+
+    <div id="topBar" class$="toolbar-tools [[_computeBarExtraClasses(justify)]]">
+      <content select=":not(.middle):not(.bottom)"></content>
+    </div>
+
+    <div id="middleBar" class$="toolbar-tools [[_computeBarExtraClasses(middleJustify)]]">
+      <content select=".middle"></content>
+    </div>
+
+    <div id="bottomBar" class$="toolbar-tools [[_computeBarExtraClasses(bottomJustify)]]">
+      <content select=".bottom"></content>
+    </div>
+  </template>
+
+  <script>Polymer({is:"paper-toolbar",hostAttributes:{role:"toolbar"},properties:{bottomJustify:{type:String,value:""},justify:{type:String,value:""},middleJustify:{type:String,value:""}},attached:function(){this._observer=this._observe(this),this._updateAriaLabelledBy()},detached:function(){this._observer&&this._observer.disconnect()},_observe:function(t){var e=new MutationObserver(function(){this._updateAriaLabelledBy()}.bind(this));return e.observe(t,{childList:!0,subtree:!0}),e},_updateAriaLabelledBy:function(){for(var t,e=[],i=Polymer.dom(this.root).querySelectorAll("content"),r=0;t=i[r];r++)for(var s,o=Polymer.dom(t).getDistributedNodes(),a=0;s=o[a];a++)if(s.classList&&s.classList.contains("title"))if(s.id)e.push(s.id);else{var l="paper-toolbar-label-"+Math.floor(1e4*Math.random());s.id=l,e.push(l)}e.length>0&&this.setAttribute("aria-labelledby",e.join(" "))},_computeBarExtraClasses:function(t){return t?t+("justified"===t?"":"-justified"):""}});</script>
+</dom-module>
 <dom-module id="app-drawer" assetpath="../bower_components/app-layout/app-drawer/">
   <template>
     <style>
@@ -1097,384 +1946,6 @@ delete this[t])},_configureProperties:function(e,t){for(var n in e){var r=e[n];i
 <script>!function(){function t(t){this.element=t,this.width=this.boundingRect.width,this.height=this.boundingRect.height,this.size=Math.max(this.width,this.height)}function i(t){this.element=t,this.color=window.getComputedStyle(t).color,this.wave=document.createElement("div"),this.waveContainer=document.createElement("div"),this.wave.style.backgroundColor=this.color,this.wave.classList.add("wave"),this.waveContainer.classList.add("wave-container"),Polymer.dom(this.waveContainer).appendChild(this.wave),this.resetInteractionState()}var e={distance:function(t,i,e,n){var s=t-e,o=i-n;return Math.sqrt(s*s+o*o)},now:window.performance&&window.performance.now?window.performance.now.bind(window.performance):Date.now};t.prototype={get boundingRect(){return this.element.getBoundingClientRect()},furthestCornerDistanceFrom:function(t,i){var n=e.distance(t,i,0,0),s=e.distance(t,i,this.width,0),o=e.distance(t,i,0,this.height),a=e.distance(t,i,this.width,this.height);return Math.max(n,s,o,a)}},i.MAX_RADIUS=300,i.prototype={get recenters(){return this.element.recenters},get center(){return this.element.center},get mouseDownElapsed(){var t;return this.mouseDownStart?(t=e.now()-this.mouseDownStart,this.mouseUpStart&&(t-=this.mouseUpElapsed),t):0},get mouseUpElapsed(){return this.mouseUpStart?e.now()-this.mouseUpStart:0},get mouseDownElapsedSeconds(){return this.mouseDownElapsed/1e3},get mouseUpElapsedSeconds(){return this.mouseUpElapsed/1e3},get mouseInteractionSeconds(){return this.mouseDownElapsedSeconds+this.mouseUpElapsedSeconds},get initialOpacity(){return this.element.initialOpacity},get opacityDecayVelocity(){return this.element.opacityDecayVelocity},get radius(){var t=this.containerMetrics.width*this.containerMetrics.width,e=this.containerMetrics.height*this.containerMetrics.height,n=1.1*Math.min(Math.sqrt(t+e),i.MAX_RADIUS)+5,s=1.1-.2*(n/i.MAX_RADIUS),o=this.mouseInteractionSeconds/s,a=n*(1-Math.pow(80,-o));return Math.abs(a)},get opacity(){return this.mouseUpStart?Math.max(0,this.initialOpacity-this.mouseUpElapsedSeconds*this.opacityDecayVelocity):this.initialOpacity},get outerOpacity(){var t=.3*this.mouseUpElapsedSeconds,i=this.opacity;return Math.max(0,Math.min(t,i))},get isOpacityFullyDecayed(){return this.opacity<.01&&this.radius>=Math.min(this.maxRadius,i.MAX_RADIUS)},get isRestingAtMaxRadius(){return this.opacity>=this.initialOpacity&&this.radius>=Math.min(this.maxRadius,i.MAX_RADIUS)},get isAnimationComplete(){return this.mouseUpStart?this.isOpacityFullyDecayed:this.isRestingAtMaxRadius},get translationFraction(){return Math.min(1,this.radius/this.containerMetrics.size*2/Math.sqrt(2))},get xNow(){return this.xEnd?this.xStart+this.translationFraction*(this.xEnd-this.xStart):this.xStart},get yNow(){return this.yEnd?this.yStart+this.translationFraction*(this.yEnd-this.yStart):this.yStart},get isMouseDown(){return this.mouseDownStart&&!this.mouseUpStart},resetInteractionState:function(){this.maxRadius=0,this.mouseDownStart=0,this.mouseUpStart=0,this.xStart=0,this.yStart=0,this.xEnd=0,this.yEnd=0,this.slideDistance=0,this.containerMetrics=new t(this.element)},draw:function(){var t,i,e;this.wave.style.opacity=this.opacity,t=this.radius/(this.containerMetrics.size/2),i=this.xNow-this.containerMetrics.width/2,e=this.yNow-this.containerMetrics.height/2,this.waveContainer.style.webkitTransform="translate("+i+"px, "+e+"px)",this.waveContainer.style.transform="translate3d("+i+"px, "+e+"px, 0)",this.wave.style.webkitTransform="scale("+t+","+t+")",this.wave.style.transform="scale3d("+t+","+t+",1)"},downAction:function(t){var i=this.containerMetrics.width/2,n=this.containerMetrics.height/2;this.resetInteractionState(),this.mouseDownStart=e.now(),this.center?(this.xStart=i,this.yStart=n,this.slideDistance=e.distance(this.xStart,this.yStart,this.xEnd,this.yEnd)):(this.xStart=t?t.detail.x-this.containerMetrics.boundingRect.left:this.containerMetrics.width/2,this.yStart=t?t.detail.y-this.containerMetrics.boundingRect.top:this.containerMetrics.height/2),this.recenters&&(this.xEnd=i,this.yEnd=n,this.slideDistance=e.distance(this.xStart,this.yStart,this.xEnd,this.yEnd)),this.maxRadius=this.containerMetrics.furthestCornerDistanceFrom(this.xStart,this.yStart),this.waveContainer.style.top=(this.containerMetrics.height-this.containerMetrics.size)/2+"px",this.waveContainer.style.left=(this.containerMetrics.width-this.containerMetrics.size)/2+"px",this.waveContainer.style.width=this.containerMetrics.size+"px",this.waveContainer.style.height=this.containerMetrics.size+"px"},upAction:function(t){this.isMouseDown&&(this.mouseUpStart=e.now())},remove:function(){Polymer.dom(this.waveContainer.parentNode).removeChild(this.waveContainer)}},Polymer({is:"paper-ripple",behaviors:[Polymer.IronA11yKeysBehavior],properties:{initialOpacity:{type:Number,value:.25},opacityDecayVelocity:{type:Number,value:.8},recenters:{type:Boolean,value:!1},center:{type:Boolean,value:!1},ripples:{type:Array,value:function(){return[]}},animating:{type:Boolean,readOnly:!0,reflectToAttribute:!0,value:!1},holdDown:{type:Boolean,value:!1,observer:"_holdDownChanged"},noink:{type:Boolean,value:!1},_animating:{type:Boolean},_boundAnimate:{type:Function,value:function(){return this.animate.bind(this)}}},get target(){return this.keyEventTarget},keyBindings:{"enter:keydown":"_onEnterKeydown","space:keydown":"_onSpaceKeydown","space:keyup":"_onSpaceKeyup"},attached:function(){11==this.parentNode.nodeType?this.keyEventTarget=Polymer.dom(this).getOwnerRoot().host:this.keyEventTarget=this.parentNode;var t=this.keyEventTarget;this.listen(t,"up","uiUpAction"),this.listen(t,"down","uiDownAction")},detached:function(){this.unlisten(this.keyEventTarget,"up","uiUpAction"),this.unlisten(this.keyEventTarget,"down","uiDownAction"),this.keyEventTarget=null},get shouldKeepAnimating(){for(var t=0;t<this.ripples.length;++t)if(!this.ripples[t].isAnimationComplete)return!0;return!1},simulatedRipple:function(){this.downAction(null),this.async(function(){this.upAction()},1)},uiDownAction:function(t){this.noink||this.downAction(t)},downAction:function(t){if(!(this.holdDown&&this.ripples.length>0)){var i=this.addRipple();i.downAction(t),this._animating||(this._animating=!0,this.animate())}},uiUpAction:function(t){this.noink||this.upAction(t)},upAction:function(t){this.holdDown||(this.ripples.forEach(function(i){i.upAction(t)}),this._animating=!0,this.animate())},onAnimationComplete:function(){this._animating=!1,this.$.background.style.backgroundColor=null,this.fire("transitionend")},addRipple:function(){var t=new i(this);return Polymer.dom(this.$.waves).appendChild(t.waveContainer),this.$.background.style.backgroundColor=t.color,this.ripples.push(t),this._setAnimating(!0),t},removeRipple:function(t){var i=this.ripples.indexOf(t);i<0||(this.ripples.splice(i,1),t.remove(),this.ripples.length||this._setAnimating(!1))},animate:function(){if(this._animating){var t,i;for(t=0;t<this.ripples.length;++t)i=this.ripples[t],i.draw(),this.$.background.style.opacity=i.outerOpacity,i.isOpacityFullyDecayed&&!i.isRestingAtMaxRadius&&this.removeRipple(i);this.shouldKeepAnimating||0!==this.ripples.length?window.requestAnimationFrame(this._boundAnimate):this.onAnimationComplete()}},_onEnterKeydown:function(){this.uiDownAction(),this.async(this.uiUpAction,1)},_onSpaceKeydown:function(){this.uiDownAction()},_onSpaceKeyup:function(){this.uiUpAction()},_holdDownChanged:function(t,i){void 0!==i&&(t?this.downAction():this.upAction())}})}();</script>
 <script>Polymer.PaperRippleBehavior={properties:{noink:{type:Boolean,observer:"_noinkChanged"},_rippleContainer:{type:Object}},_buttonStateChanged:function(){this.focused&&this.ensureRipple()},_downHandler:function(e){Polymer.IronButtonStateImpl._downHandler.call(this,e),this.pressed&&this.ensureRipple(e)},ensureRipple:function(e){if(!this.hasRipple()){this._ripple=this._createRipple(),this._ripple.noink=this.noink;var i=this._rippleContainer||this.root;if(i&&Polymer.dom(i).appendChild(this._ripple),e){var n=Polymer.dom(this._rippleContainer||this),t=Polymer.dom(e).rootTarget;n.deepContains(t)&&this._ripple.uiDownAction(e)}}},getRipple:function(){return this.ensureRipple(),this._ripple},hasRipple:function(){return Boolean(this._ripple)},_createRipple:function(){return document.createElement("paper-ripple")},_noinkChanged:function(e){this.hasRipple()&&(this._ripple.noink=e)}};</script>
 <script>Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFromKeyboard)"],_focusedChanged:function(e){e&&this.ensureRipple(),this.hasRipple()&&(this._ripple.holdDown=e)},_createRipple:function(){var e=Polymer.PaperRippleBehavior._createRipple();return e.id="ink",e.setAttribute("center",""),e.classList.add("circle"),e}},Polymer.PaperInkyFocusBehavior=[Polymer.IronButtonState,Polymer.IronControlState,Polymer.PaperRippleBehavior,Polymer.PaperInkyFocusBehaviorImpl];</script>
-<style is="custom-style">
-
-  :root {
-
-    /* Material Design color palette for Google products */
-
-    --google-red-100: #f4c7c3;
-    --google-red-300: #e67c73;
-    --google-red-500: #db4437;
-    --google-red-700: #c53929;
-
-    --google-blue-100: #c6dafc;
-    --google-blue-300: #7baaf7;
-    --google-blue-500: #4285f4;
-    --google-blue-700: #3367d6;
-
-    --google-green-100: #b7e1cd;
-    --google-green-300: #57bb8a;
-    --google-green-500: #0f9d58;
-    --google-green-700: #0b8043;
-
-    --google-yellow-100: #fce8b2;
-    --google-yellow-300: #f7cb4d;
-    --google-yellow-500: #f4b400;
-    --google-yellow-700: #f09300;
-
-    --google-grey-100: #f5f5f5;
-    --google-grey-300: #e0e0e0;
-    --google-grey-500: #9e9e9e;
-    --google-grey-700: #616161;
-    
-    /* Material Design color palette from online spec document */
-
-    --paper-red-50: #ffebee;
-    --paper-red-100: #ffcdd2;
-    --paper-red-200: #ef9a9a;
-    --paper-red-300: #e57373;
-    --paper-red-400: #ef5350;
-    --paper-red-500: #f44336;
-    --paper-red-600: #e53935;
-    --paper-red-700: #d32f2f;
-    --paper-red-800: #c62828;
-    --paper-red-900: #b71c1c;
-    --paper-red-a100: #ff8a80;
-    --paper-red-a200: #ff5252;
-    --paper-red-a400: #ff1744;
-    --paper-red-a700: #d50000;
- 
-    --paper-pink-50: #fce4ec;
-    --paper-pink-100: #f8bbd0;
-    --paper-pink-200: #f48fb1;
-    --paper-pink-300: #f06292;
-    --paper-pink-400: #ec407a;
-    --paper-pink-500: #e91e63;
-    --paper-pink-600: #d81b60;
-    --paper-pink-700: #c2185b;
-    --paper-pink-800: #ad1457;
-    --paper-pink-900: #880e4f;
-    --paper-pink-a100: #ff80ab;
-    --paper-pink-a200: #ff4081;
-    --paper-pink-a400: #f50057;
-    --paper-pink-a700: #c51162;
- 
-    --paper-purple-50: #f3e5f5;
-    --paper-purple-100: #e1bee7;
-    --paper-purple-200: #ce93d8;
-    --paper-purple-300: #ba68c8;
-    --paper-purple-400: #ab47bc;
-    --paper-purple-500: #9c27b0;
-    --paper-purple-600: #8e24aa;
-    --paper-purple-700: #7b1fa2;
-    --paper-purple-800: #6a1b9a;
-    --paper-purple-900: #4a148c;
-    --paper-purple-a100: #ea80fc;
-    --paper-purple-a200: #e040fb;
-    --paper-purple-a400: #d500f9;
-    --paper-purple-a700: #aa00ff;
- 
-    --paper-deep-purple-50: #ede7f6;
-    --paper-deep-purple-100: #d1c4e9;
-    --paper-deep-purple-200: #b39ddb;
-    --paper-deep-purple-300: #9575cd;
-    --paper-deep-purple-400: #7e57c2;
-    --paper-deep-purple-500: #673ab7;
-    --paper-deep-purple-600: #5e35b1;
-    --paper-deep-purple-700: #512da8;
-    --paper-deep-purple-800: #4527a0;
-    --paper-deep-purple-900: #311b92;
-    --paper-deep-purple-a100: #b388ff;
-    --paper-deep-purple-a200: #7c4dff;
-    --paper-deep-purple-a400: #651fff;
-    --paper-deep-purple-a700: #6200ea;
- 
-    --paper-indigo-50: #e8eaf6;
-    --paper-indigo-100: #c5cae9;
-    --paper-indigo-200: #9fa8da;
-    --paper-indigo-300: #7986cb;
-    --paper-indigo-400: #5c6bc0;
-    --paper-indigo-500: #3f51b5;
-    --paper-indigo-600: #3949ab;
-    --paper-indigo-700: #303f9f;
-    --paper-indigo-800: #283593;
-    --paper-indigo-900: #1a237e;
-    --paper-indigo-a100: #8c9eff;
-    --paper-indigo-a200: #536dfe;
-    --paper-indigo-a400: #3d5afe;
-    --paper-indigo-a700: #304ffe;
- 
-    --paper-blue-50: #e3f2fd;
-    --paper-blue-100: #bbdefb;
-    --paper-blue-200: #90caf9;
-    --paper-blue-300: #64b5f6;
-    --paper-blue-400: #42a5f5;
-    --paper-blue-500: #2196f3;
-    --paper-blue-600: #1e88e5;
-    --paper-blue-700: #1976d2;
-    --paper-blue-800: #1565c0;
-    --paper-blue-900: #0d47a1;
-    --paper-blue-a100: #82b1ff;
-    --paper-blue-a200: #448aff;
-    --paper-blue-a400: #2979ff;
-    --paper-blue-a700: #2962ff;
- 
-    --paper-light-blue-50: #e1f5fe;
-    --paper-light-blue-100: #b3e5fc;
-    --paper-light-blue-200: #81d4fa;
-    --paper-light-blue-300: #4fc3f7;
-    --paper-light-blue-400: #29b6f6;
-    --paper-light-blue-500: #03a9f4;
-    --paper-light-blue-600: #039be5;
-    --paper-light-blue-700: #0288d1;
-    --paper-light-blue-800: #0277bd;
-    --paper-light-blue-900: #01579b;
-    --paper-light-blue-a100: #80d8ff;
-    --paper-light-blue-a200: #40c4ff;
-    --paper-light-blue-a400: #00b0ff;
-    --paper-light-blue-a700: #0091ea;
- 
-    --paper-cyan-50: #e0f7fa;
-    --paper-cyan-100: #b2ebf2;
-    --paper-cyan-200: #80deea;
-    --paper-cyan-300: #4dd0e1;
-    --paper-cyan-400: #26c6da;
-    --paper-cyan-500: #00bcd4;
-    --paper-cyan-600: #00acc1;
-    --paper-cyan-700: #0097a7;
-    --paper-cyan-800: #00838f;
-    --paper-cyan-900: #006064;
-    --paper-cyan-a100: #84ffff;
-    --paper-cyan-a200: #18ffff;
-    --paper-cyan-a400: #00e5ff;
-    --paper-cyan-a700: #00b8d4;
- 
-    --paper-teal-50: #e0f2f1;
-    --paper-teal-100: #b2dfdb;
-    --paper-teal-200: #80cbc4;
-    --paper-teal-300: #4db6ac;
-    --paper-teal-400: #26a69a;
-    --paper-teal-500: #009688;
-    --paper-teal-600: #00897b;
-    --paper-teal-700: #00796b;
-    --paper-teal-800: #00695c;
-    --paper-teal-900: #004d40;
-    --paper-teal-a100: #a7ffeb;
-    --paper-teal-a200: #64ffda;
-    --paper-teal-a400: #1de9b6;
-    --paper-teal-a700: #00bfa5;
- 
-    --paper-green-50: #e8f5e9;
-    --paper-green-100: #c8e6c9;
-    --paper-green-200: #a5d6a7;
-    --paper-green-300: #81c784;
-    --paper-green-400: #66bb6a;
-    --paper-green-500: #4caf50;
-    --paper-green-600: #43a047;
-    --paper-green-700: #388e3c;
-    --paper-green-800: #2e7d32;
-    --paper-green-900: #1b5e20;
-    --paper-green-a100: #b9f6ca;
-    --paper-green-a200: #69f0ae;
-    --paper-green-a400: #00e676;
-    --paper-green-a700: #00c853;
- 
-    --paper-light-green-50: #f1f8e9;
-    --paper-light-green-100: #dcedc8;
-    --paper-light-green-200: #c5e1a5;
-    --paper-light-green-300: #aed581;
-    --paper-light-green-400: #9ccc65;
-    --paper-light-green-500: #8bc34a;
-    --paper-light-green-600: #7cb342;
-    --paper-light-green-700: #689f38;
-    --paper-light-green-800: #558b2f;
-    --paper-light-green-900: #33691e;
-    --paper-light-green-a100: #ccff90;
-    --paper-light-green-a200: #b2ff59;
-    --paper-light-green-a400: #76ff03;
-    --paper-light-green-a700: #64dd17;
- 
-    --paper-lime-50: #f9fbe7;
-    --paper-lime-100: #f0f4c3;
-    --paper-lime-200: #e6ee9c;
-    --paper-lime-300: #dce775;
-    --paper-lime-400: #d4e157;
-    --paper-lime-500: #cddc39;
-    --paper-lime-600: #c0ca33;
-    --paper-lime-700: #afb42b;
-    --paper-lime-800: #9e9d24;
-    --paper-lime-900: #827717;
-    --paper-lime-a100: #f4ff81;
-    --paper-lime-a200: #eeff41;
-    --paper-lime-a400: #c6ff00;
-    --paper-lime-a700: #aeea00;
- 
-    --paper-yellow-50: #fffde7;
-    --paper-yellow-100: #fff9c4;
-    --paper-yellow-200: #fff59d;
-    --paper-yellow-300: #fff176;
-    --paper-yellow-400: #ffee58;
-    --paper-yellow-500: #ffeb3b;
-    --paper-yellow-600: #fdd835;
-    --paper-yellow-700: #fbc02d;
-    --paper-yellow-800: #f9a825;
-    --paper-yellow-900: #f57f17;
-    --paper-yellow-a100: #ffff8d;
-    --paper-yellow-a200: #ffff00;
-    --paper-yellow-a400: #ffea00;
-    --paper-yellow-a700: #ffd600;
- 
-    --paper-amber-50: #fff8e1;
-    --paper-amber-100: #ffecb3;
-    --paper-amber-200: #ffe082;
-    --paper-amber-300: #ffd54f;
-    --paper-amber-400: #ffca28;
-    --paper-amber-500: #ffc107;
-    --paper-amber-600: #ffb300;
-    --paper-amber-700: #ffa000;
-    --paper-amber-800: #ff8f00;
-    --paper-amber-900: #ff6f00;
-    --paper-amber-a100: #ffe57f;
-    --paper-amber-a200: #ffd740;
-    --paper-amber-a400: #ffc400;
-    --paper-amber-a700: #ffab00;
- 
-    --paper-orange-50: #fff3e0;
-    --paper-orange-100: #ffe0b2;
-    --paper-orange-200: #ffcc80;
-    --paper-orange-300: #ffb74d;
-    --paper-orange-400: #ffa726;
-    --paper-orange-500: #ff9800;
-    --paper-orange-600: #fb8c00;
-    --paper-orange-700: #f57c00;
-    --paper-orange-800: #ef6c00;
-    --paper-orange-900: #e65100;
-    --paper-orange-a100: #ffd180;
-    --paper-orange-a200: #ffab40;
-    --paper-orange-a400: #ff9100;
-    --paper-orange-a700: #ff6500;
- 
-    --paper-deep-orange-50: #fbe9e7;
-    --paper-deep-orange-100: #ffccbc;
-    --paper-deep-orange-200: #ffab91;
-    --paper-deep-orange-300: #ff8a65;
-    --paper-deep-orange-400: #ff7043;
-    --paper-deep-orange-500: #ff5722;
-    --paper-deep-orange-600: #f4511e;
-    --paper-deep-orange-700: #e64a19;
-    --paper-deep-orange-800: #d84315;
-    --paper-deep-orange-900: #bf360c;
-    --paper-deep-orange-a100: #ff9e80;
-    --paper-deep-orange-a200: #ff6e40;
-    --paper-deep-orange-a400: #ff3d00;
-    --paper-deep-orange-a700: #dd2c00;
- 
-    --paper-brown-50: #efebe9;
-    --paper-brown-100: #d7ccc8;
-    --paper-brown-200: #bcaaa4;
-    --paper-brown-300: #a1887f;
-    --paper-brown-400: #8d6e63;
-    --paper-brown-500: #795548;
-    --paper-brown-600: #6d4c41;
-    --paper-brown-700: #5d4037;
-    --paper-brown-800: #4e342e;
-    --paper-brown-900: #3e2723;
- 
-    --paper-grey-50: #fafafa;
-    --paper-grey-100: #f5f5f5;
-    --paper-grey-200: #eeeeee;
-    --paper-grey-300: #e0e0e0;
-    --paper-grey-400: #bdbdbd;
-    --paper-grey-500: #9e9e9e;
-    --paper-grey-600: #757575;
-    --paper-grey-700: #616161;
-    --paper-grey-800: #424242;
-    --paper-grey-900: #212121;
- 
-    --paper-blue-grey-50: #eceff1;
-    --paper-blue-grey-100: #cfd8dc;
-    --paper-blue-grey-200: #b0bec5;
-    --paper-blue-grey-300: #90a4ae;
-    --paper-blue-grey-400: #78909c;
-    --paper-blue-grey-500: #607d8b;
-    --paper-blue-grey-600: #546e7a;
-    --paper-blue-grey-700: #455a64;
-    --paper-blue-grey-800: #37474f;
-    --paper-blue-grey-900: #263238;
-
-    /* opacity for dark text on a light background */
-    --dark-divider-opacity: 0.12;
-    --dark-disabled-opacity: 0.38; /* or hint text or icon */
-    --dark-secondary-opacity: 0.54;
-    --dark-primary-opacity: 0.87;
-
-    /* opacity for light text on a dark background */
-    --light-divider-opacity: 0.12;
-    --light-disabled-opacity: 0.3; /* or hint text or icon */
-    --light-secondary-opacity: 0.7;
-    --light-primary-opacity: 1.0;
-
-  }
-
-</style>
-<style is="custom-style">
-
-  :root {
-    /*
-     * You can use these generic variables in your elements for easy theming.
-     * For example, if all your elements use `--primary-text-color` as its main
-     * color, then switching from a light to a dark theme is just a matter of
-     * changing the value of `--primary-text-color` in your application.
-     */
-    --primary-text-color: var(--light-theme-text-color);
-    --primary-background-color: var(--light-theme-background-color);
-    --secondary-text-color: var(--light-theme-secondary-color);
-    --disabled-text-color: var(--light-theme-disabled-color);
-    --divider-color: var(--light-theme-divider-color);
-    --error-color: var(--paper-deep-orange-a700);
-
-    /*
-     * Primary and accent colors. Also see color.html for more colors.
-     */
-    --primary-color: var(--paper-indigo-500);
-    --light-primary-color: var(--paper-indigo-100);
-    --dark-primary-color: var(--paper-indigo-700);
-
-    --accent-color: var(--paper-pink-a200);
-    --light-accent-color: var(--paper-pink-a100);
-    --dark-accent-color: var(--paper-pink-a400);
-
-
-    /*
-     * Material Design Light background theme
-     */
-    --light-theme-background-color: #ffffff;
-    --light-theme-base-color: #000000;
-    --light-theme-text-color: var(--paper-grey-900);
-    --light-theme-secondary-color: #737373;  /* for secondary text and icons */
-    --light-theme-disabled-color: #9b9b9b;  /* disabled/hint text */
-    --light-theme-divider-color: #dbdbdb;
-
-    /*
-     * Material Design Dark background theme
-     */
-    --dark-theme-background-color: var(--paper-grey-900);
-    --dark-theme-base-color: #ffffff;
-    --dark-theme-text-color: #ffffff;
-    --dark-theme-secondary-color: #bcbcbc;  /* for secondary text and icons */
-    --dark-theme-disabled-color: #646464;  /* disabled/hint text */
-    --dark-theme-divider-color: #3c3c3c;
-
-    /*
-     * Deprecated values because of their confusing names.
-     */
-    --text-primary-color: var(--dark-theme-text-color);
-    --default-primary-color: var(--primary-color);
-
-  }
-
-</style>
 <dom-module id="paper-icon-button" assetpath="../bower_components/paper-icon-button/">
   <template strip-whitespace="">
     <style>
@@ -1550,478 +2021,7 @@ delete this[t])},_configureProperties:function(e,t){for(var n in e){var r=e[n];i
       </g>
     </defs>
   </svg>
-</iron-iconset-svg><dom-module id="paper-header-panel" assetpath="../bower_components/paper-header-panel/">
-  <template>
-    <style>
-      :host {
-        @apply(--layout-vertical);
-
-        position: relative;
-        height: 100%;
-
-        @apply(--paper-header-panel);
-      }
-
-      #mainContainer {
-        @apply(--layout-flex);
-
-        position: relative;
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      #mainPanel {
-        @apply(--layout-vertical);
-        @apply(--layout-flex);
-
-        position: relative;
-        min-height: 0;
-
-        @apply(--paper-header-panel-body);
-      }
-
-      /*
-       * mode: scroll
-       */
-      :host([mode=scroll]) #mainContainer {
-        @apply(--paper-header-panel-scroll-container);
-
-        overflow: visible;
-      }
-
-      :host([mode=scroll]) {
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      /*
-       * mode: cover
-       */
-      :host([mode=cover]) #mainContainer {
-        @apply(--paper-header-panel-cover-container);
-
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-
-      :host([mode=cover]) #mainPanel {
-        position: static;
-      }
-
-      /*
-       * mode: standard
-       */
-      :host([mode=standard]) #mainContainer {
-        @apply(--paper-header-panel-standard-container);
-      }
-
-      /*
-       * mode: seamed
-       */
-      :host([mode=seamed]) #mainContainer {
-        @apply(--paper-header-panel-seamed-container);
-      }
-
-
-      /*
-       * mode: waterfall
-       */
-      :host([mode=waterfall]) #mainContainer {
-        @apply(--paper-header-panel-waterfall-container);
-      }
-
-      /*
-       * mode: waterfall-tall
-       */
-      :host([mode=waterfall-tall]) #mainContainer {
-        @apply(--paper-header-panel-waterfall-tall-container);
-      }
-
-      #dropShadow {
-        transition: opacity 0.5s;
-        height: 6px;
-        box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
-
-        @apply(--paper-header-panel-shadow);
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      #dropShadow.has-shadow {
-        opacity: 1;
-      }
-    </style>
-
-    <content id="headerContent" select="paper-toolbar, .paper-header"></content>
-
-    <div id="mainPanel">
-      <div id="mainContainer" class$="[[_computeMainContainerClass(mode)]]">
-        <content id="mainContent" select="*"></content>
-      </div>
-      <div id="dropShadow"></div>
-    </div>
-  </template>
-
-  <script>!function(){"use strict";var t=1,e=2,s={outerScroll:{scroll:!0},shadowMode:{standard:e,waterfall:t,"waterfall-tall":t},tallMode:{"waterfall-tall":!0}};Polymer({is:"paper-header-panel",properties:{mode:{type:String,value:"standard",observer:"_modeChanged",reflectToAttribute:!0},shadow:{type:Boolean,value:!1},tallClass:{type:String,value:"tall"},atTop:{type:Boolean,value:!0,notify:!0,readOnly:!0,reflectToAttribute:!0}},observers:["_computeDropShadowHidden(atTop, mode, shadow)"],ready:function(){this.scrollHandler=this._scroll.bind(this)},attached:function(){this._addListener(),this._keepScrollingState()},detached:function(){this._removeListener()},get header(){return Polymer.dom(this.$.headerContent).getDistributedNodes()[0]},get scroller(){return this._getScrollerForMode(this.mode)},get visibleShadow(){return this.$.dropShadow.classList.contains("has-shadow")},_computeDropShadowHidden:function(o,l,a){var r=s.shadowMode[l];this.shadow?this.toggleClass("has-shadow",!0,this.$.dropShadow):r===e?this.toggleClass("has-shadow",!0,this.$.dropShadow):r!==t||o?this.toggleClass("has-shadow",!1,this.$.dropShadow):this.toggleClass("has-shadow",!0,this.$.dropShadow)},_computeMainContainerClass:function(t){var e={};return e.flex="cover"!==t,Object.keys(e).filter(function(t){return e[t]}).join(" ")},_addListener:function(){this.scroller.addEventListener("scroll",this.scrollHandler,!1)},_removeListener:function(){this.scroller.removeEventListener("scroll",this.scrollHandler)},_modeChanged:function(t,e){var o=s,l=this.header,a=200;l&&(o.tallMode[e]&&!o.tallMode[t]?(l.classList.remove(this.tallClass),this.async(function(){l.classList.remove("animate")},a)):this.toggleClass("animate",o.tallMode[t],l)),this._keepScrollingState()},_keepScrollingState:function(){var t=this.scroller,e=this.header;this._setAtTop(0===t.scrollTop),e&&this.tallClass&&s.tallMode[this.mode]&&this.toggleClass(this.tallClass,this.atTop||e.classList.contains(this.tallClass)&&t.scrollHeight<this.offsetHeight,e)},_scroll:function(){this._keepScrollingState(),this.fire("content-scroll",{target:this.scroller},{bubbles:!1})},_getScrollerForMode:function(t){return s.outerScroll[t]?this:this.$.mainContainer}})}();</script>
-</dom-module>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
-<style is="custom-style">
-
-  :root {
-
-    /* Shared Styles */
-    --paper-font-common-base: {
-      font-family: 'Roboto', 'Noto', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    };
-
-    --paper-font-common-code: {
-      font-family: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
-      -webkit-font-smoothing: antialiased;
-    };
-
-    --paper-font-common-expensive-kerning: {
-      text-rendering: optimizeLegibility;
-    };
-
-    --paper-font-common-nowrap: {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    };
-
-    /* Material Font Styles */
-
-    --paper-font-display4: {
-      @apply(--paper-font-common-base);
-      @apply(--paper-font-common-nowrap);
-
-      font-size: 112px;
-      font-weight: 300;
-      letter-spacing: -.044em;
-      line-height: 120px;
-    };
-
-    --paper-font-display3: {
-      @apply(--paper-font-common-base);
-      @apply(--paper-font-common-nowrap);
-
-      font-size: 56px;
-      font-weight: 400;
-      letter-spacing: -.026em;
-      line-height: 60px;
-    };
-
-    --paper-font-display2: {
-      @apply(--paper-font-common-base);
-
-      font-size: 45px;
-      font-weight: 400;
-      letter-spacing: -.018em;
-      line-height: 48px;
-    };
-
-    --paper-font-display1: {
-      @apply(--paper-font-common-base);
-
-      font-size: 34px;
-      font-weight: 400;
-      letter-spacing: -.01em;
-      line-height: 40px;
-    };
-
-    --paper-font-headline: {
-      @apply(--paper-font-common-base);
-
-      font-size: 24px;
-      font-weight: 400;
-      letter-spacing: -.012em;
-      line-height: 32px;
-    };
-
-    --paper-font-title: {
-      @apply(--paper-font-common-base);
-      @apply(--paper-font-common-nowrap);
-
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 28px;
-    };
-
-    --paper-font-subhead: {
-      @apply(--paper-font-common-base);
-
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-    };
-
-    --paper-font-body2: {
-      @apply(--paper-font-common-base);
-
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 24px;
-    };
-
-    --paper-font-body1: {
-      @apply(--paper-font-common-base);
-
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-    };
-
-    --paper-font-caption: {
-      @apply(--paper-font-common-base);
-      @apply(--paper-font-common-nowrap);
-
-      font-size: 12px;
-      font-weight: 400;
-      letter-spacing: 0.011em;
-      line-height: 20px;
-    };
-
-    --paper-font-menu: {
-      @apply(--paper-font-common-base);
-      @apply(--paper-font-common-nowrap);
-
-      font-size: 13px;
-      font-weight: 500;
-      line-height: 24px;
-    };
-
-    --paper-font-button: {
-      @apply(--paper-font-common-base);
-      @apply(--paper-font-common-nowrap);
-
-      font-size: 14px;
-      font-weight: 500;
-      letter-spacing: 0.018em;
-      line-height: 24px;
-      text-transform: uppercase;
-    };
-
-    --paper-font-code2: {
-      @apply(--paper-font-common-code);
-
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 20px;
-    };
-
-    --paper-font-code1: {
-      @apply(--paper-font-common-code);
-
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 20px;
-    };
-
-  }
-
-</style>
-<dom-module id="paper-toolbar" assetpath="../bower_components/paper-toolbar/">
-  <template>
-    <style>
-      :host {
-        --calculated-paper-toolbar-height: var(--paper-toolbar-height, 64px);
-        --calculated-paper-toolbar-sm-height: var(--paper-toolbar-sm-height, 56px);
-
-        /* technical */
-        display: block;
-        position: relative;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-
-        /* size */
-        height: var(--calculated-paper-toolbar-height);
-
-        background: var(--paper-toolbar-background, --primary-color);
-        color: var(--paper-toolbar-color, --dark-theme-text-color);
-
-        @apply(--paper-toolbar);
-      }
-
-      :host(.animate) {
-        /* transition */
-        transition: var(--paper-toolbar-transition, height 0.18s ease-in);
-      }
-
-      :host(.medium-tall) {
-        height: calc(var(--calculated-paper-toolbar-height) * 2);
-        @apply(--paper-toolbar-medium);
-      }
-
-      :host(.tall) {
-        height: calc(var(--calculated-paper-toolbar-height) * 3);
-        @apply(--paper-toolbar-tall);
-      }
-
-      .toolbar-tools {
-        position: relative;
-        height: var(--calculated-paper-toolbar-height);
-        padding: 0 16px;
-        pointer-events: none;
-        @apply(--layout-horizontal);
-        @apply(--layout-center);
-        @apply(--paper-toolbar-content);
-      }
-
-      /*
-       * TODO: Where should media query breakpoints live so they can be shared between elements?
-       */
-
-      @media (max-width: 600px) {
-        :host {
-          height: var(--calculated-paper-toolbar-sm-height);
-        }
-
-        :host(.medium-tall) {
-          height: calc(var(--calculated-paper-toolbar-sm-height) * 2);
-        }
-
-        :host(.tall) {
-          height: calc(var(--calculated-paper-toolbar-sm-height) * 3);
-        }
-
-        .toolbar-tools {
-          height: var(--calculated-paper-toolbar-sm-height);
-        }
-      }
-
-      #topBar {
-        position: relative;
-      }
-
-      /* middle bar */
-      #middleBar {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-      }
-
-      :host(.tall) #middleBar,
-      :host(.medium-tall) #middleBar {
-        -webkit-transform: translateY(100%);
-        transform: translateY(100%);
-      }
-
-      /* bottom bar */
-      #bottomBar {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-
-      /*
-       * make elements (e.g. buttons) respond to mouse/touch events
-       *
-       * `.toolbar-tools` disables touch events so multiple toolbars can stack and not
-       * absorb events. All children must have pointer events re-enabled to work as
-       * expected.
-       */
-      .toolbar-tools > ::content > *:not([disabled]) {
-        pointer-events: auto;
-      }
-
-      .toolbar-tools > ::content .title {
-        @apply(--paper-font-common-base);
-
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 1;
-        pointer-events: none;
-
-        @apply(--layout-flex);
-      }
-
-      .toolbar-tools > ::content > .title {
-        margin-left: 56px;
-      }
-
-      .toolbar-tools > ::content > paper-icon-button + .title {
-        margin-left: 0;
-      }
-
-      /**
-       * The --paper-toolbar-title mixin is applied here instead of above to
-       * fix the issue with margin-left being ignored due to css ordering.
-       */
-      .toolbar-tools > ::content .title {
-        @apply(--paper-toolbar-title);
-      }
-
-      .toolbar-tools > ::content paper-icon-button[icon=menu] {
-        margin-right: 24px;
-      }
-
-      .toolbar-tools > ::content > .fit {
-        position: absolute;
-        top: auto;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: auto;
-        margin: 0;
-      }
-
-      /* TODO(noms): Until we have a better solution for classes that don't use
-       * /deep/ create our own.
-       */
-      .start-justified {
-        @apply(--layout-start-justified);
-      }
-
-      .center-justified {
-        @apply(--layout-center-justified);
-      }
-
-      .end-justified {
-        @apply(--layout-end-justified);
-      }
-
-      .around-justified {
-        @apply(--layout-around-justified);
-      }
-
-      .justified {
-        @apply(--layout-justified);
-      }
-    </style>
-
-    <div id="topBar" class$="toolbar-tools [[_computeBarExtraClasses(justify)]]">
-      <content select=":not(.middle):not(.bottom)"></content>
-    </div>
-
-    <div id="middleBar" class$="toolbar-tools [[_computeBarExtraClasses(middleJustify)]]">
-      <content select=".middle"></content>
-    </div>
-
-    <div id="bottomBar" class$="toolbar-tools [[_computeBarExtraClasses(bottomJustify)]]">
-      <content select=".bottom"></content>
-    </div>
-  </template>
-
-  <script>Polymer({is:"paper-toolbar",hostAttributes:{role:"toolbar"},properties:{bottomJustify:{type:String,value:""},justify:{type:String,value:""},middleJustify:{type:String,value:""}},attached:function(){this._observer=this._observe(this),this._updateAriaLabelledBy()},detached:function(){this._observer&&this._observer.disconnect()},_observe:function(t){var e=new MutationObserver(function(){this._updateAriaLabelledBy()}.bind(this));return e.observe(t,{childList:!0,subtree:!0}),e},_updateAriaLabelledBy:function(){for(var t,e=[],i=Polymer.dom(this.root).querySelectorAll("content"),r=0;t=i[r];r++)for(var s,o=Polymer.dom(t).getDistributedNodes(),a=0;s=o[a];a++)if(s.classList&&s.classList.contains("title"))if(s.id)e.push(s.id);else{var l="paper-toolbar-label-"+Math.floor(1e4*Math.random());s.id=l,e.push(l)}e.length>0&&this.setAttribute("aria-labelledby",e.join(" "))},_computeBarExtraClasses:function(t){return t?t+("justified"===t?"":"-justified"):""}});</script>
-</dom-module>
-</div><dom-module id="my-app">
+</iron-iconset-svg></div><dom-module id="my-app">
   <template>
     <style>
       :host {
