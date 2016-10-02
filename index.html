@@ -14,11 +14,6 @@
     
     <meta name="theme-color" content="#3f51b5">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
     
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Interdigitize">
@@ -44,8 +39,32 @@
 
     <link rel="import" href="/src/my-app.html">
 
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: #eeeeee;
+      }
+    </style>
   </head>
-  <body>
+    <body class="fullbleed vertical layout">
+      <paper-header-panel class="flex">
+        <paper-toolbar class="medium-tall">
+          <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
+          
+          <span class="flex">Title</span>
+          
+          <paper-icon-button id="morebutton" icon="more-vert"></paper-icon-button>
+          <paper-tabs class="bottom fit" selected="0">
+            <paper-tab>ONE</paper-tab>
+            <paper-tab>TWO</paper-tab>
+          </paper-tabs>
+        </paper-toolbar>
+        <div>Content</div>
+      </paper-header-panel>
+
     <my-app></my-app>
     
   
