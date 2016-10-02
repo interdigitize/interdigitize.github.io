@@ -12,6 +12,9 @@
 
 
 
+
+
+
 </head><body><div hidden="" by-vulcanize=""><script>!function(){function e(){document.body.removeAttribute("unresolved")}window.WebComponents?addEventListener("WebComponentsReady",e):"interactive"===document.readyState||"complete"===document.readyState?e():addEventListener("DOMContentLoaded",e)}(),window.Polymer={Settings:function(){var e=window.Polymer||{};if(!e.noUrlSettings)for(var t,r=location.search.slice(1).split("&"),i=0;i<r.length&&(t=r[i]);i++)t=t.split("="),t[0]&&(e[t[0]]=t[1]||!0);return e.wantShadow="shadow"===e.dom,e.hasShadow=Boolean(Element.prototype.createShadowRoot),e.nativeShadow=e.hasShadow&&!window.ShadowDOMPolyfill,e.useShadow=e.wantShadow&&e.hasShadow,e.hasNativeImports=Boolean("import"in document.createElement("link")),e.useNativeImports=e.hasNativeImports,e.useNativeCustomElements=!window.CustomElements||window.CustomElements.useNative,e.useNativeShadow=e.useShadow&&e.nativeShadow,e.usePolyfillProto=!e.useNativeCustomElements&&!Object.__proto__,e.hasNativeCSSProperties=!navigator.userAgent.match("AppleWebKit/601")&&window.CSS&&CSS.supports&&CSS.supports("box-shadow","0 0 0 var(--foo)"),e.useNativeCSSProperties=e.hasNativeCSSProperties&&e.lazyRegister&&e.useNativeCSSProperties,e}()},function(){var e=window.Polymer;window.Polymer=function(e){"function"==typeof e&&(e=e.prototype),e||(e={});var r=t(e);e=r.prototype;var i={prototype:e};return e.extends&&(i.extends=e.extends),Polymer.telemetry._registrate(e),document.registerElement(e.is,i),r};var t=function(e){var t=Polymer.Base;return e.extends&&(t=Polymer.Base._getExtendedPrototype(e.extends)),e=Polymer.Base.chainObject(e,t),e.registerCallback(),e.constructor};if(e)for(var r in e)Polymer[r]=e[r];Polymer.Class=t}(),Polymer.telemetry={registrations:[],_regLog:function(e){console.log("["+e.is+"]: registered")},_registrate:function(e){this.registrations.push(e),Polymer.log&&this._regLog(e)},dumpRegistrations:function(){this.registrations.forEach(this._regLog)}},Object.defineProperty(window,"currentImport",{enumerable:!0,configurable:!0,get:function(){return(document._currentScript||document.currentScript).ownerDocument}}),Polymer.RenderStatus={_ready:!1,_callbacks:[],whenReady:function(e){this._ready?e():this._callbacks.push(e)},_makeReady:function(){this._ready=!0;for(var e=0;e<this._callbacks.length;e++)this._callbacks[e]();this._callbacks=[]},_catchFirstRender:function(){requestAnimationFrame(function(){Polymer.RenderStatus._makeReady()})},_afterNextRenderQueue:[],_waitingNextRender:!1,afterNextRender:function(e,t,r){this._watchNextRender(),this._afterNextRenderQueue.push([e,t,r])},hasRendered:function(){return this._ready},_watchNextRender:function(){if(!this._waitingNextRender){this._waitingNextRender=!0;var e=function(){Polymer.RenderStatus._flushNextRender()};this._ready?requestAnimationFrame(e):this.whenReady(e)}},_flushNextRender:function(){var e=this;setTimeout(function(){e._flushRenderCallbacks(e._afterNextRenderQueue),e._afterNextRenderQueue=[],e._waitingNextRender=!1})},_flushRenderCallbacks:function(e){for(var t,r=0;r<e.length;r++)t=e[r],t[1].apply(t[0],t[2]||Polymer.nar)}},window.HTMLImports?HTMLImports.whenReady(function(){Polymer.RenderStatus._catchFirstRender()}):Polymer.RenderStatus._catchFirstRender(),Polymer.ImportStatus=Polymer.RenderStatus,Polymer.ImportStatus.whenLoaded=Polymer.ImportStatus.whenReady,function(){"use strict";var e=Polymer.Settings;Polymer.Base={__isPolymerInstance__:!0,_addFeature:function(e){this.extend(this,e)},registerCallback:function(){"max"===e.lazyRegister?this.beforeRegister&&this.beforeRegister():(this._desugarBehaviors(),this._doBehavior("beforeRegister")),this._registerFeatures(),e.lazyRegister||this.ensureRegisterFinished()},createdCallback:function(){this.__hasRegisterFinished||this._ensureRegisterFinished(this.__proto__),Polymer.telemetry.instanceCount++,this.root=this,this._doBehavior("created"),this._initFeatures()},ensureRegisterFinished:function(){this._ensureRegisterFinished(this)},_ensureRegisterFinished:function(t){t.__hasRegisterFinished===t.is&&t.is||("max"===e.lazyRegister&&(t._desugarBehaviors(),t._doBehaviorOnly("beforeRegister")),t.__hasRegisterFinished=t.is,t._finishRegisterFeatures&&t._finishRegisterFeatures(),t._doBehavior("registered"),e.usePolyfillProto&&t!==this&&t.extend(this,t))},attachedCallback:function(){var e=this;Polymer.RenderStatus.whenReady(function(){e.isAttached=!0,e._doBehavior("attached")})},detachedCallback:function(){var e=this;Polymer.RenderStatus.whenReady(function(){e.isAttached=!1,e._doBehavior("detached")})},attributeChangedCallback:function(e,t,r){this._attributeChangedImpl(e),this._doBehavior("attributeChanged",[e,t,r])},_attributeChangedImpl:function(e){this._setAttributeToProperty(this,e)},extend:function(e,t){if(e&&t)for(var r,i=Object.getOwnPropertyNames(t),o=0;o<i.length&&(r=i[o]);o++)this.copyOwnProperty(r,t,e);return e||t},mixin:function(e,t){for(var r in t)e[r]=t[r];return e},copyOwnProperty:function(e,t,r){var i=Object.getOwnPropertyDescriptor(t,e);i&&Object.defineProperty(r,e,i)},_logger:function(e,t){switch(1===t.length&&Array.isArray(t[0])&&(t=t[0]),e){case"log":case"warn":case"error":console[e].apply(console,t)}},_log:function(){var e=Array.prototype.slice.call(arguments,0);this._logger("log",e)},_warn:function(){var e=Array.prototype.slice.call(arguments,0);this._logger("warn",e)},_error:function(){var e=Array.prototype.slice.call(arguments,0);this._logger("error",e)},_logf:function(){return this._logPrefix.concat(this.is).concat(Array.prototype.slice.call(arguments,0))}},Polymer.Base._logPrefix=function(){var e=window.chrome&&!/edge/i.test(navigator.userAgent)||/firefox/i.test(navigator.userAgent);return e?["%c[%s::%s]:","font-weight: bold; background-color:#EEEE00;"]:["[%s::%s]:"]}(),Polymer.Base.chainObject=function(e,t){return e&&t&&e!==t&&(Object.__proto__||(e=Polymer.Base.extend(Object.create(t),e)),e.__proto__=t),e},Polymer.Base=Polymer.Base.chainObject(Polymer.Base,HTMLElement.prototype),window.CustomElements?Polymer.instanceof=CustomElements.instanceof:Polymer.instanceof=function(e,t){return e instanceof t},Polymer.isInstance=function(e){return Boolean(e&&e.__isPolymerInstance__)},Polymer.telemetry.instanceCount=0}(),function(){function e(){if(s)for(var e,t=document._currentScript||document.currentScript,r=t&&t.ownerDocument||document,i=r.querySelectorAll("dom-module"),o=i.length-1;o>=0&&(e=i[o]);o--){if(e.__upgraded__)return;CustomElements.upgrade(e)}}var t={},r={},i=function(e){return t[e]||r[e.toLowerCase()]},o=function(){return document.createElement("dom-module")};o.prototype=Object.create(HTMLElement.prototype),Polymer.Base.extend(o.prototype,{constructor:o,createdCallback:function(){this.register()},register:function(e){e=e||this.id||this.getAttribute("name")||this.getAttribute("is"),e&&(this.id=e,t[e]=this,r[e.toLowerCase()]=this)},import:function(t,r){if(t){var o=i(t);return o||(e(),o=i(t)),o&&r&&(o=o.querySelector(r)),o}}});var s=window.CustomElements&&!CustomElements.useNative;document.registerElement("dom-module",o)}(),Polymer.Base._addFeature({_prepIs:function(){if(!this.is){var e=(document._currentScript||document.currentScript).parentNode;if("dom-module"===e.localName){var t=e.id||e.getAttribute("name")||e.getAttribute("is");this.is=t}}this.is&&(this.is=this.is.toLowerCase())}}),Polymer.Base._addFeature({behaviors:[],_desugarBehaviors:function(){this.behaviors.length&&(this.behaviors=this._desugarSomeBehaviors(this.behaviors))},_desugarSomeBehaviors:function(e){var t=[];e=this._flattenBehaviorsList(e);for(var r=e.length-1;r>=0;r--){var i=e[r];t.indexOf(i)===-1&&(this._mixinBehavior(i),t.unshift(i))}return t},_flattenBehaviorsList:function(e){for(var t=[],r=0;r<e.length;r++){var i=e[r];i instanceof Array?t=t.concat(this._flattenBehaviorsList(i)):i?t.push(i):this._warn(this._logf("_flattenBehaviorsList","behavior is null, check for missing or 404 import"))}return t},_mixinBehavior:function(e){for(var t,r=Object.getOwnPropertyNames(e),i=0;i<r.length&&(t=r[i]);i++)Polymer.Base._behaviorProperties[t]||this.hasOwnProperty(t)||this.copyOwnProperty(t,e,this)},_prepBehaviors:function(){this._prepFlattenedBehaviors(this.behaviors)},_prepFlattenedBehaviors:function(e){for(var t=0,r=e.length;t<r;t++)this._prepBehavior(e[t]);this._prepBehavior(this)},_doBehavior:function(e,t){for(var r=0;r<this.behaviors.length;r++)this._invokeBehavior(this.behaviors[r],e,t);this._invokeBehavior(this,e,t)},_doBehaviorOnly:function(e,t){for(var r=0;r<this.behaviors.length;r++)this._invokeBehavior(this.behaviors[r],e,t)},_invokeBehavior:function(e,t,r){var i=e[t];i&&i.apply(this,r||Polymer.nar)},_marshalBehaviors:function(){for(var e=0;e<this.behaviors.length;e++)this._marshalBehavior(this.behaviors[e]);this._marshalBehavior(this)}}),Polymer.Base._behaviorProperties={hostAttributes:!0,beforeRegister:!0,registered:!0,properties:!0,observers:!0,listeners:!0,created:!0,attached:!0,detached:!0,attributeChanged:!0,ready:!0},Polymer.Base._addFeature({_getExtendedPrototype:function(e){return this._getExtendedNativePrototype(e)},_nativePrototypes:{},_getExtendedNativePrototype:function(e){var t=this._nativePrototypes[e];if(!t){var r=this.getNativePrototype(e);t=this.extend(Object.create(r),Polymer.Base),this._nativePrototypes[e]=t}return t},getNativePrototype:function(e){return Object.getPrototypeOf(document.createElement(e))}}),Polymer.Base._addFeature({_prepConstructor:function(){this._factoryArgs=this.extends?[this.extends,this.is]:[this.is];var e=function(){return this._factory(arguments)};this.hasOwnProperty("extends")&&(e.extends=this.extends),Object.defineProperty(this,"constructor",{value:e,writable:!0,configurable:!0}),e.prototype=this},_factory:function(e){var t=document.createElement.apply(document,this._factoryArgs);return this.factoryImpl&&this.factoryImpl.apply(t,e),t}}),Polymer.nob=Object.create(null),Polymer.Base._addFeature({properties:{},getPropertyInfo:function(e){var t=this._getPropertyInfo(e,this.properties);if(!t)for(var r=0;r<this.behaviors.length;r++)if(t=this._getPropertyInfo(e,this.behaviors[r].properties))return t;return t||Polymer.nob},_getPropertyInfo:function(e,t){var r=t&&t[e];return"function"==typeof r&&(r=t[e]={type:r}),r&&(r.defined=!0),r},_prepPropertyInfo:function(){this._propertyInfo={};for(var e=0;e<this.behaviors.length;e++)this._addPropertyInfo(this._propertyInfo,this.behaviors[e].properties);this._addPropertyInfo(this._propertyInfo,this.properties),this._addPropertyInfo(this._propertyInfo,this._propertyEffects)},_addPropertyInfo:function(e,t){if(t){var r,i;for(var o in t)r=e[o],i=t[o],("_"!==o[0]||i.readOnly)&&(e[o]?(r.type||(r.type=i.type),r.readOnly||(r.readOnly=i.readOnly)):e[o]={type:"function"==typeof i?i:i.type,readOnly:i.readOnly,attribute:Polymer.CaseMap.camelToDashCase(o)})}}}),Polymer.CaseMap={_caseMap:{},_rx:{dashToCamel:/-[a-z]/g,camelToDash:/([A-Z])/g},dashToCamelCase:function(e){return this._caseMap[e]||(this._caseMap[e]=e.indexOf("-")<0?e:e.replace(this._rx.dashToCamel,function(e){return e[1].toUpperCase()}))},camelToDashCase:function(e){return this._caseMap[e]||(this._caseMap[e]=e.replace(this._rx.camelToDash,"-$1").toLowerCase())}},Polymer.Base._addFeature({_addHostAttributes:function(e){this._aggregatedAttributes||(this._aggregatedAttributes={}),e&&this.mixin(this._aggregatedAttributes,e)},_marshalHostAttributes:function(){this._aggregatedAttributes&&this._applyAttributes(this,this._aggregatedAttributes)},_applyAttributes:function(e,t){for(var r in t)if(!this.hasAttribute(r)&&"class"!==r){var i=t[r];this.serializeValueToAttribute(i,r,this)}},_marshalAttributes:function(){this._takeAttributesToModel(this)},_takeAttributesToModel:function(e){if(this.hasAttributes())for(var t in this._propertyInfo){var r=this._propertyInfo[t];this.hasAttribute(r.attribute)&&this._setAttributeToProperty(e,r.attribute,t,r)}},_setAttributeToProperty:function(e,t,r,i){if(!this._serializing&&(r=r||Polymer.CaseMap.dashToCamelCase(t),i=i||this._propertyInfo&&this._propertyInfo[r],i&&!i.readOnly)){var o=this.getAttribute(t);e[r]=this.deserialize(o,i.type)}},_serializing:!1,reflectPropertyToAttribute:function(e,t,r){this._serializing=!0,r=void 0===r?this[e]:r,this.serializeValueToAttribute(r,t||Polymer.CaseMap.camelToDashCase(e)),this._serializing=!1},serializeValueToAttribute:function(e,t,r){var i=this.serialize(e);r=r||this,void 0===i?r.removeAttribute(t):r.setAttribute(t,i)},deserialize:function(e,t){switch(t){case Number:e=Number(e);break;case Boolean:e=null!=e;break;case Object:try{e=JSON.parse(e)}catch(e){}break;case Array:try{e=JSON.parse(e)}catch(t){e=null,console.warn("Polymer::Attributes: couldn`t decode Array as JSON")}break;case Date:e=new Date(e);break;case String:}return e},serialize:function(e){switch(typeof e){case"boolean":return e?"":void 0;case"object":if(e instanceof Date)return e.toString();if(e)try{return JSON.stringify(e)}catch(e){return""}default:return null!=e?e:void 0}}}),Polymer.version="1.7.0",Polymer.Base._addFeature({_registerFeatures:function(){this._prepIs(),this._prepBehaviors(),this._prepConstructor(),this._prepPropertyInfo()},_prepBehavior:function(e){this._addHostAttributes(e.hostAttributes)},_marshalBehavior:function(e){},_initFeatures:function(){this._marshalHostAttributes(),this._marshalBehaviors()}});</script>
 
 
@@ -78,42 +81,156 @@ delete this[t])},_configureProperties:function(e,t){for(var n in e){var r=e[n];i
 
 <dom-module id="shared-styles" assetpath="/">
   <template>
-    <style>
-      .card {
-        margin: 24px;
-        padding: 16px;
+  <style>
+  .card {
+    margin: 24px;
+    padding: 16px;
 
-        color: #757575;
-        border-radius: 5px;
-        background-color: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-      }
+    color: #757575;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  }
 
-      .circle {
-        display: inline-block;
+  .circle {
+    display: inline-block;
 
-        width: 64px;
-        height: 64px;
+    width: 64px;
+    height: 64px;
 
-        text-align: center;
+    text-align: center;
 
-        color: #555;
-        border-radius: 50%;
-        background: #ddd;
+    color: #555;
+    border-radius: 50%;
+    background: #ddd;
 
-        font-size: 30px;
-        line-height: 64px;
-      }
+    font-size: 30px;
+    line-height: 64px;
+  }
 
-      h1 {
-        margin: 16px 0;
+  h1 {
+    margin: 16px 0;
 
-        color: #212121;
+    color: #212121;
 
-        font-size: 22px;
-      }
-    </style>
-  </template>
+    font-size: 22px;
+  }
+  /* MATERIAL */
+
+  .portfolio-header {
+    position: relative;
+    background-color: #D8D8D8;
+    background-image: url("images/header-bg.jpg");
+  }
+
+  .portfolio-header .mdl-layout__header-row {
+    padding: 0;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .portfolio-navigation-row {
+    background-color: rgba(0, 0, 0, 0.08);
+    text-transform: uppercase;
+    height: 45px;
+  }
+
+  .portfolio-navigation-row  .mdl-navigation {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .portfolio-navigation-row .mdl-navigation__link {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    line-height: 42px;
+  }
+
+  .portfolio-header .mdl-layout__drawer-button {
+    background-color: rgba(197, 197, 197, 0.44);
+  }
+
+  .portfolio-navigation-row .is-active {
+    position: relative;
+    font-weight: bold;
+  }
+
+  .portfolio-navigation-row .is-active:after {
+    content: "";
+    width: 70%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255,64,129);
+    left: 15%;
+  }
+
+
+  img.article-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .portfolio-max-width {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .portfolio-copy {
+    max-width: 700px;
+  }
+
+  .portfolio-card .mdl-card__title {
+    padding-bottom: 0;
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+
+  .no-left-padding{
+    padding-left: 0;
+  }
+
+  .no-bottom-padding {
+    padding-bottom: 0;
+  }
+
+  .padding-top {
+    padding: 10px 0 0;
+  }
+
+  .portfolio-share-btn {
+    position: relative;
+    float: right;
+    top: -4px;
+  }
+
+  .demo-card-event > .mdl-card__actions {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .portfolio-contact .mdl-textfield {
+    width: 100%;
+  }
+
+  .portfolio-contact form {
+    max-width: 700px;
+    margin: auto;
+  }
+  </style>
+</template>
 </dom-module>
 <style>
   /* IE 10 support for HTML5 hidden attr */
@@ -1433,7 +1550,478 @@ delete this[t])},_configureProperties:function(e,t){for(var n in e){var r=e[n];i
       </g>
     </defs>
   </svg>
-</iron-iconset-svg></div><dom-module id="my-app">
+</iron-iconset-svg><dom-module id="paper-header-panel" assetpath="../bower_components/paper-header-panel/">
+  <template>
+    <style>
+      :host {
+        @apply(--layout-vertical);
+
+        position: relative;
+        height: 100%;
+
+        @apply(--paper-header-panel);
+      }
+
+      #mainContainer {
+        @apply(--layout-flex);
+
+        position: relative;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #mainPanel {
+        @apply(--layout-vertical);
+        @apply(--layout-flex);
+
+        position: relative;
+        min-height: 0;
+
+        @apply(--paper-header-panel-body);
+      }
+
+      /*
+       * mode: scroll
+       */
+      :host([mode=scroll]) #mainContainer {
+        @apply(--paper-header-panel-scroll-container);
+
+        overflow: visible;
+      }
+
+      :host([mode=scroll]) {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /*
+       * mode: cover
+       */
+      :host([mode=cover]) #mainContainer {
+        @apply(--paper-header-panel-cover-container);
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      :host([mode=cover]) #mainPanel {
+        position: static;
+      }
+
+      /*
+       * mode: standard
+       */
+      :host([mode=standard]) #mainContainer {
+        @apply(--paper-header-panel-standard-container);
+      }
+
+      /*
+       * mode: seamed
+       */
+      :host([mode=seamed]) #mainContainer {
+        @apply(--paper-header-panel-seamed-container);
+      }
+
+
+      /*
+       * mode: waterfall
+       */
+      :host([mode=waterfall]) #mainContainer {
+        @apply(--paper-header-panel-waterfall-container);
+      }
+
+      /*
+       * mode: waterfall-tall
+       */
+      :host([mode=waterfall-tall]) #mainContainer {
+        @apply(--paper-header-panel-waterfall-tall-container);
+      }
+
+      #dropShadow {
+        transition: opacity 0.5s;
+        height: 6px;
+        box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+
+        @apply(--paper-header-panel-shadow);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #dropShadow.has-shadow {
+        opacity: 1;
+      }
+    </style>
+
+    <content id="headerContent" select="paper-toolbar, .paper-header"></content>
+
+    <div id="mainPanel">
+      <div id="mainContainer" class$="[[_computeMainContainerClass(mode)]]">
+        <content id="mainContent" select="*"></content>
+      </div>
+      <div id="dropShadow"></div>
+    </div>
+  </template>
+
+  <script>!function(){"use strict";var t=1,e=2,s={outerScroll:{scroll:!0},shadowMode:{standard:e,waterfall:t,"waterfall-tall":t},tallMode:{"waterfall-tall":!0}};Polymer({is:"paper-header-panel",properties:{mode:{type:String,value:"standard",observer:"_modeChanged",reflectToAttribute:!0},shadow:{type:Boolean,value:!1},tallClass:{type:String,value:"tall"},atTop:{type:Boolean,value:!0,notify:!0,readOnly:!0,reflectToAttribute:!0}},observers:["_computeDropShadowHidden(atTop, mode, shadow)"],ready:function(){this.scrollHandler=this._scroll.bind(this)},attached:function(){this._addListener(),this._keepScrollingState()},detached:function(){this._removeListener()},get header(){return Polymer.dom(this.$.headerContent).getDistributedNodes()[0]},get scroller(){return this._getScrollerForMode(this.mode)},get visibleShadow(){return this.$.dropShadow.classList.contains("has-shadow")},_computeDropShadowHidden:function(o,l,a){var r=s.shadowMode[l];this.shadow?this.toggleClass("has-shadow",!0,this.$.dropShadow):r===e?this.toggleClass("has-shadow",!0,this.$.dropShadow):r!==t||o?this.toggleClass("has-shadow",!1,this.$.dropShadow):this.toggleClass("has-shadow",!0,this.$.dropShadow)},_computeMainContainerClass:function(t){var e={};return e.flex="cover"!==t,Object.keys(e).filter(function(t){return e[t]}).join(" ")},_addListener:function(){this.scroller.addEventListener("scroll",this.scrollHandler,!1)},_removeListener:function(){this.scroller.removeEventListener("scroll",this.scrollHandler)},_modeChanged:function(t,e){var o=s,l=this.header,a=200;l&&(o.tallMode[e]&&!o.tallMode[t]?(l.classList.remove(this.tallClass),this.async(function(){l.classList.remove("animate")},a)):this.toggleClass("animate",o.tallMode[t],l)),this._keepScrollingState()},_keepScrollingState:function(){var t=this.scroller,e=this.header;this._setAtTop(0===t.scrollTop),e&&this.tallClass&&s.tallMode[this.mode]&&this.toggleClass(this.tallClass,this.atTop||e.classList.contains(this.tallClass)&&t.scrollHeight<this.offsetHeight,e)},_scroll:function(){this._keepScrollingState(),this.fire("content-scroll",{target:this.scroller},{bubbles:!1})},_getScrollerForMode:function(t){return s.outerScroll[t]?this:this.$.mainContainer}})}();</script>
+</dom-module>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
+<style is="custom-style">
+
+  :root {
+
+    /* Shared Styles */
+    --paper-font-common-base: {
+      font-family: 'Roboto', 'Noto', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    };
+
+    --paper-font-common-code: {
+      font-family: 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+      -webkit-font-smoothing: antialiased;
+    };
+
+    --paper-font-common-expensive-kerning: {
+      text-rendering: optimizeLegibility;
+    };
+
+    --paper-font-common-nowrap: {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    };
+
+    /* Material Font Styles */
+
+    --paper-font-display4: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 112px;
+      font-weight: 300;
+      letter-spacing: -.044em;
+      line-height: 120px;
+    };
+
+    --paper-font-display3: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 56px;
+      font-weight: 400;
+      letter-spacing: -.026em;
+      line-height: 60px;
+    };
+
+    --paper-font-display2: {
+      @apply(--paper-font-common-base);
+
+      font-size: 45px;
+      font-weight: 400;
+      letter-spacing: -.018em;
+      line-height: 48px;
+    };
+
+    --paper-font-display1: {
+      @apply(--paper-font-common-base);
+
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: -.01em;
+      line-height: 40px;
+    };
+
+    --paper-font-headline: {
+      @apply(--paper-font-common-base);
+
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -.012em;
+      line-height: 32px;
+    };
+
+    --paper-font-title: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    };
+
+    --paper-font-subhead: {
+      @apply(--paper-font-common-base);
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    };
+
+    --paper-font-body2: {
+      @apply(--paper-font-common-base);
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+    };
+
+    --paper-font-body1: {
+      @apply(--paper-font-common-base);
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    };
+
+    --paper-font-caption: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.011em;
+      line-height: 20px;
+    };
+
+    --paper-font-menu: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 24px;
+    };
+
+    --paper-font-button: {
+      @apply(--paper-font-common-base);
+      @apply(--paper-font-common-nowrap);
+
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.018em;
+      line-height: 24px;
+      text-transform: uppercase;
+    };
+
+    --paper-font-code2: {
+      @apply(--paper-font-common-code);
+
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+    };
+
+    --paper-font-code1: {
+      @apply(--paper-font-common-code);
+
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    };
+
+  }
+
+</style>
+<dom-module id="paper-toolbar" assetpath="../bower_components/paper-toolbar/">
+  <template>
+    <style>
+      :host {
+        --calculated-paper-toolbar-height: var(--paper-toolbar-height, 64px);
+        --calculated-paper-toolbar-sm-height: var(--paper-toolbar-sm-height, 56px);
+
+        /* technical */
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+
+        /* size */
+        height: var(--calculated-paper-toolbar-height);
+
+        background: var(--paper-toolbar-background, --primary-color);
+        color: var(--paper-toolbar-color, --dark-theme-text-color);
+
+        @apply(--paper-toolbar);
+      }
+
+      :host(.animate) {
+        /* transition */
+        transition: var(--paper-toolbar-transition, height 0.18s ease-in);
+      }
+
+      :host(.medium-tall) {
+        height: calc(var(--calculated-paper-toolbar-height) * 2);
+        @apply(--paper-toolbar-medium);
+      }
+
+      :host(.tall) {
+        height: calc(var(--calculated-paper-toolbar-height) * 3);
+        @apply(--paper-toolbar-tall);
+      }
+
+      .toolbar-tools {
+        position: relative;
+        height: var(--calculated-paper-toolbar-height);
+        padding: 0 16px;
+        pointer-events: none;
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+        @apply(--paper-toolbar-content);
+      }
+
+      /*
+       * TODO: Where should media query breakpoints live so they can be shared between elements?
+       */
+
+      @media (max-width: 600px) {
+        :host {
+          height: var(--calculated-paper-toolbar-sm-height);
+        }
+
+        :host(.medium-tall) {
+          height: calc(var(--calculated-paper-toolbar-sm-height) * 2);
+        }
+
+        :host(.tall) {
+          height: calc(var(--calculated-paper-toolbar-sm-height) * 3);
+        }
+
+        .toolbar-tools {
+          height: var(--calculated-paper-toolbar-sm-height);
+        }
+      }
+
+      #topBar {
+        position: relative;
+      }
+
+      /* middle bar */
+      #middleBar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+
+      :host(.tall) #middleBar,
+      :host(.medium-tall) #middleBar {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+
+      /* bottom bar */
+      #bottomBar {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      /*
+       * make elements (e.g. buttons) respond to mouse/touch events
+       *
+       * `.toolbar-tools` disables touch events so multiple toolbars can stack and not
+       * absorb events. All children must have pointer events re-enabled to work as
+       * expected.
+       */
+      .toolbar-tools > ::content > *:not([disabled]) {
+        pointer-events: auto;
+      }
+
+      .toolbar-tools > ::content .title {
+        @apply(--paper-font-common-base);
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1;
+        pointer-events: none;
+
+        @apply(--layout-flex);
+      }
+
+      .toolbar-tools > ::content > .title {
+        margin-left: 56px;
+      }
+
+      .toolbar-tools > ::content > paper-icon-button + .title {
+        margin-left: 0;
+      }
+
+      /**
+       * The --paper-toolbar-title mixin is applied here instead of above to
+       * fix the issue with margin-left being ignored due to css ordering.
+       */
+      .toolbar-tools > ::content .title {
+        @apply(--paper-toolbar-title);
+      }
+
+      .toolbar-tools > ::content paper-icon-button[icon=menu] {
+        margin-right: 24px;
+      }
+
+      .toolbar-tools > ::content > .fit {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: auto;
+        margin: 0;
+      }
+
+      /* TODO(noms): Until we have a better solution for classes that don't use
+       * /deep/ create our own.
+       */
+      .start-justified {
+        @apply(--layout-start-justified);
+      }
+
+      .center-justified {
+        @apply(--layout-center-justified);
+      }
+
+      .end-justified {
+        @apply(--layout-end-justified);
+      }
+
+      .around-justified {
+        @apply(--layout-around-justified);
+      }
+
+      .justified {
+        @apply(--layout-justified);
+      }
+    </style>
+
+    <div id="topBar" class$="toolbar-tools [[_computeBarExtraClasses(justify)]]">
+      <content select=":not(.middle):not(.bottom)"></content>
+    </div>
+
+    <div id="middleBar" class$="toolbar-tools [[_computeBarExtraClasses(middleJustify)]]">
+      <content select=".middle"></content>
+    </div>
+
+    <div id="bottomBar" class$="toolbar-tools [[_computeBarExtraClasses(bottomJustify)]]">
+      <content select=".bottom"></content>
+    </div>
+  </template>
+
+  <script>Polymer({is:"paper-toolbar",hostAttributes:{role:"toolbar"},properties:{bottomJustify:{type:String,value:""},justify:{type:String,value:""},middleJustify:{type:String,value:""}},attached:function(){this._observer=this._observe(this),this._updateAriaLabelledBy()},detached:function(){this._observer&&this._observer.disconnect()},_observe:function(t){var e=new MutationObserver(function(){this._updateAriaLabelledBy()}.bind(this));return e.observe(t,{childList:!0,subtree:!0}),e},_updateAriaLabelledBy:function(){for(var t,e=[],i=Polymer.dom(this.root).querySelectorAll("content"),r=0;t=i[r];r++)for(var s,o=Polymer.dom(t).getDistributedNodes(),a=0;s=o[a];a++)if(s.classList&&s.classList.contains("title"))if(s.id)e.push(s.id);else{var l="paper-toolbar-label-"+Math.floor(1e4*Math.random());s.id=l,e.push(l)}e.length>0&&this.setAttribute("aria-labelledby",e.join(" "))},_computeBarExtraClasses:function(t){return t?t+("justified"===t?"":"-justified"):""}});</script>
+</dom-module>
+</div><dom-module id="my-app">
   <template>
     <style>
       :host {
@@ -1477,10 +2065,16 @@ delete this[t])},_configureProperties:function(e,t){for(var n in e){var r=e[n];i
     <app-location route="{{route}}"></app-location>
     <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
+    <app-paper-header-panel class="flex">
+        <app-paper-toolbar>
+          <div>Interdigitize</div>
+        </app-paper-toolbar>
+    </app-paper-header-panel>
+
     <app-drawer-layout fullbleed="">
       
       <app-drawer>
-        <app-toolbar>Menu</app-toolbar>
+        
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="view1" href="/view1">View One</a>
           <a name="view2" href="/view2">View Two</a>
