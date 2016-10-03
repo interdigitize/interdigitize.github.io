@@ -2,97 +2,155 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interdigitize</title>
-    <description>Work by a cross-diciplinary artists.</description>
+    <description></description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Oct 2016 15:14:56 -0700</pubDate>
-    <lastBuildDate>Sun, 02 Oct 2016 15:14:56 -0700</lastBuildDate>
+    <pubDate>Mon, 03 Oct 2016 00:13:45 -0700</pubDate>
+    <lastBuildDate>Mon, 03 Oct 2016 00:13:45 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>What makes employees smile at TowerJazz</title>
+        <title>Cycle Cycle Cyc</title>
         <description>&lt;div class=&quot;embed-container&quot;&gt;
-  &lt;iframe src=&quot;https://www.youtube.com/embed/wewrWSICmM0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/oJVEMomuFZ0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;To celebrate TowerJazz reaching a $1 billion run rate, we asked employees what they like about working at the company and what makes them smile. Here is a video with some of their answers.&lt;/p&gt;
-
-&lt;p&gt;I worked on the concept for this video with Ela Pappo and Felize Richens then shot and edited it for the celebration.&lt;/p&gt;
+&lt;p&gt;Some friends rode in the Salt to Saint Utah Bicycle Relay, so Kärstin and I wrote this song for them and sang it at The Songwriting School of Los Angeles’ open mic.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 04 Jun 2016 10:40:06 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/06/04/what-makes-employees-smile-at-towerjazz.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/06/04/what-makes-employees-smile-at-towerjazz.html</guid>
+        <pubDate>Fri, 23 Sep 2016 18:47:21 -0700</pubDate>
+        <link>http://www.interdigitize.com/2016/09/23/cycle-cycle-cyc.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2016/09/23/cycle-cycle-cyc.html</guid>
         
         
       </item>
     
       <item>
-        <title>Smart Post</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 23 Oct 2015 10:40:06 -0700</pubDate>
-        <link>http://www.interdigitize.com/2015/10/23/welcome-to-jekyll5.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2015/10/23/welcome-to-jekyll5.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Thought Posters</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://www.interdigitize.com/assets/post-images/destkop-image-sample.jpg&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Concepts I had on my mind that I decided to make into posters for my flat.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 03 Jul 2015 14:20:34 -0700</pubDate>
-        <link>http://www.interdigitize.com/2015/07/03/thought-posters.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2015/07/03/thought-posters.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Learning about biological pest control with GAIA</title>
+        <title>America the Beautiful</title>
         <description>&lt;div class=&quot;embed-container&quot;&gt;
-  &lt;iframe src=&quot;https://www.youtube.com/embed/DE-F8M25FoI?list=PLXLGpLk5RLCWKkMH9PI1a_HCtZX283lll&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/m9Pw06lu9fE&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;GAIA (Global Awareness, Investigation and Action) Environmental Youth Collaboration Program completed its eight-week agenda with a four-day investigative trip to the Galilee and Negev in Israel. The trip focus was on scientific discovery regarding biological pest control. Participants included students from five schools in Israel as well two partner schools from the Czech Republic. Leading the trip was Dr. Stuart Fleischer, Director of Project GAIA and Dr. Motti Charter of Haifa University.&lt;/p&gt;
+&lt;p&gt;A good friend, Kärstin Lake, and I have been talking about collaborating for a while. She played this arrangement of America the Beautiful in church on Sept. 11 and I wanted to sing something patriotic this week, so this was the perfect opportunity!&lt;/p&gt;
 
-&lt;p&gt;A classmate and I received a research grant from Maryland Institute College of Art to attend, observe and learn about the collaborative structure and hands-on teaching methodologies as well as document the trip and create summary posters and videos.&lt;/p&gt;
+&lt;p&gt;I have a hard time relating to some of the lyrics from Katharine Bates’ poem written in 1911, so I took creative liberty and made it more relatable.&lt;/p&gt;
+
+&lt;p&gt;LYRICS:&lt;br /&gt;
+I see spacious skies&lt;br /&gt;
+Past the power lines&lt;br /&gt;
+And stores stocked with food&lt;br /&gt;
+Mountain majesties&lt;br /&gt;
+Feel like home to me&lt;br /&gt;
+I know there so much more here I don’t see&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;But I know we have a lot&lt;br /&gt;
+And we want a lot&lt;br /&gt;
+And we work a lot&lt;br /&gt;
+But where is our heart where is our soul&lt;br /&gt;
+In the moments that write the story of our&lt;br /&gt;
+Home of the brave and land of the free&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Trying to be great&lt;br /&gt;
+And live what we believe&lt;br /&gt;
+Some serve&lt;br /&gt;
+Some take a knee&lt;br /&gt;
+Just please don’t feed me&lt;br /&gt;
+Rubbish sleaze&lt;br /&gt;
+I can’t respect a political disease&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oh, America, America&lt;br /&gt;
+God shed his grace on thee&lt;br /&gt;
+And crown thy good with brotherhood&lt;br /&gt;
+For all humanity!&lt;/p&gt;
 </description>
-        <pubDate>Fri, 29 Mar 2013 05:20:06 -0700</pubDate>
-        <link>http://www.interdigitize.com/2013/03/29/gaia.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2013/03/29/gaia.html</guid>
+        <pubDate>Thu, 15 Sep 2016 04:32:22 -0700</pubDate>
+        <link>http://www.interdigitize.com/2016/09/15/america-the-beautiful.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2016/09/15/america-the-beautiful.html</guid>
         
         
       </item>
     
       <item>
-        <title>Tabitha Silk Products Catalog</title>
-        <description>&lt;p&gt;The Tabitha Foundation focuses on community development and cottage industry in Cambodia. Financial sustainability is derived partly from silk weaving cottage industry. Silk sales pay for 80% of all administrative costs. Working in Tabitha’s cottage industry, women develop job skills and are paid fair wages allowing them to take care of themselves and their families.&lt;/p&gt;
+        <title>Put Your Records On </title>
+        <description>&lt;div class=&quot;embed-container&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/zG--ZjAJkKk&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;When I learned about Tabitha and wanted to purchase products, I had a hard time knowing what the products looked like from the photos in the reference catalog. So while in Phnom Penh on a forPEACE service-learning trip, I pulled together a couple photoshoots at their store and a local hotel and recruited a couple team members as models. Then took supplementary shots when I returned and put together this catalog for them.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://static1.squarespace.com/static/560ccb28e4b0a926fe0c846c/t/571c7fdcf699bbdfbf721d4a/1461485538947/tabitha_catalog.pdf&quot;&gt;View the catalog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This week I got a Novation LaunchPad to work on beats and have been in the studio recording samples for a new song I am working on!… BUT since it isn’t ready yet, this week I am covering Corinne Bailey Rae’s Put Your Records On. It has a great groove.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 16 Aug 2011 03:47:21 -0700</pubDate>
-        <link>http://www.interdigitize.com/2011/08/16/tabitha-cambodia-catalog.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2011/08/16/tabitha-cambodia-catalog.html</guid>
+        <pubDate>Wed, 07 Sep 2016 23:30:10 -0700</pubDate>
+        <link>http://www.interdigitize.com/2016/09/07/put-your-records-on.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2016/09/07/put-your-records-on.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Gone Gone Gone</title>
+        <description>&lt;div class=&quot;embed-container&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/UJXTuoG3SB4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Seeing Phillip Phillips and his band play a few weeks ago nudged me to transition from conceptualizing to doing. I decided to cover one of his well-loved songs this week and give him and his band a shout out and a thank you!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 31 Aug 2016 23:22:43 -0700</pubDate>
+        <link>http://www.interdigitize.com/2016/08/31/gone-gone-gone.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2016/08/31/gone-gone-gone.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>200 OK</title>
+        <description>&lt;div class=&quot;embed-container&quot;&gt;
+  &lt;iframe src=&quot;https://www.youtube.com/embed/atg0BV-T47E&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;A JavaScript inspired song that I wrote making it’s open mic debut at The Songwriting School of Los Angeles.&lt;/p&gt;
+
+&lt;p&gt;LYRICS:&lt;/p&gt;
+
+&lt;p&gt;Hello&lt;br /&gt;
+var Kamie;&lt;br /&gt;
+Treat me like an object and I won’t call back&lt;br /&gt;
+What’s that?&lt;br /&gt;
+You think I’m funny&lt;br /&gt;
+I think I’m okay with that&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;CHORUS:&lt;br /&gt;
+If you query me about who I am&lt;br /&gt;
+I’ll return enough to make you think&lt;br /&gt;
+Query me about where I’ve been&lt;br /&gt;
+I’ll serve up sweet stories&lt;br /&gt;
+Query me about my plans&lt;br /&gt;
+I’ll return an array of possibilities&lt;br /&gt;
+You say you want to be a part of them&lt;br /&gt;
+It’s 200 OK with me.&lt;/p&gt;
+
+&lt;p&gt;I think too much I’m always mulling it over&lt;br /&gt;
+You’re plagued with anxiety&lt;br /&gt;
+But when it slips your mind and you focus in real time&lt;br /&gt;
+I wish you could see what I see&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;CHORUS&lt;/p&gt;
+
+&lt;p&gt;A little bridge nudge followed by an exuberant gush&lt;br /&gt;
+And a detailed explanation of&lt;br /&gt;
+What befuddled you for a while&lt;br /&gt;
+Then a question or a gaze&lt;br /&gt;
+Asking for my take&lt;br /&gt;
+That look on your face&lt;br /&gt;
+I can’t help but smile&lt;/p&gt;
+
+&lt;p&gt;CHORUS&lt;/p&gt;
+</description>
+        <pubDate>Fri, 26 Aug 2016 23:28:04 -0700</pubDate>
+        <link>http://www.interdigitize.com/2016/08/26/200-ok.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2016/08/26/200-ok.html</guid>
         
         
       </item>
