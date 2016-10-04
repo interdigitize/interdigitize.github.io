@@ -96,8 +96,7 @@ pre {
 
 /* MATERIAL*/
 .portfolio-header {
-  position: relative;
-  background-image: url(images/header-bg.jpg); }
+  position: relative; }
 
 .portfolio-header .mdl-layout__header-row {
   padding: 0;
@@ -120,15 +119,15 @@ pre {
   min-height: auto; }
 
 .portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
+  background: url(../assets/images/logo.png) 100% no-repeat;
   background-size: cover;
-  height: 150px;
-  width: 150px;
+  height: 106px;
+  width: 350px;
   margin: auto auto 10px; }
 
 .is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 100px;
   margin-top: 7px; }
 
 .portfolio-navigation-row {
@@ -229,9 +228,12 @@ img.article-image {
   max-width: 550px;
   margin: auto; }
 
-footer {
-  background-image: url(images/footer-background.png);
-  background-size: cover; }
+.center {
+  margin: 0 auto;
+  text-align: center; }
+
+.mdl-layout__header {
+  background-color: #e5e5e5 !important; }
 
 .site-title {
   color: #000;
