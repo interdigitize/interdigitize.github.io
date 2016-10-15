@@ -289,6 +289,10 @@ footer .mdl-mini-footer__link-list a {
 footer .copyright {
   margin-top: 2rem; }
 
+.center-title {
+  font-size: 24px;
+  text-align: center; }
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
