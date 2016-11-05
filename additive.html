@@ -2,158 +2,120 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<meta name="author" content="Taylor Nelson, Kamie Robinson, Joshua Chavez ">
+	<meta property="og:description" content="A mix and match color game " />
+	<meta property="og:title" content="Additive" />
 
 
-
-		<script type='text/javascript' src='js/kinetic-v5.1.0.min.js'></script>
 		<style>
-		div#wrapper {
-			width: 320px;
-			height: 480px;
-			//margin: 0 auto;
-			border: 1px dashed gray;
-		}
-		canvas {
-			display:block;
-			margin: 0 auto;
-			margin-top: 0px;
-			width: 320px;
-			height: 480px;
-			border: 1px solid blue;
-		}
-		canvas#canvas{
-			position: relative;
-			top: -964px;
+	div#wrapper {
+		width: 320px;
+		height:568px;
+		/*background-image: url('playb.png');*/
+	}
+	canvas#canvas{
+		position: absolute;
+		top: 274px;
+		left: 25px;
+		width: 292px;
+		height:292px;
+		z-index: 5;
+	}
+	div#score{
+		position: absolute;
+		top: 239px;
+		left: 122px;
+		width: 100px;
+		height: 40px;
+		font-family: Helvetica;
+	}
+	div#sound{
+		position: absolute;
+		top: 100px;
+		width:40px;
+		height: 40px;
+	}
+	div#music{
+		position: absolute;
+		top: 100px;
 
-		}
-		canvas#canvasb{
-			position: relative;
-			top: -482px;
-
-		}
-		canvas#bgcanvas{
-
-    		background-image: linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
-    		background-image: -o-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
-    		background-image: -moz-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
-    		background-image: -webkit-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
-    		background-image: -ms-linear-gradient(bottom, rgb(105,173,212) 0%, rgb(23,82,145) 84%);
-
-    		background-image: -webkit-gradient(
-        		linear,
-        		left bottom,
-        		left top,
-        		color-stop(0, rgb(105,173,212)),
-        		color-stop(0.84, rgb(23,82,145))
-    		);
-		}
-		div#score{
-			position: relative;
-			top: -1440px;
-			left: 5px;
-			width: 125px;
-			height: 25px;
-			color: yellow;
-			font-weight: bold;
-			font-size: 18px;
-			font-family: helvetica, arial;
-			background-color: rgba(150,150,150,.3);
-			z-index: 7;
-			padding-left: 5px;
-			padding-top: 3px;
-			border-radius: 6px;
-		}
-		div#time{
-			position: relative;
-			top: -1340px;
-			left: 142px;
-			width: 120px;
-			height: 25px;
-			color: rgba(200,200,200,1);
-			font-weight: bold;
-			font-size: 18px;
-			font-family: helvetica, arial;
-			background-color: ;
-			z-index: 7;
-			padding-left: 5px;
-			padding-top: 3px;
-		}
-		div#music{
-			position: relative;
-			top: -1503px;
-			left: 241px;
-			width: 40px;
-			height: 40px;
-			background-color: ;
-			background-image: url(../sounds/music.png);
-			z-index: 7;
-			-khtml-opacity:.65;
- 			-moz-opacity:.65;
- 			-ms-filter:"alpha(opacity=.65)";
-  			filter:alpha(opacity=65);
-  			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5.65);
-  			opacity:.65;
-		}
-		div#sound{
-			position: relative;
-			top: -1543px;
-			left: 278px;
-			width: 40px;
-			height: 40px;
-			background-color: ;
-			background-image: url(../sounds/audio.png);
-			z-index: 7;
-			-khtml-opacity:.65;
- 			-moz-opacity:.65;
- 			-ms-filter:"alpha(opacity=.65)";
-  			filter:alpha(opacity=65);
-  			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5.65);
-  			opacity:.65;
-		}
-		div#sound:hover, div#music:hover {
-			-khtml-opacity:.99;
- 			-moz-opacity:.99;
- 			-ms-filter:"alpha(opacity=.99)";
-  			filter:alpha(opacity=99);
-  			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.99);
-  			opacity:.99;
-		}
+		width:40px;
+		height: 40px;
+	}
+	div#div1{
+		position: absolute;
+		z-index: 8;
+		width: 320px;
+		height: 568px;
+		border: 1px solid #ccc;
+		background-image: url('screen1.png');
+	}
+	div#div2{
+		position: absolute;
+		z-index: 7;
+		width: 320px;
+		height: 568px;
+		border: 1px solid #ccc;
+		background-image: url('instructions.jpg');
+	}
+	div#div3{
+		position: absolute;
+		z-index: 6;
+		width: 320px;
+		height: 568px;
+		border: 1px solid #ccc;
+		background-image: url('screen3.png');
+	}
 		</style>
-
-
-
-
 
 	</head>
 
-<body>
+<body >
 <div id='wrapper'>
 
-	<canvas id='bgcanvas'></canvas>
-	<canvas id='canvasb'></canvas>
+<div id='div1'></div>
+<div id='div2'></div>
+<div id='div3'></div>
 	<canvas id='canvas'></canvas>
 
 
 	<div id="score"><div id="scorespan"></div></div>
-	<div id="time"><div id="timespan"></div></div>
+
 	<div id='music' onclick="musicSelector()"></div>
 	<div id='sound' onclick="soundSelector()"></div>
 
 
 <script >
+//jquery section
+$(document).ready(function(){
+
+
+});
+
+
+
+
+document.getElementById('div1').addEventListener('click',function(e){
+    document.getElementById('div1').style.display = 'none';
+});
+
+document.getElementById('div2').addEventListener('click',function(e){
+    document.getElementById('div2').style.display = 'none';
+});
+
+document.getElementById('div3').addEventListener('click',function(e){
+    document.getElementById('div3').style.display = 'none';
+});
 
 //background noises code
 	var soundsOnCnt = 0;
 	var soundsOn = true;
-
-	var jumpsnd = new Audio('jump2.mp3');
-	var matchSnd = new Audio('../sounds/bonus.mp3');
-	var tap1 = new Audio('jump2.mp3');
-	var tap2 = new Audio('jump2.mp3');
-
+	var jumpsnd = new Audio('bubble.mp3');
+	var matchSnd = new Audio('bonus.mp3');
+	var tap1 = new Audio('click-3.mp3');
 	function soundSelector(){
 		soundsOnCnt++;
-
 	}
 
 //load sound files
@@ -162,8 +124,6 @@
 
 //background music code
 	var pauseCount = 0;
-
-
 
 	function musicSelector(){
 		pauseCount++;
@@ -178,23 +138,13 @@
 
 
 
-	myAudio = new Audio('../sounds/bte.mp3');
-	myAudio.addEventListener('ended', function() {
-	    this.currentTime = 0;
-	    this.play();
-	}, false);
-	myAudio.volume = 0.15;
-	myAudio.play();
-
 	function pauseMusic() {
-	myAudio.pause();
-
+		myAudio.pause();
 	}
 
 	function resumeMusic() {
-
-	myAudio = new Audio('../sounds/bte.mp3');
-	myAudio.addEventListener('ended', function() {
+		myAudio = new Audio('bte.mp3');
+		myAudio.addEventListener('ended', function() {
 	    this.currentTime = 0;
 	    this.play();
 	}, false);
@@ -203,147 +153,13 @@
 
 
 
-
-
-//falling snow background
-var flakes = [],
-    bgcanvas = document.getElementById("bgcanvas"),
-    bgctx = bgcanvas.getContext("2d"),
-    flakeCount = 60,
-    mX = -100,
-    mY = -100
-
-bgcanvas.width = 320;
-bgcanvas.height = 480;
-flakeTicker = 0;
-var secondary2 = new Array('zat','rgba(0,255,255','rgba(255,0,255','rgba(255,255,0');
-var colorString = secondary2[1];
-
-
-function snow() {
-    bgctx.clearRect(0, 0, bgcanvas.width, bgcanvas.height);
-
-    for (var i = 0; i < flakeCount; i++) {
-        var flake = flakes[i],
-            x = mX,
-            y = mY,
-            minDist = 150,
-            x2 = flake.x,
-            y2 = flake.y;
-
-        var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y)),
-            dx = x2 - x,
-            dy = y2 - y;
-
-        if (dist < minDist) {
-            var force = minDist / (dist * dist),
-                xcomp = (x - x2) / dist,
-                ycomp = (y - y2) / dist,
-                deltaV = force / 2;
-
-            flake.velX -= deltaV * xcomp;
-            flake.velY -= deltaV * ycomp;
-
-        } else {
-            flake.velX *= .98;
-            if (flake.velY <= flake.speed) {
-                flake.velY = flake.speed
-            }
-            flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
-        }
-
-	//change the flake colors
-
-	if(flakeTicker <10000){
-	var colorString = secondary2[1];
-	}
-
-	flakeTicker++;
-	if(flakeTicker % 9000 == 0){
-
-	var colorString = secondary2[Math.floor(Math.random()*4)];
-
-
-	}
-
-
-
-        bgctx.fillStyle = ""+colorString+"," + flake.opacity + ")";
-        flake.y += flake.velY;
-        flake.x += flake.velX;
-
-        if (flake.y >= canvas.height || flake.y <= 0) {
-            reset(flake);
-        }
-
-
-        if (flake.x >= canvas.width || flake.x <= 0) {
-            reset(flake);
-        }
-
-        bgctx.beginPath();
-        bgctx.rect(flake.x, flake.y, flake.size,flake.size);
-        bgctx.fill();
-    }
-    requestAnimationFrame(snow);
-};
-
-function reset(flake) {
-    flake.x = Math.floor(Math.random() * canvas.width);
-    flake.y = 0;
-    flake.size = (Math.random() * 4) + 9;
-    flake.speed = (Math.random() * 1) + 0.55;
-    flake.velY = flake.speed;
-    flake.velX = 0;
-    flake.opacity = (Math.random() * 0.5) + 0.3;
-}
-
-function init() {
-    for (var i = 0; i < flakeCount; i++) {
-        var x = Math.floor(Math.random() * 380),
-            y = Math.floor(Math.random() * 420),
-            size = (Math.random() * 3) +9,
-            speed = (Math.random() * 1) + 0.5,
-            opacity = (Math.random() * 0.5) + 0.3;
-
-        flakes.push({
-            speed: speed,
-            velY: speed,
-            velX: 0,
-            x: x,
-            y: y,
-            size: size,
-            stepSize: (Math.random()) / 30,
-            step: 0,
-            angle: 180,
-            opacity: opacity
-        });
-    }
-
-    snow();
-};
-
-canvas.addEventListener("mousemove", function(e) {
-    mX = e.clientX,
-    mY = e.clientY
-});
-
-init();
-
 </script>
 
 	<script type='text/javascript'>
-
 	//create and call  timer
-	var clockTime = 60;
-	var gameTime = true;
-	document.getElementById('timespan').innerHTML = clockTime;
+	clockTime = 1;
+	gameTime = 1;
 
-	var ticksnd = new Audio('../sounds/switch-3.mp3');
-	ticksnd.volume=0.2;
-
-	var gameStart = new Audio('../sounds/switch-3.mp3');
-	gameStart.volume=0.3;
 
 
 	function startGameMusic(){
@@ -351,7 +167,7 @@ init();
 	}
 
 	if(clockTime == 59){
-	startGameMusic();
+		startGameMusic();
 
 
 	}
@@ -359,16 +175,15 @@ init();
 
 	function fgameTime(){ gameTime = false;}
 
-	window.setTimeout("Tick()", 1000);
+
 
 	function Tick() {
-	if(clockTime >0){clockTime--; ticksnd.play();}
+	if(clockTime >0){/*clockTime--; ticksnd.play();*/}
 
 	if(clockTime >= 0){
-	window.setTimeout("Tick()", 1000);}
+		window.setTimeout("Tick()", 1000);}
 
 
-	document.getElementById('timespan').innerHTML = clockTime;
 
 	if(clockTime == 0){fgameTime();}
 
@@ -389,7 +204,7 @@ init();
 		(function() {
     			var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
     			    function(callback) {
-        			window.setTimeout(callback, 5000/60);
+        			window.setTimeout(callback, 1000/60);
     			};
 
    			window.requestAnimationFrame = requestAnimationFrame;
@@ -399,117 +214,222 @@ init();
 
 		//all global variables before update loop
 
-
-
-
-
-
 		//items to run into
 		var cube = [];
-		var primary = new Array('rgba(0,255,0,.85)','rgba(255,0,0,.85)','rgba(0,0,255,.85)')
+		var primary = new Array('rgba(0,255,0,.7)','rgba(255,0,0,.7)','rgba(0,0,255,.7)')
 		var secondary = new Array('rgba(255,255,0,.9)','rgba(255,0,255,.9)','rgba(0,255,255,.9)');
+		var tert = new Array('rgba(255,0,127,1)','rgba(127,0,255,1)','rgba(0,127,255,1)','rgba(0,255,127,1)','rgba(127,255,0,1)','rgba(255,127,0,1)','rgba(255,255,255,1)');
 
 		//all the cubes
 
+		var randColor1 = Math.floor(Math.random() * primary.length);
+		var randPrimary = primary[randColor1];
+
+
 		//cube1
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[0],
-			borderW: 1,
-			x: 48,
-			y: 200
-		});
+//cube 1
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'black',
+		x:0,
+		y:0
+	});
+	//cube 2
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:72,
+		y:0
+	});
+	//cube 3
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:144,
+		y:0
+	});
+	//cube 4
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:216,
+		y:0
+	});
 
-		//cube2
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[2],
-			borderW: 1,
-			x: 125,
-			y: 200
-		});
+	//cube 5
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:0,
+		y:72
+	});
+	//cube 6
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:72,
+		y:72
+	});
+	//cube 7
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:144,
+		y:72
+	});
+	//cube 8
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:216,
+		y:72
+	});
 
-		//cube3
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[1],
-			borderW: 1,
-			x: 202,
-			y: 200
-		});
+	//cube 9
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:0,
+		y:144
+	});
+	//cube 10
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:72,
+		y:144
+	});
+	//cube 11
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:144,
+		y:144
+	});
+	//cube 12
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:216,
+		y:144
+	});
 
-		//cube 4
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[0],
-			borderW: 1,
-			x: 48,
-			y: 277
-		});
-
-		//cube5
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[2],
-			borderW: 1,
-			x: 125,
-			y: 277
-		});
-
-		//cube6
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[1],
-			borderW: 1,
-			x: 202,
-			y: 277
-		});
-
-		//cube 7
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[0],
-			borderW: 1,
-			x: 48,
-			y: 354
-		});
-
-		//cube8
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[2],
-			borderW: 1,
-			x: 125,
-			y: 354
-		});
-
-		//cube9
-		cube.push({
-			width: 75,
-			height: 75,
-			color: primary[1],
-			borderW: 1,
-			x: 202,
-			y: 354
-		});
+	//cube 13
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:0,
+		y:216
+	});
+	//cube 14
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:72,
+		y:216
+	});
+	//cube 15
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:144,
+		y:216
+	});
+	//cube 16
+	cube.push({
+		width:70,
+		height:70,
+		color:primary[Math.floor(Math.random() * primary.length)],
+		borderW:1,
+		borderColor: 'black',
+		cubeBlur:0,
+		cubeShadow:'rgba(80, 80, 80, 0)',
+		x:216,
+		y:216
+	});
 
 
 		var canvas = document.getElementById('canvas');
 		var ctx = canvas.getContext('2d');
 
-		var canvasb = document.getElementById('canvasb');
-		var ctx2 = canvasb.getContext('2d');
 
-		var width = 320;
-		var height = 480;
+		var width = 292;
+		var height = 292;
 
 		canvas.width = width;
 		canvas.height = height;
@@ -521,31 +441,63 @@ init();
 		var movecube2down = false;
 		var movecube2left = false;
 
-		var movecube3left = false;
+		var movecube3right = false;
 		var movecube3down = false;
+		var movecube3left = false;
 
-		var movecube4right = false;
+		var movecube4left = false;
 		var movecube4down = false;
-		var movecube4up = false;
 
 		var movecube5right = false;
-		var movecube5left = false;
-		var movecube5up = false;
 		var movecube5down = false;
+		var movecube5up = false;
 
+		var movecube6right = false;
 		var movecube6left = false;
 		var movecube6up = false;
 		var movecube6down = false;
 
 		var movecube7right = false;
+		var movecube7left = false;
 		var movecube7up = false;
+		var movecube7down = false;
 
 		var movecube8left = false;
 		var movecube8up = false;
-		var movecube8right = false;
+		var movecube8down = false;
 
-		var movecube9left = false;
+		var movecube9right = false;
+		var movecube9down = false;
 		var movecube9up = false;
+
+		var movecube10right = false;
+		var movecube10left = false;
+		var movecube10up = false;
+		var movecube10down = false;
+
+		var movecube11right = false;
+		var movecube11left = false;
+		var movecube11up = false;
+		var movecube11down = false;
+
+		var movecube12left = false;
+		var movecube12up = false;
+		var movecube12right = false;
+		var movecube12down = false;
+
+		var movecube13right = false;
+		var movecube13up = false;
+
+		var movecube14right = false;
+		var movecube14up = false;
+		var movecube14left = false;
+
+		var movecube15right = false;
+		var movecube15up = false;
+		var movecube15left = false;
+
+		var movecube16left = false;
+		var movecube16up = false;
 
 		var moves = new Array();
 		var movesX = new Array();
@@ -553,42 +505,42 @@ init();
 
 		var callprimary = 0;
 		var moveList = new Array();
-
-		//tap dot
-		var bdot = new Image();
-		bdot.src = "../pics/bdot.jpg";
-		ctx2.drawImage(bdot,100,400,10,10);
+		var step = 0;
+		var step3 = 0;
+		var scoring = false;
+		var colorIt = '';
 
 		var randColor1 = Math.floor(Math.random() * primary.length);
 
 		var timer = true;
 		var adjacent = true;
+		var step2 = 0;
 
-		// ctx.drawImage(bdot,0,0,10,10,80,232,10,10);
 
 		//main game loop right here so make sure that you notice this line and put things in the right place ok?
 		function update(){
 
+			for(x=0;x<cube.length;x++){
+	 		if(moveList[0]==(x+1) ){cube[x].borderColor = 'yellow';cube[x].borderW = 3; cube[x].cubeShadow = 'yellow';cube[x].cubeBlur = 20;}
+			else{cube[x].borderColor = 'black';cube[x].borderW = 1;cube[x].cubeShadow ='';cube[x].cubeBlur = 0; }
+			}
+
 		if(soundsOnCnt%2 == 0){
 			jumpsnd.volume=0.25;
 			matchSnd.volume=0.25;
-			ticksnd.volume=0.25;
-			tap1.volume=0.25;
-			tap2.volume=0.25;
+			tap1.volume=0.35;
 			document.getElementById('sound').style.backgroundPosition="0 0";
 		}
 		else{
 			jumpsnd.volume=0.0;
 			matchSnd.volume=0.0;
-			ticksnd.volume=0.0;
 			tap1.volume=0.0;
-			tap2.volume=0.0;
 			document.getElementById('sound').style.backgroundPosition="42px 0";
 		}
 
 		//update stuff
 		if(!gameTime){ //stuff to happen when game ends within loop
-		for (var i = 0; i < cube.length; i++) {cube[i].color = "rgba(192,192,192,.6)";}
+			for (var i = 0; i < cube.length; i++) {cube[i].color = "rgba(192,192,192,.6)";}
 
 		}
 
@@ -598,15 +550,23 @@ init();
 
 
 			//generate new dimensions based on the cubes  chosen
-			if(firstcube == 1){var fx=48,fy=200;}
-			else if(firstcube == 2){var fx=125,fy=200;}
-			else if(firstcube == 3){var fx=202,fy=200;}
-			else if(firstcube == 4){var fx=48,fy=277;}
-			else if(firstcube == 5){var fx=125,fy=277;}
-			else if(firstcube == 6){var fx=202,fy=277;}
-			else if(firstcube == 7){var fx=48,fy=354;}
-			else if(firstcube == 8){var fx=125,fy=354;}
-			else if(firstcube == 9){var fx=202,fy=354;}
+		//generate new positions based on the cubes chosen
+		if(firstcube == 1){var fx=0,fy=0;}
+		else if(firstcube == 2 ){var fx=72, fy=0;}
+		else if(firstcube == 3 ){var fx=144, fy=0;}
+		else if(firstcube == 4 ){var fx=216, fy=0;}
+		else if(firstcube == 5 ){var fx=0, fy=72;}
+		else if(firstcube == 6 ){var fx=72, fy=72;}
+		else if(firstcube == 7 ){var fx=144, fy=72;}
+		else if(firstcube == 8 ){var fx=216, fy=72;}
+		else if(firstcube == 9 ){var fx=0, fy=144;}
+		else if(firstcube == 10 ){var fx=72, fy=144;}
+		else if(firstcube == 11 ){var fx=144, fy=144;}
+		else if(firstcube == 12 ){var fx=216, fy=144;}
+		else if(firstcube == 13 ){var fx=0, fy=216;}
+		else if(firstcube == 14 ){var fx=72, fy=216;}
+		else if(firstcube == 15 ){var fx=144, fy=216;}
+		else if(firstcube == 16 ){var fx=216, fy=216;}
 
 			function newPrimary(){
 			//select a random primary color
@@ -614,8 +574,8 @@ init();
 			var randColor2 = primary[randColor1];
 
 			//recreate cube 1
-			cube[firstcube-1].width = 75;
-			cube[firstcube-1].height = 75;
+			cube[firstcube-1].width = 70;
+			cube[firstcube-1].height = 70;
 			cube[firstcube-1].color = randColor2;
 			cube[firstcube-1].borderW = 1;
 			cube[firstcube-1].x = fx;
@@ -634,20 +594,27 @@ init();
 			}
 
 			//generate new coordinates for the second cube
-			if(secondcube == 1){var sx=48,sy=200;}
-			else if(secondcube == 2){var sx=125,sy=200;}
-			else if(secondcube == 3){var sx=202,sy=200;}
-			else if(secondcube == 4){var sx=48,sy=277;}
-			else if(secondcube == 5){var sx=125,sy=277;}
-			else if(secondcube == 6){var sx=202,sy=277;}
-			else if(secondcube == 7){var sx=48,sy=354;}
-			else if(secondcube == 8){var sx=125,sy=354;}
-			else if(secondcube == 9){var sx=202,sy=354;}
+		if(secondcube == 1){var sx=0,sy=0;}
+		else if(secondcube == 2 ){var sx=72, sy=0;}
+		else if(secondcube == 3 ){var sx=144, sy=0;}
+		else if(secondcube == 4 ){var sx=216, sy=0;}
+		else if(secondcube == 5 ){var sx=0, sy=72;}
+		else if(secondcube == 6 ){var sx=72, sy=72;}
+		else if(secondcube == 7 ){var sx=144, sy=72;}
+		else if(secondcube == 8 ){var sx=216, sy=72;}
+		else if(secondcube == 9 ){var sx=0, sy=144;}
+		else if(secondcube == 10 ){var sx=72, sy=144;}
+		else if(secondcube == 11 ){var sx=144, sy=144;}
+		else if(secondcube == 12 ){var sx=216, sy=144;}
+		else if(secondcube == 13 ){var sx=0, sy=216;}
+		else if(secondcube == 14 ){var sx=72, sy=216;}
+		else if(secondcube == 15 ){var sx=144, sy=216;}
+		else if(secondcube == 16 ){var sx=216, sy=216;;}
 
 
 			//make new amalgam cube
-			cube[secondcube-1].width = 75;
-			cube[secondcube-1].height = 75;
+			cube[secondcube-1].width = 70;
+			cube[secondcube-1].height = 70;
 
 			//give the new secondary color
 			if(cube[firstcube-1].color == primary[0] && cube[secondcube-1].color == primary[1]){cube[secondcube-1].color = secondary[0];}
@@ -656,9 +623,29 @@ init();
 			else if(cube[firstcube-1].color == primary[2] && cube[secondcube-1].color == primary[1]){cube[secondcube-1].color = secondary[1];}
 			else if(cube[firstcube-1].color == primary[2] && cube[secondcube-1].color == primary[0]){cube[secondcube-1].color = secondary[2];}
 			else if(cube[firstcube-1].color == primary[0] && cube[secondcube-1].color == primary[2]){cube[secondcube-1].color = secondary[2];}
-			else if(cube[secondcube-1].color == secondary[0] || [secondcube-1].color == secondary[1] || [secondcube-1].color == secondary[2]){
+			else if(cube[firstcube-1].color == primary[0] && cube[secondcube-1].color == secondary[0]){cube[secondcube-1].color = tert[5];}
+			else if(cube[firstcube-1].color == primary[1] && cube[secondcube-1].color == secondary[0]){cube[secondcube-1].color = tert[4];}
+			else if(cube[firstcube-1].color == primary[2] && cube[secondcube-1].color == secondary[0]){cube[secondcube-1].color = tert[6];}
+			else if(cube[firstcube-1].color == primary[0] && cube[secondcube-1].color == secondary[1]){cube[secondcube-1].color = tert[6];}
+			else if(cube[firstcube-1].color == primary[1] && cube[secondcube-1].color == secondary[1]){cube[secondcube-1].color = tert[1];}
+			else if(cube[firstcube-1].color == primary[2] && cube[secondcube-1].color == secondary[1]){cube[secondcube-1].color = tert[0];}
+			else if(cube[firstcube-1].color == primary[0] && cube[secondcube-1].color == secondary[2]){cube[secondcube-1].color = tert[2];}
+			else if(cube[firstcube-1].color == primary[1] && cube[secondcube-1].color == secondary[2]){cube[secondcube-1].color = tert[6];}
+			else if(cube[firstcube-1].color == primary[2] && cube[secondcube-1].color == secondary[2]){cube[secondcube-1].color = tert[3];}
+			else if(cube[firstcube-1].color == secondary[0] && cube[secondcube-1].color == primary[0]){cube[secondcube-1].color = tert[5];}
+			else if(cube[firstcube-1].color == secondary[1] && cube[secondcube-1].color == primary[0]){cube[secondcube-1].color = tert[6];}
+			else if(cube[firstcube-1].color == secondary[2] && cube[secondcube-1].color == primary[0]){cube[secondcube-1].color = tert[2];}
+			else if(cube[firstcube-1].color == secondary[0] && cube[secondcube-1].color == primary[1]){cube[secondcube-1].color = tert[4];}
+			else if(cube[firstcube-1].color == secondary[1] && cube[secondcube-1].color == primary[1]){cube[secondcube-1].color = tert[1];}
+			else if(cube[firstcube-1].color == secondary[2] && cube[secondcube-1].color == primary[1]){cube[secondcube-1].color = tert[6];}
+			else if(cube[firstcube-1].color == secondary[0] && cube[secondcube-1].color == primary[2]){cube[secondcube-1].color = tert[6];}
+			else if(cube[firstcube-1].color == secondary[1] && cube[secondcube-1].color == primary[2]){cube[secondcube-1].color = tert[0];}
+			else if(cube[firstcube-1].color == secondary[2] && cube[secondcube-1].color == primary[2]){cube[secondcube-1].color = tert[3];}
+			else if(cube[secondcube-1].color == tert[0] || cube[secondcube-1].color == tert[1] || cube[secondcube-1].color == tert[2] || cube[secondcube-1].color == tert[3] || cube[secondcube-1].color == tert[4] || cube[secondcube-1].color == tert[5] || cube[secondcube-1].color == tert[6]){
 				cube[secondcube-1].color = cube[secondcube-1].color;
 			}
+
+
 			cube[secondcube-1].borderW = 1;
 			cube[secondcube-1].x = sx;
 			cube[secondcube-1].y = sy;
@@ -699,20 +686,33 @@ init();
 			cube[cube2-1].color=primary[randColor2];}
 			else if(cube2 == 6){randColor2 = Math.floor(Math.random() * primary.length); cube[5].color=primary[randColor2];}
 
-
-
-
-
-
-
-
 			//play new generate sound
 			jumpsnd.play();
 
-
-
-
 		}
+
+function scoredPoint(cube1color,cube1x,cube1y){
+
+	if(cube1color == 'rgba(0,255,0,.7)'){scoreColor = 'rgb(255,0,255)';}
+	else if(cube1color == 'rgba(255,0,0,.7)'){scoreColor = 'rgb(0,255,255)'}
+	else if(cube1color == 'rgba(0,0,255,.7)'){scoreColor = 'rgb(255,255,0)'}
+	else if(cube1color == 'rgba(255,255,0,.9)'){scoreColor = 'rgb(0,0,255)'}
+	else if(cube1color == 'rgba(255,0,255,.9)'){scoreColor = 'rgb(0,255,0)'}
+	else if(cube1color == 'rgba(0,255,255,.9)'){scoreColor = 'rgb(255,0,0)'}
+	else if(cube1color == 'rgba(255,0,127,1)'){scoreColor = 'rgb(0,255,127)'}
+	else if(cube1color == 'rgba(127,0,255,1)'){scoreColor = 'rgb(127,255,0)'}
+	else if(cube1color == 'rgba(0,127,255,1)'){scoreColor = 'rgb(255,127,0)'}
+	else if(cube1color == 'rgba(0,255,127,1)'){scoreColor = 'rgb(255,0,127)'}
+	else if(cube1color == 'rgba(127,255,0,1)'){scoreColor = 'rgb(127,0,255)'}
+	else if(cube1color == 'rgba(255,127,0,1)'){scoreColor = 'rgb(0,127,255)'}
+	else if(cube1color == 'rgba(255,255,255,1)'){scoreColor = 'rgb(0,0,0)'}
+	else{scoreColor = 'black';}
+
+	scorex = (cube1x)+35;
+	scorey = (cube1y)+44;
+	colorIt = cube1color;
+
+}
 
 		function points1(){
 		timer=false;
@@ -722,530 +722,1233 @@ init();
 
 
 		//check for win conditions matching 2 rows
-		function winCheck(){
 
-			var TimeToClear = 1000;
+function winCheck(){
 
-			//detect secondary colors
-			for(x=0;x<9;x++){
-				if(cube[x].color == secondary[0] || cube[x].color == secondary[1] || cube[x].color == secondary[2] ){
+					var TimeToClear = 1000;
+		for(x=0;x<16;x++){
+            	if(cube[x].color == secondary[0] || cube[x].color == secondary[1] || cube[x].color == secondary[2] ){
 
-					//matching with cube1
-					if(cube[0].color == secondary[0] || cube[0].color == secondary[1] || cube[0].color == secondary[2]){
-						if(cube[1].color == cube[0].color ){
+                	//matching with cube1
+                	if(cube[0].color == secondary[0] || cube[0].color == secondary[1] || cube[0].color == secondary[2]){
+                    	if(cube[1].color == cube[0].color ){
 
-							//happy sounds and animations
-							matchSnd.play();
+                   	 	if(step>=0){scoring=true;}
 
-							setTimeout(function() {	points(1,2);},TimeToClear);
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                       		scoredPoint(cube[0].color,cube[0].x,cube[0].y);
 
-							points1();
-							generateMatch(a,b);
-							}
 
-							}
-							timer=true;
+                        	setTimeout(function() {	points(1,2);},TimeToClear);
 
-						}
-						else if(cube[0].color == cube[3].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							setTimeout(function() {	points(1,4);},TimeToClear);
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	}
+                        	timer=true;
 
-							points1();
-							generateMatch(a,b);
-							}
+                    	}
+                    	else if(cube[0].color == cube[4].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							}
-							timer=true;
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-						}
-					}
+                       		scoredPoint(cube[0].color,cube[0].x,cube[0].y);
 
-					if(cube[1].color == secondary[0] || cube[1].color == secondary[1] || cube[1].color == secondary[2]){
-						if(cube[1].color == cube[0].color ){
+                        	setTimeout(function() {	points(1,5);},TimeToClear);
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							setTimeout(function() {points(2,1);},TimeToClear);
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	}
+                        	timer=true;
 
-							points1();
-							generateMatch(a,b);
-							}
+                    	}
+                	}
 
-							}
-							timer=true;
+                	if(cube[1].color == secondary[0] || cube[1].color == secondary[1] || cube[1].color == secondary[2]){
+                    	if(cube[1].color == cube[0].color ){
 
-						}
-						else if(cube[1].color == cube[2].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							setTimeout(function() {points(2,3);},TimeToClear);
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                       		scoredPoint(cube[1].color,cube[1].x,cube[1].y);
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	setTimeout(function() {points(2,1);},TimeToClear);
 
-							}
-							timer=true;
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-						}
-						else if(cube[1].color == cube[4].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							setTimeout(function() {points(2,5);},TimeToClear);
+                        	}
+                        	timer=true;
 
-							function points(a,b){
-							//add points
-							if(timer){
+                    	}
+                    	else if(cube[1].color == cube[2].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							}
-							timer=true;
+                       		scoredPoint(cube[1].color,cube[1].x,cube[1].y);
 
-						}
+                        	setTimeout(function() {points(2,3);},TimeToClear);
 
-					}
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-					if(cube[2].color == secondary[0] || cube[2].color == secondary[1] || cube[2].color == secondary[2]){
-						if(cube[2].color == cube[1].color ){
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	}
+                        	timer=true;
 
-							setTimeout(function() {points(3,2);},TimeToClear);
+                    	}
+                    	else if(cube[1].color == cube[5].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							points1();
-							generateMatch(a,b);
-							}
+                       		scoredPoint(cube[1].color,cube[1].x,cube[1].y);
 
-							}
-							timer=true;
+                        	setTimeout(function() {points(2,6);},TimeToClear);
 
-						}
-						else if(cube[2].color == cube[5].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							setTimeout(function() {points(3,6);},TimeToClear);
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	}
+                        	timer=true;
 
-							points1();
-							generateMatch(a,b);
-							}
+                    	}
 
-							}
-							timer=true;
+                	}
 
-						}
-					}
+                	if(cube[2].color == secondary[0] || cube[2].color == secondary[1] || cube[2].color == secondary[2]){
+                    	if(cube[2].color == cube[1].color ){
 
-					if(cube[3].color == secondary[0] || cube[3].color == secondary[1] || cube[3].color == secondary[2]){
-						if(cube[3].color == cube[0].color ){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							setTimeout(function() {points(4,1);},TimeToClear);
+                       		scoredPoint(cube[2].color,cube[2].x,cube[2].y);
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	setTimeout(function() {points(3,2);},TimeToClear);
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							}
-							timer=true;
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-						}
-						else if(cube[3].color == cube[4].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	}
+                        	timer=true;
 
-							setTimeout(function() {points(4,5);},TimeToClear);
+                    	}
+                    	else if(cube[2].color == cube[6].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							points1();
-							generateMatch(a,b);
-							}
+                       		scoredPoint(cube[2].color,cube[2].x,cube[2].y);;
 
-							}
-							timer=true;
+                        	setTimeout(function() {points(3,7);},TimeToClear);
 
-						}
-						else if(cube[3].color == cube[6].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							setTimeout(function() {points(4,7);},TimeToClear);
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	}
+                        	timer=true;
 
-							points1();
-							generateMatch(a,b);
-							}
+                    	}
+   					 else if(cube[2].color == cube[3].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							}
-							timer=true;
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-						}
-					}
+                       		scoredPoint(cube[2].color,cube[2].x,cube[2].y);
 
-					if(cube[4].color == secondary[0] || cube[4].color == secondary[1] || cube[4].color == secondary[2]){
-						if(cube[4].color == cube[1].color ){
+                        	setTimeout(function() {points(3,4);},TimeToClear);
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							setTimeout(function() {points(5,2);},TimeToClear);
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	}
+                        	timer=true;
 
-							points1();
-							generateMatch(a,b);
-							}
+                    	}
+                	}
 
-							}
-							timer=true;
+                	if(cube[3].color == secondary[0] || cube[3].color == secondary[1] || cube[3].color == secondary[2]){
+                    	if(cube[3].color == cube[7].color ){
 
-						}
-						else if(cube[4].color == cube[3].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							setTimeout(function() {points(5,4);},TimeToClear);
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                       		scoredPoint(cube[3].color,cube[3].x,cube[3].y);
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	setTimeout(function() {points(4,8);},TimeToClear);
 
-							}
-							timer=true;
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-						}
-						else if(cube[4].color == cube[7].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							setTimeout(function() {points(5,8);},TimeToClear);
+                        	}
+                        	timer=true;
 
-							function points(a,b){
-							//add points
-							if(timer){
+                    	}
+                    	else if(cube[3].color == cube[2].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							}
-							timer=true;
+                       		scoredPoint(cube[3].color,cube[3].x,cube[3].y);
 
-						}
-						else if(cube[4].color == cube[5].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	setTimeout(function() {points(4,3);},TimeToClear);
 
-							setTimeout(function() {points(5,6);},TimeToClear);
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	}
+                        	timer=true;
 
-							}
-							timer=true;
+                    	}
 
-						}
-					}
+                	}
 
-					if(cube[5].color == secondary[0] || cube[5].color == secondary[1] || cube[5].color == secondary[2]){
-						if(cube[5].color == cube[2].color ){
+                	if(cube[4].color == secondary[0] || cube[4].color == secondary[1] || cube[4].color == secondary[2]){
+                    	if(cube[4].color == cube[0].color ){
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							setTimeout(function() {points(6,3);},TimeToClear);
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							function points(a,b){
-							//add points
-							if(timer){
+                       		scoredPoint(cube[4].color,cube[4].x,cube[4].y);
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	setTimeout(function() {points(5,1);},TimeToClear);
 
-							}
-							timer=true;
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-						}
-						else if(cube[5].color == cube[4].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							setTimeout(function() {points(6,5);},TimeToClear);
+                        	}
+                        	timer=true;
 
-							function points(a,b){
-							//add points
-							if(timer){
+                    	}
+                    	else if(cube[4].color == cube[5].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							}
-							timer=true;
+                       		scoredPoint(cube[4].color,cube[4].x,cube[4].y);
 
-						}
-						else if(cube[5].color == cube[8].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	setTimeout(function() {points(5,6);},TimeToClear);
 
-							setTimeout(function() {points(6,9);},TimeToClear);
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	}
+                        	timer=true;
 
-							}
-							timer=true;
+                    	}
+                    	else if(cube[4].color == cube[8].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-						}
-					}
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-					if(cube[6].color == secondary[0] || cube[6].color == secondary[1] || cube[6].color == secondary[2]){
-						if(cube[6].color == cube[3].color ){
+                       		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	setTimeout(function() {points(5,9);},TimeToClear);
 
-							setTimeout(function() {points(7,4);},TimeToClear);
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	}
+                        	timer=true;
 
-							}
-							timer=true;
+                    	}
 
-						}
-						else if(cube[6].color == cube[7].color){
-							//happy sounds and animations
-							matchSnd.play();
+                	}
 
-							setTimeout(function() {points(7,8);},TimeToClear);
+                	if(cube[5].color == secondary[0] || cube[5].color == secondary[1] || cube[5].color == secondary[2]){
+                    	if(cube[5].color == cube[1].color ){
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							}
-							timer=true;
+                       		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
-						}
-					}
+                        	setTimeout(function() {points(6,2);},TimeToClear);
 
-					if(cube[7].color == secondary[0] || cube[7].color == secondary[1] || cube[7].color == secondary[2]){
-						if(cube[7].color == cube[6].color ){
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							setTimeout(function() {points(8,7);},TimeToClear);
+                        	}
+                        	timer=true;
 
-							function points(a,b){
-							//add points
-							if(timer){
+                    	}
+                    	else if(cube[5].color == cube[6].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							}
-							timer=true;
+                       		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
-						}
-						else if(cube[7].color == cube[8].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	setTimeout(function() {points(6,7);},TimeToClear);
 
-							setTimeout(function() {points(8,9);}, TimeToClear);
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	}
+                        	timer=true;
 
-							}
-							timer=true;
+                    	}
+                    	else if(cube[5].color == cube[9].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-						}
-						else if(cube[7].color == cube[4].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							setTimeout(function() {points(8,5);}, TimeToClear);
+                       		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	setTimeout(function() {points(6,10);},TimeToClear);
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							}
-							timer=true;
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-						}
-					}
+                        	}
+                        	timer=true;
 
-					if(cube[8].color == secondary[0] || cube[8].color == secondary[1] || cube[8].color == secondary[2]){
-						if(cube[8].color == cube[7].color ){
+                    	}
+   					 else if(cube[5].color == cube[4].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							//happy sounds and animations
-							matchSnd.play();
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
-							setTimeout(function() {points(9,8);}, TimeToClear);
+                       		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
-							function points(a,b){
-							//add points
-							if(timer){
+                        	setTimeout(function() {points(6,5);},TimeToClear);
 
-							points1();
-							generateMatch(a,b);
-							}
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-							}
-							timer=true;
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
-						}
-						else if(cube[8].color == cube[5].color){
-							//happy sounds and animations
-							matchSnd.play();
+                        	}
+                        	timer=true;
 
+                    	}
+                	}
 
+                	if(cube[6].color == secondary[0] || cube[6].color == secondary[1] || cube[6].color == secondary[2]){
+                    	if(cube[6].color == cube[2].color ){
 
-							setTimeout(function() {points(9,6);},TimeToClear);
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
-							function points(a,b){
-							//add points
-							if(timer){
-							points1();
-							generateMatch(a,b);
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
+                       		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
 
-							}
+                        	setTimeout(function() {points(7,3);},TimeToClear);
 
-							}
-							timer=true;
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
 
-						}
-					}
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
 
+                        	}
+                        	timer=true;
 
+                    	}
+                    	else if(cube[6].color == cube[7].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
 
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
 
+                       		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
 
-				}
-			}
+                        	setTimeout(function() {points(7,8);},TimeToClear);
 
-		}
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   			else if(cube[6].color == cube[10].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
+
+                        	setTimeout(function() {points(7,11);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   			else if(cube[6].color == cube[5].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
+
+                        	setTimeout(function() {points(7,6);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                	}
+
+                	if(cube[7].color == secondary[0] || cube[7].color == secondary[1] || cube[7].color == secondary[2]){
+                    	if(cube[7].color == cube[3].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[7].color,cube[7].x,cube[7].y);
+
+                        	setTimeout(function() {points(8,4);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[7].color == cube[6].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[7].color,cube[7].x,cube[7].y);
+
+                        	setTimeout(function() {points(8,7);}, TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[7].color == cube[11].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[7].color,cube[7].x,cube[7].y);
+
+                        	setTimeout(function() {points(8,12);}, TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                	}
+
+                	if(cube[8].color == secondary[0] || cube[8].color == secondary[1] || cube[8].color == secondary[2]){
+                    	if(cube[8].color == cube[4].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[8].color,cube[8].x,cube[8].y);
+
+                        	setTimeout(function() {points(9,5);}, TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[8].color == cube[9].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[8].color,cube[8].x,cube[8].y);
+
+
+
+                        	setTimeout(function() {points(9,10);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+                        	points1();
+                        	generateMatch(a,b);
+
+
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+						else if(cube[8].color == cube[12].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[8].color,cube[8].x,cube[8].y);
+
+
+
+                        	setTimeout(function() {points(9,13);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+                        	points1();
+                        	generateMatch(a,b);
+
+
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                	}
+       			if(cube[9].color == secondary[0] || cube[9].color == secondary[1] || cube[9].color == secondary[2]){
+                    	if(cube[9].color == cube[5].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
+
+                        	setTimeout(function() {points(10,6);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[9].color == cube[10].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
+
+                        	setTimeout(function() {points(10,11);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   			else if(cube[9].color == cube[13].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
+
+                        	setTimeout(function() {points(10,14);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   					 else if(cube[9].color == cube[8].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
+
+                        	setTimeout(function() {points(10,9);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                	}
+   			if(cube[10].color == secondary[0] || cube[10].color == secondary[1] || cube[10].color == secondary[2]){
+                    	if(cube[10].color == cube[6].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
+
+                        	setTimeout(function() {points(11,7);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[10].color == cube[11].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
+
+                        	setTimeout(function() {points(11,12);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   					 else if(cube[10].color == cube[14].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
+
+                        	setTimeout(function() {points(11,15);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   					 else if(cube[10].color == cube[9].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
+
+                        	setTimeout(function() {points(11,10);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                	}
+   				 if(cube[11].color == secondary[0] || cube[11].color == secondary[1] || cube[11].color == secondary[2]){
+                    	if(cube[11].color == cube[7].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[11].color,cube[11].x,cube[11].y);
+
+                        	setTimeout(function() {points(12,8);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[11].color == cube[10].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[11].color,cube[11].x,cube[11].y);
+
+                        	setTimeout(function() {points(12,11);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   					 else if(cube[11].color == cube[15].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[11].color,cube[11].x,cube[11].y);
+
+                        	setTimeout(function() {points(12,16);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+
+                	}
+   				 if(cube[12].color == secondary[0] || cube[12].color == secondary[1] || cube[12].color == secondary[2]){
+                    	if(cube[12].color == cube[8].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[12].color,cube[12].x,cube[12].y);
+
+                        	setTimeout(function() {points(13,9);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[12].color == cube[13].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[12].color,cube[12].x,cube[12].y);
+
+                        	setTimeout(function() {points(13,14);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+
+                	}
+   				 if(cube[13].color == secondary[0] || cube[13].color == secondary[1] || cube[13].color == secondary[2]){
+                    	if(cube[13].color == cube[9].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[13].color,cube[13].x,cube[13].y);
+
+                        	setTimeout(function() {points(14,10);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[13].color == cube[12].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[13].color,cube[13].x,cube[13].y);
+
+                        	setTimeout(function() {points(14,13);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   					 else if(cube[13].color == cube[14].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[13].color,cube[13].x,cube[13].y);
+
+                        	setTimeout(function() {points(14,15);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+
+                	}
+   				 if(cube[14].color == secondary[0] || cube[14].color == secondary[1] || cube[14].color == secondary[2]){
+                    	if(cube[14].color == cube[10].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[14].color,cube[14].x,cube[14].y);
+
+                        	setTimeout(function() {points(15,11);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[14].color == cube[15].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[14].color,cube[14].x,cube[14].y);
+
+                        	setTimeout(function() {points(15,16);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+   					 else if(cube[14].color == cube[13].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[14].color,cube[14].x,cube[14].y);
+
+                        	setTimeout(function() {points(15,14);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+
+                	}
+   				 if(cube[15].color == secondary[0] || cube[15].color == secondary[1] || cube[15].color == secondary[2]){
+                    	if(cube[15].color == cube[11].color ){
+
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[15].color,cube[15].x,cube[15].y);
+
+                        	setTimeout(function() {points(16,12);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+                    	else if(cube[15].color == cube[14].color){
+                        	//happy sounds and animations
+                	 	if(step>=0){scoring=true;}
+
+                        	//happy sounds and animations
+                        	if(scoring){matchSnd.play();}
+
+                       		scoredPoint(cube[15].color,cube[15].x,cube[15].y);
+
+                        	setTimeout(function() {points(16,15);},TimeToClear);
+
+                        	function points(a,b){
+                        	//add points
+                        	if(timer){
+
+                        	points1();
+                        	generateMatch(a,b);
+                        	}
+
+                        	}
+                        	timer=true;
+
+                    	}
+
+                	}
+
+
+
+
+            	}
+        	}
+        	}
+
+
 
 
 		//check for match win state
 		winCheck();
 
 
-
-
-		//if a non-adjacent block is tapped
-
-
-
 		//if they tap the same square twice
-		if(moveList[0] == moveList[1]){moveList[0]=moveList[1];moveList.pop(); }
-
+		//if(moveList[0] == moveList[1]){moveList[0]=moveList[1];moveList.pop(); }
+		//if(moveList[0] == moveList[1]){moveList.pop(); moveList.pop();}
 
 		//record first move, tap, or click
 		if((moveList.length) == 0){
 
-			if(movesX[0]<123 && movesX[0]>50 && movesY[0]>200 && movesY[0]<275){moveList[0]=1;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<198 && movesX[0]>123 && movesY[0]>200 && movesY[0]<275){moveList[0]=2;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<273 && movesX[0]>198 && movesY[0]>200 && movesY[0]<275){moveList[0]=3;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<123 && movesX[0]>50 && movesY[0]>275 && movesY[0]<350){moveList[0]=4;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<198 && movesX[0]>123 && movesY[0]>275 && movesY[0]<350){moveList[0]=5;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<273 && movesX[0]>198 && movesY[0]>275 && movesY[0]<350){moveList[0]=6;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<123 && movesX[0]>50 && movesY[0]>350 && movesY[0]<425){moveList[0]=7;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<198 && movesX[0]>123 && movesY[0]>350 && movesY[0]<425){moveList[0]=8;tap1.play();movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<273 && movesX[0]>198 && movesY[0]>350 && movesY[0]<425){moveList[0]=9;tap1.play();movesX[0]=null;movesY[0]=null;};
-
-			if(moveList[0] == 1){ctx2.drawImage(bdot,0,0,10,10,81.5,500,10,10);}
-
-
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>0 && movesY[0]<72){moveList[0]=1;
+			tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>0 && movesY[0]<72){moveList[0]=2;tap1.play();movesX[0]=null;movesY[0]=null; };
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>0 && movesY[0]<72){moveList[0]=3;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>0 && movesY[0]<72){moveList[0]=4;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>72 && movesY[0]<144){moveList[0]=5;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>72 && movesY[0]<144){moveList[0]=6;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>72 && movesY[0]<144){moveList[0]=7;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>72 && movesY[0]<144){moveList[0]=8;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>144 && movesY[0]<216){moveList[0]=9;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>144 && movesY[0]<216){moveList[0]=10;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>144 && movesY[0]<216){moveList[0]=11;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>144 && movesY[0]<216){moveList[0]=12;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>216 && movesY[0]<288){moveList[0]=13;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>216 && movesY[0]<288){moveList[0]=14;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>216 && movesY[0]<288){moveList[0]=15;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>216 && movesY[0]<288){moveList[0]=16;tap1.play();movesX[0]=null;movesY[0]=null;};
 
 			adjacent=true;
 		}
+
+
+
 
 
 
@@ -1254,178 +1957,426 @@ init();
 		//record second move, tap, or click
 		if((moveList.length)==1){
 
-			if(movesX[0]<123 && movesX[0]>50 && movesY[0]>200 && movesY[0]<275){moveList[1]=1;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<198 && movesX[0]>123 && movesY[0]>200 && movesY[0]<275){moveList[1]=2;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<273 && movesX[0]>198 && movesY[0]>200 && movesY[0]<275){moveList[1]=3;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<123 && movesX[0]>50 && movesY[0]>275 && movesY[0]<350){moveList[1]=4;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<198 && movesX[0]>123 && movesY[0]>275 && movesY[0]<350){moveList[1]=5;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<273 && movesX[0]>198 && movesY[0]>275 && movesY[0]<350){moveList[1]=6;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<123 && movesX[0]>50 && movesY[0]>350 && movesY[0]<425){moveList[1]=7;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<198 && movesX[0]>123 && movesY[0]>350 && movesY[0]<425){moveList[1]=8;movesX[0]=null;movesY[0]=null;};
-			if(movesX[0]<273 && movesX[0]>198 && movesY[0]>350 && movesY[0]<425){moveList[1]=9;movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>0 && movesY[0]<72){moveList[1]=1;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>0 && movesY[0]<72){moveList[1]=2;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>0 && movesY[0]<72){moveList[1]=3;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>0 && movesY[0]<72){moveList[1]=4;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>72 && movesY[0]<144){moveList[1]=5;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>72 && movesY[0]<144){moveList[1]=6;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>72 && movesY[0]<144){moveList[1]=7;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>72 && movesY[0]<144){moveList[1]=8;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>144 && movesY[0]<216){moveList[1]=9;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>144 && movesY[0]<216){moveList[1]=10;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>144 && movesY[0]<216){moveList[1]=11;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>144 && movesY[0]<216){moveList[1]=12;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<72 && movesX[0]>0 && movesY[0]>216 && movesY[0]<288){moveList[1]=13;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<144 && movesX[0]>72 && movesY[0]>216 && movesY[0]<288){moveList[1]=14;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<216 && movesX[0]>144 && movesY[0]>216 && movesY[0]<288){moveList[1]=15;tap1.play();movesX[0]=null;movesY[0]=null;};
+			if(movesX[0]<288 && movesX[0]>216 && movesY[0]>216 && movesY[0]<288){moveList[1]=16;tap1.play();movesX[0]=null;movesY[0]=null;};
+
 			adjacent=true;
 		}
 
 		//if they tap non-adjacent squares, illegal moves
 		if(moveList.length == 2){
 		if(moveList[0] == 1 && moveList[1] == 2 || moveList[0] == 2 && moveList[1] ==1 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 1 && moveList[1] == 4 || moveList[0] == 4 && moveList[1] ==1 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 2 && moveList[1] == 5 || moveList[0] == 5 && moveList[1] ==2 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 1 && moveList[1] == 5 || moveList[0] == 5 && moveList[1] ==1 ){ adjacent = true;console.log(adjacent);}
 		else if(moveList[0] == 2 && moveList[1] == 3 || moveList[0] == 3 && moveList[1] ==2 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 3 && moveList[1] == 6 || moveList[0] == 6 && moveList[1] ==3 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 4 && moveList[1] == 5 || moveList[0] == 5 && moveList[1] ==4 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 2 && moveList[1] == 6 || moveList[0] == 6 && moveList[1] ==2 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 3 && moveList[1] == 4 || moveList[0] == 4 && moveList[1] ==3 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 3 && moveList[1] == 7 || moveList[0] == 7 && moveList[1] ==3 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 4 && moveList[1] == 8 || moveList[0] == 8 && moveList[1] ==4 ){ adjacent = true;console.log(adjacent);}
 		else if(moveList[0] == 5 && moveList[1] == 6 || moveList[0] == 6 && moveList[1] ==5 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 4 && moveList[1] == 7 || moveList[0] == 7 && moveList[1] ==4 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 6 && moveList[1] == 9 || moveList[0] == 9 && moveList[1] ==6 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 8 && moveList[1] == 7 || moveList[0] == 7 && moveList[1] ==8 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 5 && moveList[1] == 8 || moveList[0] == 8 && moveList[1] ==5 ){ adjacent = true;console.log(adjacent);}
-		else if(moveList[0] == 8 && moveList[1] == 9 || moveList[0] == 9 && moveList[1] ==8 ){ adjacent = true;console.log(adjacent);}
-		else {adjacent = false; console.log(adjacent);}}
+		else if(moveList[0] == 5 && moveList[1] == 9 || moveList[0] == 9 && moveList[1] ==5 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 6 && moveList[1] == 7 || moveList[0] == 7 && moveList[1] ==6 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 6 && moveList[1] == 10 || moveList[0] == 10 && moveList[1] ==6 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 7 && moveList[1] == 8 || moveList[0] == 8 && moveList[1] ==7 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 7 && moveList[1] == 11 || moveList[0] == 11 && moveList[1] ==7 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 8 && moveList[1] == 12 || moveList[0] == 12 && moveList[1] ==8 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 9 && moveList[1] == 10 || moveList[0] == 10 && moveList[1] ==9 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 9 && moveList[1] == 13 || moveList[0] == 13 && moveList[1] ==9 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 10 && moveList[1] == 11 || moveList[0] == 11 && moveList[1] ==10 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 10 && moveList[1] == 14 || moveList[0] == 14 && moveList[1] ==10 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 11 && moveList[1] == 12 || moveList[0] == 12 && moveList[1] ==11 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 11 && moveList[1] == 15 || moveList[0] == 15 && moveList[1] ==11 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 12 && moveList[1] == 16 || moveList[0] == 16 && moveList[1] ==12 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 13 && moveList[1] == 14 || moveList[0] == 14 && moveList[1] ==13 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 14 && moveList[1] == 15 || moveList[0] == 15 && moveList[1] ==14 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == 15 && moveList[1] == 16 || moveList[0] == 16 && moveList[1] ==15 ){ adjacent = true;console.log(adjacent);}
+		else if(moveList[0] == moveList[1]){moveList.pop();moveList.pop();}
+		else{adjacent = false; console.log(adjacent);}}
 
-		if(!adjacent){ moveList.shift();
+		if(!adjacent){ moveList.shift();}
 
 
-
-
-		}
 
 		//moved the squares after getting two moves next to each other
-		if(moveList[0] == 1 && moveList[1] == 2){movecube1right=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 1 && moveList[1] == 4){movecube1down=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 2 && moveList[1] == 1){movecube2left=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 2 && moveList[1] == 5){movecube2down=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 2 && moveList[1] == 3){movecube2right=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 3 && moveList[1] == 2){movecube3left=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 3 && moveList[1] == 6){movecube3down=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 4 && moveList[1] == 1){movecube4up=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 4 && moveList[1] == 5){movecube4right=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 4 && moveList[1] == 7){movecube4down=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 5 && moveList[1] == 2){movecube5up=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 5 && moveList[1] == 4){movecube5left=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 5 && moveList[1] == 6){movecube5right=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 5 && moveList[1] == 8){movecube5down=true;moveList=[];canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
-		if(moveList[0] == 6 && moveList[1] == 3){movecube6up=true;moveList=[];}
-		if(moveList[0] == 6 && moveList[1] == 5){movecube6left=true;moveList=[];}
-		if(moveList[0] == 6 && moveList[1] == 9){movecube6down=true;moveList=[];}
-		if(moveList[0] == 7 && moveList[1] == 4){movecube7up=true;moveList=[];}
-		if(moveList[0] == 7 && moveList[1] == 8){movecube7right=true;moveList=[];}
-		if(moveList[0] == 8 && moveList[1] == 7){movecube8left=true;moveList=[];}
-		if(moveList[0] == 8 && moveList[1] == 5){movecube8up=true;moveList=[];}
-		if(moveList[0] == 8 && moveList[1] == 9){movecube8right=true;moveList=[];}
-		if(moveList[0] == 9 && moveList[1] == 8){movecube9left=true;moveList=[];}
-		if(moveList[0] == 9 && moveList[1] == 6){movecube9up=true;moveList=[];}
+		if(moveList[0] == 1 && moveList[1] == 2){movecube1right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 1 && moveList[1] == 5){movecube1down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 2 && moveList[1] == 1){movecube2left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 2 && moveList[1] == 3){movecube2right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 2 && moveList[1] == 6){movecube2down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 3 && moveList[1] == 2){movecube3left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 3 && moveList[1] == 4){movecube3right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 3 && moveList[1] == 7){movecube3down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 4 && moveList[1] == 8){movecube4down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 4 && moveList[1] == 3){movecube4left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 5 && moveList[1] == 1){movecube5up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 5 && moveList[1] == 6){movecube5right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 5 && moveList[1] == 9){movecube5down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 6 && moveList[1] == 2){movecube6up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 6 && moveList[1] == 5){movecube6left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 6 && moveList[1] == 7){movecube6right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 6 && moveList[1] == 10){movecube6down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 7 && moveList[1] == 3){movecube7up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 7 && moveList[1] == 8){movecube7right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 7 && moveList[1] == 6){movecube7left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 7 && moveList[1] == 11){movecube7down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 8 && moveList[1] == 12){movecube8down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 8 && moveList[1] == 7){movecube8left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 8 && moveList[1] == 4){movecube8up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 9 && moveList[1] == 5){movecube9up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 9 && moveList[1] == 10){movecube9right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 9 && moveList[1] == 13){movecube9down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 10 && moveList[1] == 6){movecube10up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 10 && moveList[1] == 9){movecube10left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 10 && moveList[1] == 11){movecube10right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 10 && moveList[1] == 14){movecube10down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 11 && moveList[1] == 7){movecube11up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 11 && moveList[1] == 15){movecube11down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 11 && moveList[1] == 10){movecube11left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 11 && moveList[1] == 12){movecube11right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 12 && moveList[1] == 16){movecube12down=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 12 && moveList[1] == 11){movecube12left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 12 && moveList[1] == 8){movecube12up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 13 && moveList[1] == 12){movecube13left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 13 && moveList[1] == 9){movecube13up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 13 && moveList[1] == 14){movecube13right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 14 && moveList[1] == 13){movecube14left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 14 && moveList[1] == 10){movecube14up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 14 && moveList[1] == 15){movecube14right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 15 && moveList[1] == 14){movecube15left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 15 && moveList[1] == 11){movecube15up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 15 && moveList[1] == 16){movecube15right=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 16 && moveList[1] == 12){movecube16up=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
+		if(moveList[0] == 16 && moveList[1] == 15){movecube16left=true;moveList=[]; console.log('working');
+		canv.removeEventListener('touchstart',touchHandler,false);canv.removeEventListener('click',clickHandler,false);}
+
 
 
    		//wipe the canvas clean
 		ctx.clearRect(0,0,width,height);
-		//all animation below
-
-		//bg flakes
 
 
 
 
 		//stop moving the cube and generate new cubes
-		if(movecube1right){
-		if(cube[0].x >= cube[1].x){movecube1right=false;setTimeout(generateNewCube(1,2),200);}}
 
-		if(movecube1down){
-		if(cube[0].y >= cube[3].y){movecube1down=false;	setTimeout(generateNewCube(1,4),200);}}
+    	if(movecube1right){
+    	if(cube[0].x >= cube[1].x){movecube1right=false;setTimeout(generateNewCube(1,2),200);}}
 
-		if(movecube2right){
-		if(cube[1].x >= cube[2].x){movecube2right=false;setTimeout(generateNewCube(2,3),200);}}
+    	if(movecube1down){
+    	if(cube[0].y >= cube[4].y){movecube1down=false;setTimeout(generateNewCube(1,5),200);}}
 
-		if(movecube2down){
-		if(cube[1].y >= cube[4].y){movecube2down=false;setTimeout(generateNewCube(2,5),200);}}
+    	if(movecube2right){
+    	if(cube[1].x >= cube[2].x){movecube2right=false;setTimeout(generateNewCube(2,3),200);}}
 
-		if(movecube2left){
-		if(cube[1].x <= cube[0].x){movecube2left=false;generateNewCube(2,1);}}
+    	if(movecube2down){
+    	if(cube[1].y >= cube[5].y){movecube2down=false;setTimeout(generateNewCube(2,6),200);}}
 
-		if(movecube3left){
-		if(cube[2].x <= cube[1].x){movecube3left=false;setTimeout(generateNewCube(3,2),200);}}
+    	if(movecube2left){
+    	if(cube[1].x <= cube[0].x){movecube2left=false;setTimeout(generateNewCube(2,1),200);}}
 
-		if(movecube3down){
-		if(cube[2].y >= cube[5].y){movecube3down=false;setTimeout(generateNewCube(3,6),200);}}
+    	if(movecube3right){
+    	if(cube[2].x >= cube[3].x){movecube3right=false;setTimeout(generateNewCube(3,4),200);}}
 
-		if(movecube4right){
-		if(cube[3].x >= cube[4].x){movecube4right=false;setTimeout(generateNewCube(4,5),200);}}
+    	if(movecube3left){
+    	if(cube[2].x <= cube[1].x){movecube3left=false;setTimeout(generateNewCube(3,2),200);}}
 
-		if(movecube4down){
-		if(cube[3].y >= cube[6].y){movecube4down=false;setTimeout(generateNewCube(4,7),200);}}
+    	if(movecube3down){
+    	if(cube[2].y >= cube[6].y){movecube3down=false;setTimeout(generateNewCube(3,7),200);}}
 
-		if(movecube4up){
-		if(cube[3].y <= cube[0].y){movecube4up=false;generateNewCube(4,1);}}
+    	if(movecube4down){
+    	if(cube[3].y >= cube[7].y){movecube4down=false;setTimeout(generateNewCube(4,8),200);}}
 
-		if(movecube5right){
-		if(cube[4].x >= cube[5].x){movecube5right=false;setTimeout(generateNewCube(5,6),200);}}
+    	if(movecube4left){
+    	if(cube[3].x <= cube[2].x){movecube4left=false;setTimeout(generateNewCube(4,3),200);}}
 
-		if(movecube5left){
-		if(cube[4].x <= cube[3].x){movecube5left=false;setTimeout(generateNewCube(5,4),200);}}
 
-		if(movecube5up){
-		if(cube[4].y <= cube[1].y){movecube5up=false;setTimeout(generateNewCube(5,2),200);}}
+    	if(movecube5right){
+    	if(cube[4].x >= cube[5].x){movecube5right=false;setTimeout(generateNewCube(5,6),200);}}
 
-		if(movecube5down){
-		if(cube[4].y >= cube[7].y){movecube5down=false;setTimeout(generateNewCube(5,8),200);}}
+    	if(movecube5down){
+    	if(cube[4].y >= cube[8].y){movecube5down=false;setTimeout(generateNewCube(5,9),200);}}
 
-		if(movecube6left){
-		if(cube[5].x <= cube[4].x){movecube6left=false;setTimeout(generateNewCube(6,5),200);}}
+    	if(movecube5up){
+    	if(cube[4].y <= cube[0].y){movecube5up=false;setTimeout(generateNewCube(5,1),200);}}
 
-		if(movecube6up){
-		if(cube[5].y <= cube[2].y){movecube6up=false;setTimeout(generateNewCube(6,3),200);}}
 
-		if(movecube6down){
-		if(cube[5].y >= cube[8].y){movecube6down=false;setTimeout(generateNewCube(6,9),200);}}
+    	if(movecube6right){
+    	if(cube[5].x >= cube[6].x){movecube6right=false;setTimeout(generateNewCube(6,7),200);}}
 
-		if(movecube7right){
-		if(cube[6].x >= cube[7].x){movecube7right=false;setTimeout(generateNewCube(7,8),200);}}
+    	if(movecube6down){
+    	if(cube[5].y >= cube[9].y){movecube6down=false;setTimeout(generateNewCube(6,10),200);}}
 
-		if(movecube7up){
-		if(cube[6].y <= cube[3].y){movecube7up=false;setTimeout(generateNewCube(7,4),200);}}
+    	if(movecube6left){
+    	if(cube[5].x <= cube[4].x){movecube6left=false;setTimeout(generateNewCube(6,5),200);}}
 
-		if(movecube8up){
-		if(cube[7].y <= cube[4].y){movecube8up=false;setTimeout(generateNewCube(8,5),200);}}
+    	if(movecube6up){
+    	if(cube[5].y <= cube[1].y){movecube6up=false;setTimeout(generateNewCube(6,2),200);}}
 
-		if(movecube8left){
-		if(cube[7].x <= cube[6].x){movecube8left=false;setTimeout(generateNewCube(8,7),200);}}
 
-		if(movecube8right){
-		if(cube[7].x >= cube[8].x){movecube8right=false;setTimeout(generateNewCube(8,9),200);}}
+    	if(movecube7right){
+    	if(cube[6].x >= cube[7].x){movecube7right=false;setTimeout(generateNewCube(7,8),200);}}
 
-		if(movecube9up){
-		if(cube[8].y <= cube[4].y){movecube9up=false;setTimeout(generateNewCube(9,6),200);}}
+    	if(movecube7down){
+    	if(cube[6].y >= cube[10].y){movecube7down=false;setTimeout(generateNewCube(7,11),200);}}
 
-		if(movecube9left){
-		if(cube[8].x <= cube[7].x){movecube9left=false;setTimeout(generateNewCube(9,8),200);}}
+    	if(movecube7left){
+    	if(cube[6].x <= cube[5].x){movecube7left=false;setTimeout(generateNewCube(7,6),200);}}
+
+    	if(movecube7up){
+    	if(cube[6].y <= cube[2].y){movecube7up=false;setTimeout(generateNewCube(7,3),200);}}
+
+
+    	if(movecube8up){
+    	if(cube[7].y <= cube[3].y){movecube8up=false;setTimeout(generateNewCube(8,4),200);}}
+
+    	if(movecube8down){
+    	if(cube[7].y >= cube[11].y){movecube8down=false;setTimeout(generateNewCube(8,12),200);}}
+
+    	if(movecube8left){
+    	if(cube[7].x <= cube[6].x){movecube8left=false;setTimeout(generateNewCube(8,7),200);}}
+
+
+    	if(movecube12up){
+    	if(cube[11].y <= cube[7].y){movecube12up=false;setTimeout(generateNewCube(12,8),200);}}
+
+    	if(movecube12down){
+    	if(cube[11].y >= cube[15].y){movecube12down=false;setTimeout(generateNewCube(12,16),200);}}
+
+    	if(movecube12left){
+    	if(cube[11].x <= cube[10].x){movecube12left=false;setTimeout(generateNewCube(12,11),200);}}
+
+    	if(movecube9right){
+    	if(cube[8].x >= cube[9].x){movecube9right=false;setTimeout(generateNewCube(9,10),200);}}
+
+    	if(movecube9down){
+    	if(cube[8].y >= cube[12].y){movecube9down=false;setTimeout(generateNewCube(9,13),200);}}
+
+    	if(movecube9up){
+    	if(cube[8].x <= cube[4].x){movecube9up=false;setTimeout(generateNewCube(9,5),200);}}
+
+    	if(movecube10right){
+    	if(cube[9].x >= cube[10].x){movecube10right=false;setTimeout(generateNewCube(10,11),200);}}
+
+    	if(movecube10down){
+    	if(cube[9].y >= cube[13].y){movecube10down=false;setTimeout(generateNewCube(10,14),200);}}
+
+    	if(movecube10left){
+    	if(cube[9].x <= cube[8].x){movecube10left=false;setTimeout(generateNewCube(10,9),200);}}
+
+    	if(movecube10up){
+    	if(cube[9].y <= cube[5].y){movecube10up=false;setTimeout(generateNewCube(10,6),200);}}
+
+    	if(movecube11right){
+    	if(cube[10].x >= cube[11].x){movecube11right=false;setTimeout(generateNewCube(11,12),200);}}
+
+    	if(movecube11down){
+    	if(cube[10].y >= cube[14].y){movecube11down=false;setTimeout(generateNewCube(11,15),200);}}
+
+    	if(movecube11left){
+    	if(cube[10].x <= cube[9].x){movecube11left=false;setTimeout(generateNewCube(11,10),200);}}
+
+    	if(movecube11up){
+    	if(cube[10].y <= cube[6].y){movecube11up=false;setTimeout(generateNewCube(11,7),200);}}
+
+
+    	if(movecube13right){
+    	if(cube[12].x >= cube[13].x){movecube13right=false;setTimeout(generateNewCube(13,14),200);}}
+
+    	if(movecube13up){
+    	if(cube[12].y <= cube[8].y){movecube13up=false;setTimeout(generateNewCube(13,9),200);}}
+
+    	if(movecube14right){
+    	if(cube[13].x >= cube[14].x){movecube14right=false;setTimeout(generateNewCube(14,15),200);}}
+
+    	if(movecube14up){
+    	if(cube[13].y <= cube[9].y){movecube14up=false;setTimeout(generateNewCube(14,10),200);}}
+
+    	if(movecube14left){
+    	if(cube[13].x <= cube[12].x){movecube14left=false;setTimeout(generateNewCube(14,13),200);}}
+
+    	if(movecube15right){
+    	if(cube[14].x >= cube[15].x){movecube15right=false;setTimeout(generateNewCube(15,16),200);}}
+
+    	if(movecube15left){
+    	if(cube[14].x <= cube[13].x){movecube15left=false;setTimeout(generateNewCube(15,14),200);}}
+
+    	if(movecube15up){
+    	if(cube[14].y <= cube[10].y){movecube15up=false;setTimeout(generateNewCube(15,11),200);}}
+
+    	if(movecube16up){
+    	if(cube[15].y <= cube[11].y){movecube16up=false;setTimeout(generateNewCube(16,12),200);}}
+
+    	if(movecube16left){
+    	if(cube[15].x <= cube[14].x){movecube16left=false;setTimeout(generateNewCube(16,15),200);}}
+
 
 		var mSpeed = 20;
 
 		//move the cubes
-		if(movecube1right){cube[0].x=cube[0].x+mSpeed;}
-		if(movecube1down){cube[0].y=cube[0].y+mSpeed;}
-		if(movecube2right){cube[1].x=cube[1].x+mSpeed;}
-		if(movecube2down){cube[1].y=cube[1].y+mSpeed;}
-		if(movecube2left){cube[1].x=cube[1].x-mSpeed;}
-		if(movecube3left){cube[2].x=cube[2].x-mSpeed;}
-		if(movecube3down){cube[2].y=cube[2].y+mSpeed;}
-		if(movecube4right){cube[3].x=cube[3].x+mSpeed;}
-		if(movecube4down){cube[3].y=cube[3].y+mSpeed;}
-		if(movecube4up){cube[3].y=cube[3].y-mSpeed;}
-		if(movecube5right){cube[4].x=cube[4].x+mSpeed;}
-		if(movecube5down){cube[4].y=cube[4].y+mSpeed;}
-		if(movecube5left){cube[4].x=cube[4].x-mSpeed;}
-		if(movecube5up){cube[4].y=cube[4].y-mSpeed;}
-		if(movecube6left){cube[5].x=cube[5].x-mSpeed;}
-		if(movecube6up){cube[5].y=cube[5].y-mSpeed;}
-		if(movecube6down){cube[5].y=cube[5].y+mSpeed;}
-		if(movecube7right){cube[6].x=cube[6].x+mSpeed;}
-		if(movecube7up){cube[6].y=cube[6].y-mSpeed;}
-		if(movecube8left){cube[7].x=cube[7].x-mSpeed;}
-		if(movecube8up){cube[7].y=cube[7].y-mSpeed;}
-		if(movecube8right){cube[7].x=cube[7].x+mSpeed;}
-		if(movecube9up){cube[8].y=cube[8].y-mSpeed;}
-		if(movecube9left){cube[8].x=cube[8].x-mSpeed;}
+		if(movecube1right){cube[0].x=cube[1].x+mSpeed;}
+		if(movecube1down){cube[0].y=cube[4].y+mSpeed;}
+		if(movecube2right){cube[1].x=cube[2].x+mSpeed;}
+		if(movecube2down){cube[1].y=cube[5].y+mSpeed;}
+		if(movecube2left){cube[1].x=cube[0].x-mSpeed;}
+		if(movecube3right){cube[2].x=cube[3].x+mSpeed;}
+		if(movecube3down){cube[2].y=cube[6].y+mSpeed;}
+		if(movecube3left){cube[2].x=cube[1].x-mSpeed;}
+		if(movecube4left){cube[3].x=cube[2].x-mSpeed;}
+		if(movecube4down){cube[3].y=cube[7].y+mSpeed;}
+		if(movecube5right){cube[4].x=cube[5].x+mSpeed;}
+		if(movecube5down){cube[4].y=cube[8].y+mSpeed;}
+		if(movecube5up){cube[4].y=cube[0].y-mSpeed;}
+		if(movecube6right){cube[5].x=cube[6].x+mSpeed;}
+		if(movecube6down){cube[5].y=cube[9].y+mSpeed;}
+		if(movecube6up){cube[5].y=cube[1].y-mSpeed;}
+		if(movecube6left){cube[5].x=cube[4].x-mSpeed;}
 
+		if(movecube7right){cube[6].x=cube[7].x+mSpeed;}
+		if(movecube7down){cube[6].y=cube[10].y+mSpeed;}
+		if(movecube7up){cube[6].y=cube[2].y-mSpeed;}
+		if(movecube7left){cube[6].x=cube[5].x-mSpeed;}
+
+		if(movecube10right){cube[9].x=cube[10].x+mSpeed;}
+		if(movecube10down){cube[9].y=cube[13].y+mSpeed;}
+		if(movecube10up){cube[9].y=cube[5].y-mSpeed;}
+		if(movecube10left){cube[9].x=cube[8].x-mSpeed;}
+
+		if(movecube11right){cube[10].x=cube[11].x+mSpeed;}
+		if(movecube11down){cube[10].y=cube[14].y+mSpeed;}
+		if(movecube11up){cube[10].y=cube[6].y-mSpeed;}
+		if(movecube11left){cube[10].x=cube[9].x-mSpeed;}
+
+		if(movecube8left){cube[7].x=cube[6].x-mSpeed;}
+		if(movecube8down){cube[7].y=cube[11].y+mSpeed;}
+		if(movecube8up){cube[7].y=cube[3].y-mSpeed;}
+
+		if(movecube9right){cube[8].x=cube[9].x+mSpeed;}
+		if(movecube9down){cube[8].y=cube[12].y+mSpeed;}
+		if(movecube9up){cube[8].y=cube[4].y-mSpeed;}
+
+		if(movecube12left){cube[11].x=cube[10].x-mSpeed;}
+		if(movecube12down){cube[11].y=cube[15].y+mSpeed;}
+		if(movecube12up){cube[11].y=cube[7].y-mSpeed;}
+
+		if(movecube13right){cube[12].x=cube[13].x+mSpeed;}
+		if(movecube13up){cube[12].y=cube[8].y-mSpeed;}
+		if(movecube14right){cube[13].x=cube[14].x+mSpeed;}
+		if(movecube14up){cube[13].y=cube[9].y-mSpeed;}
+		if(movecube14left){cube[13].x=cube[12].x-mSpeed;}
+		if(movecube15right){cube[14].x=cube[15].x+mSpeed;}
+		if(movecube15up){cube[14].y=cube[11].y-mSpeed;}
+		if(movecube15left){cube[14].x=cube[13].x-mSpeed;}
+		if(movecube16left){cube[15].x=cube[14].x-mSpeed;}
+		if(movecube16up){cube[15].y=cube[11].y-mSpeed;}
 
 
 
@@ -1438,32 +2389,77 @@ init();
  			ctx.rect(cube[i].x, cube[i].y, cube[i].width, cube[i].height);
  			ctx.fill();
 
- 			ctx.lineWidth = cube[i].borderW;
-      			ctx.strokeStyle = 'black';
-      			ctx.stroke();
+ 			//highlight the cube picked
+
+ 			//ctx.shadowColor = cube[i].cubeShadow;
+
+			//ctx.shadowBlur=cube[i].cubeBlur;
+			ctx.lineWidth = cube[i].borderW;
+      		ctx.strokeStyle = cube[i].borderColor;
+      		ctx.stroke();
+
+
+
+
 
  		}
 
-		if(gameTime){requestAnimationFrame(update);}
 
+
+	step++;
+
+	if(step%30==0){step2=0}
+
+	if(scoring){
+
+
+
+			ctx.fillStyle = colorIt;
+ 			ctx.beginPath();
+ 			ctx.rect(scorex-39, scorey-49, 80, 80);
+ 			ctx.fill();
+
+      			ctx.stroke();
+
+	    ctx.fillStyle = scoreColor;
+            ctx.textAlign = "center";
+
+
+		step2++;
+		if(step2<=3){
+			step3 = 6;
+            ctx.save();
+            ctx.translate(scorex,scorey);
+            ctx.font = (step3 + 6)+ "pt Helvetica";
+            ctx.fillText("+100", 0, 0);
+            ctx.restore();
+		}
+
+
+		if(step2 >3){
+			step3 = 10;
+            ctx.save();
+            ctx.translate(scorex, scorey);
+            ctx.font = "bold " + (step3 + 5)+ "pt Helvetica";
+            ctx.fillText("+100 ", 0, 0);
+            ctx.restore();}
+
+	if(step2 >= 8){
+	scoring=false;
+	}
+
+
+	}
+
+
+		if(gameTime){requestAnimationFrame(update);}
 
 		}
 
 
-		//detect keys
-		window.addEventListener("keydown", function(e) {
-
-		});
-
-		window.addEventListener("keyup", function(e) {
-
-
-		});
-
 		var canv = document.getElementById('canvas');
 		canv.addEventListener('touchstart',touchHandler,false);
 		canv.addEventListener('click',clickHandler,false);
-
 
 
 			//check cube 1
@@ -1476,24 +2472,24 @@ init();
 
 			//this works alert(moves[0]);
 
-			e.preventDefault();
-
-
 		}
+
 
 		function clickHandler(e){
 			var clickedX = e.pageX - this.offsetLeft;
     			var clickedY = e.pageY - this.offsetTop;
     			movesX[0]=clickedX;
     			movesY[0]=clickedY;
+				e.preventDefault();
 
-			e.preventDefault();
 		}
 
-		//this is not working for some reason
+
+
 
 		window.addEventListener("load", function(){update();});
 	</script>
+
 
 </div>
 </body>
