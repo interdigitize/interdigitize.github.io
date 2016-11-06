@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 05 Nov 2016 23:37:41 -0700</pubDate>
-    <lastBuildDate>Sat, 05 Nov 2016 23:37:41 -0700</lastBuildDate>
+    <pubDate>Sun, 06 Nov 2016 14:40:31 -0800</pubDate>
+    <lastBuildDate>Sun, 06 Nov 2016 14:40:31 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -261,18 +261,16 @@
     
       <item>
         <title>Additive Color Game </title>
-        <description>&lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;div class=&quot;mdl-grid&quot;&gt;
+        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
     &lt;p&gt;
       Taylor Nelson, Joshua Chavez and Kamie came up with this mix-and-match color game to passively teach &lt;a href=&quot;https://en.wikipedia.org/wiki/Additive_color&quot;&gt;additive color theory&lt;/a&gt;.
     &lt;/p&gt;
     &lt;p&gt;
-      Players swipe a red, green or blue square into another square to combine them to make a &lt;a href=&quot;https://en.wikipedia.org/wiki/Secondary_color#Light_.28RGB.29&quot;&gt;secondary&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Tertiary_color&quot;&gt;tertiary&lt;/a&gt; color. (If you are on a computer, click the first square, then the second.) You earn points if you get two matching secondary or tertiary colors next to each other!
+      Players swipe a red, green or blue square into another square to combine them to make a &lt;a href=&quot;https://en.wikipedia.org/wiki/Secondary_color#Light_.28RGB.29&quot;&gt;secondary&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Tertiary_color&quot;&gt;tertiary&lt;/a&gt; color. (If you are on a computer, instead of swiping, click the first square, then the second.) You earn points if you get two matching secondary or tertiary colors next to each other!
     &lt;/p&gt;
     &lt;p&gt;
-      The goal is to see how many points you can get before time runs out.
+      This iteration doesn't include a countdown, but the goal was to see how many points you could earn before a timer reached zero. As mixing colors becomes more familiar, focus on which blocks to swipe or click decreases and your score increases.
     &lt;/p&gt;
 
   &lt;/div&gt;
@@ -281,29 +279,25 @@
 
   &lt;iframe src=&quot;http://www.interdigitize.com/additive.html&quot; height=&quot;340&quot;&gt;&lt;/iframe&gt;
     &lt;br /&gt;
-    The MVP from Angel Hack LA in May 2014. Taylor, Josh and Kamie jointly worked on the concept. Taylor headed the dev. Kamie mocked up the design. 
+    The MVP from Angel Hack LA in May 2014. Taylor, Josh and Kamie jointly worked on the concept. Taylor headed the dev. Kamie mocked up the design.
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-1.jpg&quot; alt=&quot;Additive mockup screen 1 - the logo and description, the mix-then-match color game.&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-2.jpg&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-3.jpg&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-4.jpg&quot; alt=&quot;Additive mockup screen 2 - mix blue with green&quot; /&gt;  
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Tue, 20 May 2014 01:24:54 -0700</pubDate>
         <link>http://www.interdigitize.com/2014/05/20/additive-color-game.html</link>
         <guid isPermaLink="true">http://www.interdigitize.com/2014/05/20/additive-color-game.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Symmetrica</title>
-        <description>&lt;p&gt;Symmetrica is based on Rorschach ink blot tests. Designer &lt;a href=&quot;https://www.behance.net/richblake&quot;&gt;Richard Blake&lt;/a&gt; developed five laser cut headpieces to examine the fusion of fashion, graphic design, and psychology. Symmetrica aims to highlight human features through dimensional wearable sculptures and emphasize awareness to the individual guise.&lt;/p&gt;
-
-&lt;p&gt;Kamie photographed the pieces for Richard. The photos were selected to be included in this book, &lt;a href=&quot;http://victionary.com/product/making-a-splash/&quot;&gt;Making a Splash: Graphics that Flow&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-01-10-symmetrica-making-a-splash_thumb.png&quot; alt=&quot;Making a Splash: Graphics that Flow&quot; /&gt;
-&lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-01-10-symmetrica.jpg&quot; alt=&quot;A photo of one of Richard's laser cut headpieces&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 10 Jan 2014 01:23:05 -0800</pubDate>
-        <link>http://www.interdigitize.com/2014/01/10/symmetrica.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2014/01/10/symmetrica.html</guid>
         
         
       </item>
@@ -336,6 +330,53 @@
         <pubDate>Wed, 24 Apr 2013 11:12:43 -0700</pubDate>
         <link>http://www.interdigitize.com/2013/04/24/a-laser-cut-record.html</link>
         <guid isPermaLink="true">http://www.interdigitize.com/2013/04/24/a-laser-cut-record.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Learning about biological pest control with GAIA in Israel</title>
+        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;p&gt;
+      Kamie and a classmate, &lt;a href=&quot;http://studioames.com/&quot;&gt;Amy Lee Walton&lt;/a&gt;, received a research grant from Maryland Institute College of Art to attend, observe and learn about the collaborative structure and hands-on teaching methodologies as well as document the trip and create summary posters and videos.
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;div class=&quot;embed-container&quot;&gt;
+      &lt;iframe src=&quot;https://www.youtube.com/embed/DE-F8M25FoI?list=PLXLGpLk5RLCWKkMH9PI1a_HCtZX283lll&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;&lt;br /&gt;
+    GAIA (Global Awareness, Investigation and Action) Environmental Youth Collaboration Program completed its eight-week agenda with a four-day investigative trip to the Galilee and Negev in Israel. The trip focus was on scientific discovery regarding biological pest control. Participants included students from five schools in Israel as well two partner schools from the Czech Republic. Leading the trip was Dr. Stuart Fleischer, Director of Project GAIA and Dr. Motti Charter of Haifa University.
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-1.jpg&quot; alt=&quot;Mud bricks and lip balm — service learning at Desert Daughter in the Negev&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt; &lt;br /&gt;&lt;br /&gt;
+    Mud bricks and lip balm — service learning at Desert Daughter in the Negev&lt;br /&gt;&lt;br /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-2.jpg&quot; alt=&quot;The Hula Valley: exploring and learning about bird ringing&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt; &lt;br /&gt;&lt;br /&gt;
+    The Hula Valley: exploring and learning about bird ringing&lt;br /&gt;&lt;br /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-3.jpg&quot; alt=&quot;Building Bird Boxes at Kfar Kama&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt; &lt;br /&gt;&lt;br /&gt;
+    Building Bird Boxes at Kfar Kama&lt;br /&gt;&lt;br /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-4.jpg&quot; alt=&quot;&amp;quot;Working with nature instead of against nature&amp;quot; at Sde Eliyahu&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+    &quot;Working with nature instead of against nature&quot; at Sde Eliyahu&lt;br /&gt;&lt;br /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-5.jpg&quot; alt=&quot;Prepping for the Year of the Sea&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+    Prepping for the Year of the Sea&lt;br /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-map.jpg&quot; alt=&quot;Map of the GAIA trip&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+    Map of the GAIA trip
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 26 Mar 2013 15:12:04 -0700</pubDate>
+        <link>http://www.interdigitize.com/2013/03/26/gaia.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2013/03/26/gaia.html</guid>
         
         
       </item>
