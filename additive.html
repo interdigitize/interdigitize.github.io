@@ -9,11 +9,11 @@
 
 
 		<style>
-	div#wrapper {
+	/*div#wrapper {
 		width: 320px;
 		height:568px;
-		/*background-image: url('playb.png');*/
-	}
+		background-image: url('playb.png');
+	}*/
 	canvas#canvas{
 		position: absolute;
 		top: 274px;
@@ -30,20 +30,20 @@
 		height: 40px;
 		font-family: Helvetica;
 	}
-	div#sound{
+	/*div#sound{
 		position: absolute;
 		top: 100px;
 		width:40px;
 		height: 40px;
-	}
-	div#music{
+	}*/
+	/*div#music{
 		position: absolute;
 		top: 100px;
 
 		width:40px;
 		height: 40px;
-	}
-	div#div1{
+	}*/
+	/*div#div1{
 		position: absolute;
 		z-index: 8;
 		width: 320px;
@@ -66,27 +66,25 @@
 		height: 568px;
 		border: 1px solid #ccc;
 		background-image: url('screen3.png');
-	}
+	}*/
 		</style>
 
 	</head>
 
 <body >
 <div id='wrapper'>
-
+<!--
 <div id='div1'></div>
 <div id='div2'></div>
-<div id='div3'></div>
+<div id='div3'></div> -->
 	<canvas id='canvas'></canvas>
-
-
 	<div id="score"><div id="scorespan"></div></div>
 
-	<div id='music' onclick="musicSelector()"></div>
-	<div id='sound' onclick="soundSelector()"></div>
+	<!-- <div id='music' onclick="musicSelector()"></div> -->
+	<!-- <div id='sound' onclick="soundSelector()"></div> -->
 
 
-<script >
+<!-- <script >
 //jquery section
 $(document).ready(function(){
 
@@ -96,81 +94,76 @@ $(document).ready(function(){
 
 
 
-document.getElementById('div1').addEventListener('click',function(e){
-    document.getElementById('div1').style.display = 'none';
-});
-
-document.getElementById('div2').addEventListener('click',function(e){
-    document.getElementById('div2').style.display = 'none';
-});
-
-document.getElementById('div3').addEventListener('click',function(e){
-    document.getElementById('div3').style.display = 'none';
-});
+// document.getElementById('div1').addEventListener('click',function(e){
+//     document.getElementById('div1').style.display = 'none';
+// });
+//
+// document.getElementById('div2').addEventListener('click',function(e){
+//     document.getElementById('div2').style.display = 'none';
+// });
+//
+// document.getElementById('div3').addEventListener('click',function(e){
+//     document.getElementById('div3').style.display = 'none';
+// });
 
 //background noises code
-	var soundsOnCnt = 0;
-	var soundsOn = true;
-	var jumpsnd = new Audio('bubble.mp3');
-	var matchSnd = new Audio('bonus.mp3');
-	var tap1 = new Audio('click-3.mp3');
-	function soundSelector(){
-		soundsOnCnt++;
-	}
+	// var soundsOnCnt = 0;
+	// var soundsOn = true;
+	// var jumpsnd = new Audio('bubble.mp3');
+	// var matchSnd = new Audio('bonus.mp3');
+	// var tap1 = new Audio('click-3.mp3');
+	// function soundSelector(){
+	// 	soundsOnCnt++;
+	// }
 
 //load sound files
 
 
 
 //background music code
-	var pauseCount = 0;
-
-	function musicSelector(){
-		pauseCount++;
-		if(pauseCount % 2 == 0){
-			resumeMusic();
-			document.getElementById('music').style.backgroundPosition="0px 0";
-		}
-		else{pauseMusic();
-		document.getElementById('music').style.backgroundPosition="42px 0";
-		}
-	}
-
-
-
-	function pauseMusic() {
-		myAudio.pause();
-	}
-
-	function resumeMusic() {
-		myAudio = new Audio('bte.mp3');
-		myAudio.addEventListener('ended', function() {
-	    this.currentTime = 0;
-	    this.play();
-	}, false);
-	myAudio.volume = 0.15;
-	myAudio.play();}
+	// var pauseCount = 0;
+	//
+	// function musicSelector(){
+	// 	pauseCount++;
+	// 	if(pauseCount % 2 == 0){
+	// 		resumeMusic();
+	// 		document.getElementById('music').style.backgroundPosition="0px 0";
+	// 	}
+	// 	else{pauseMusic();
+	// 	document.getElementById('music').style.backgroundPosition="42px 0";
+	// 	}
+	// }
 
 
 
-</script>
+	// function pauseMusic() {
+	// 	myAudio.pause();
+	// }
+	//
+	// function resumeMusic() {
+	// 	myAudio = new Audio('bte.mp3');
+	// 	myAudio.addEventListener('ended', function() {
+	//     this.currentTime = 0;
+	//     this.play();
+	// }, false);
+	// myAudio.volume = 0.15;
+	// myAudio.play();}
+
+</script> -->
 
 	<script type='text/javascript'>
-	//create and call  timer
+	//create and call timer
 	clockTime = 1;
 	gameTime = 1;
 
-
-
-	function startGameMusic(){
-		//gamestart sound
-	}
-
-	if(clockTime == 59){
-		startGameMusic();
-
-
-	}
+	// 
+	// function startGameMusic(){
+	// 	//gamestart sound
+	// }
+	//
+	// if(clockTime == 59){
+	// 	startGameMusic();
+	// }
 
 
 	function fgameTime(){ gameTime = false;}
@@ -525,18 +518,18 @@ document.getElementById('div3').addEventListener('click',function(e){
 			else{cube[x].borderColor = 'black';cube[x].borderW = 1;cube[x].cubeShadow ='';cube[x].cubeBlur = 0; }
 			}
 
-		if(soundsOnCnt%2 == 0){
-			jumpsnd.volume=0.25;
-			matchSnd.volume=0.25;
-			tap1.volume=0.35;
-			document.getElementById('sound').style.backgroundPosition="0 0";
-		}
-		else{
-			jumpsnd.volume=0.0;
-			matchSnd.volume=0.0;
-			tap1.volume=0.0;
-			document.getElementById('sound').style.backgroundPosition="42px 0";
-		}
+		// if(soundsOnCnt%2 == 0){
+		// 	jumpsnd.volume=0.25;
+		// 	matchSnd.volume=0.25;
+		// 	tap1.volume=0.35;
+		// 	document.getElementById('sound').style.backgroundPosition="0 0";
+		// }
+		// else{
+		// 	jumpsnd.volume=0.0;
+		// 	matchSnd.volume=0.0;
+		// 	tap1.volume=0.0;
+		// 	document.getElementById('sound').style.backgroundPosition="42px 0";
+		// }
 
 		//update stuff
 		if(!gameTime){ //stuff to happen when game ends within loop
@@ -582,7 +575,7 @@ document.getElementById('div3').addEventListener('click',function(e){
 			cube[firstcube-1].y = fy;
 
 			//sound indicating that gameplay has resumed
-			jumpsnd.play();
+			// jumpsnd.play();
 
 			setTimeout(listenersBack,100);
 
@@ -687,7 +680,7 @@ document.getElementById('div3').addEventListener('click',function(e){
 			else if(cube2 == 6){randColor2 = Math.floor(Math.random() * primary.length); cube[5].color=primary[randColor2];}
 
 			//play new generate sound
-			jumpsnd.play();
+			// jumpsnd.play();
 
 		}
 
@@ -736,7 +729,7 @@ function winCheck(){
                    	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	// //if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[0].color,cube[0].x,cube[0].y);
 
@@ -760,7 +753,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	// //if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[0].color,cube[0].x,cube[0].y);
 
@@ -787,7 +780,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[1].color,cube[1].x,cube[1].y);
 
@@ -810,7 +803,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[1].color,cube[1].x,cube[1].y);
 
@@ -833,7 +826,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[1].color,cube[1].x,cube[1].y);
 
@@ -861,7 +854,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[2].color,cube[2].x,cube[2].y);
 
@@ -884,7 +877,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[2].color,cube[2].x,cube[2].y);;
 
@@ -907,7 +900,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[2].color,cube[2].x,cube[2].y);
 
@@ -934,7 +927,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[3].color,cube[3].x,cube[3].y);
 
@@ -957,7 +950,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[3].color,cube[3].x,cube[3].y);
 
@@ -985,7 +978,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[4].color,cube[4].x,cube[4].y);
 
@@ -1008,7 +1001,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[4].color,cube[4].x,cube[4].y);
 
@@ -1031,7 +1024,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
@@ -1059,7 +1052,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
@@ -1082,7 +1075,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
@@ -1105,7 +1098,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
@@ -1128,7 +1121,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[5].color,cube[5].x,cube[5].y);
 
@@ -1155,7 +1148,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
 
@@ -1178,7 +1171,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
 
@@ -1201,7 +1194,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
 
@@ -1224,7 +1217,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[6].color,cube[6].x,cube[6].y);
 
@@ -1251,7 +1244,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[7].color,cube[7].x,cube[7].y);
 
@@ -1274,7 +1267,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[7].color,cube[7].x,cube[7].y);
 
@@ -1297,7 +1290,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[7].color,cube[7].x,cube[7].y);
 
@@ -1324,7 +1317,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[8].color,cube[8].x,cube[8].y);
 
@@ -1347,7 +1340,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[8].color,cube[8].x,cube[8].y);
 
@@ -1373,7 +1366,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[8].color,cube[8].x,cube[8].y);
 
@@ -1402,7 +1395,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
 
@@ -1425,7 +1418,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
 
@@ -1448,7 +1441,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
 
@@ -1471,7 +1464,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[9].color,cube[9].x,cube[9].y);
 
@@ -1497,7 +1490,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
 
@@ -1520,7 +1513,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
 
@@ -1543,7 +1536,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
 
@@ -1566,7 +1559,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[10].color,cube[10].x,cube[10].y);
 
@@ -1592,7 +1585,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[11].color,cube[11].x,cube[11].y);
 
@@ -1615,7 +1608,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[11].color,cube[11].x,cube[11].y);
 
@@ -1638,7 +1631,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[11].color,cube[11].x,cube[11].y);
 
@@ -1665,7 +1658,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[12].color,cube[12].x,cube[12].y);
 
@@ -1688,7 +1681,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[12].color,cube[12].x,cube[12].y);
 
@@ -1715,7 +1708,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[13].color,cube[13].x,cube[13].y);
 
@@ -1738,7 +1731,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[13].color,cube[13].x,cube[13].y);
 
@@ -1761,7 +1754,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[13].color,cube[13].x,cube[13].y);
 
@@ -1788,7 +1781,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[14].color,cube[14].x,cube[14].y);
 
@@ -1811,7 +1804,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[14].color,cube[14].x,cube[14].y);
 
@@ -1834,7 +1827,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[14].color,cube[14].x,cube[14].y);
 
@@ -1861,7 +1854,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[15].color,cube[15].x,cube[15].y);
 
@@ -1884,7 +1877,7 @@ function winCheck(){
                 	 	if(step>=0){scoring=true;}
 
                         	//happy sounds and animations
-                        	if(scoring){matchSnd.play();}
+                        	//if(scoring){matchSnd.play();}
 
                        		scoredPoint(cube[15].color,cube[15].x,cube[15].y);
 
