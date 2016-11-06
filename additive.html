@@ -9,11 +9,11 @@
 
 
 		<style>
-	/*div#wrapper {
+	div#wrapper {
 		width: 320px;
-		height:568px;
-		background-image: url('playb.png');
-	}*/
+		height:340px;
+		/*background-image: url('playb.png');*/
+	}
 	canvas#canvas{
 		position: absolute;
 		top: 274px;
@@ -22,7 +22,7 @@
 		height:292px;
 		z-index: 5;
 	}
-	div#score{
+	/*div#score{
 		position: absolute;
 		top: 239px;
 		left: 122px;
@@ -30,20 +30,20 @@
 		height: 40px;
 		font-family: Helvetica;
 	}
-	/*div#sound{
+	div#sound{
 		position: absolute;
 		top: 100px;
 		width:40px;
 		height: 40px;
-	}*/
-	/*div#music{
+	}
+	div#music{
 		position: absolute;
 		top: 100px;
 
 		width:40px;
 		height: 40px;
-	}*/
-	/*div#div1{
+	}
+	div#div1{
 		position: absolute;
 		z-index: 8;
 		width: 320px;
@@ -147,6 +147,8 @@ document.getElementById('div3').addEventListener('click',function(e){
 	myAudio.volume = 0.15;
 	myAudio.play();}
 
+
+
 </script>
 
 	<script type='text/javascript'>
@@ -155,12 +157,15 @@ document.getElementById('div3').addEventListener('click',function(e){
 	gameTime = 1;
 
 
+
 	function startGameMusic(){
 		//gamestart sound
 	}
 
 	if(clockTime == 59){
 		startGameMusic();
+
+
 	}
 
 
@@ -516,18 +521,18 @@ document.getElementById('div3').addEventListener('click',function(e){
 			else{cube[x].borderColor = 'black';cube[x].borderW = 1;cube[x].cubeShadow ='';cube[x].cubeBlur = 0; }
 			}
 
-		// if(soundsOnCnt%2 == 0){
-		// 	jumpsnd.volume=0.25;
-		// 	matchSnd.volume=0.25;
-		// 	tap1.volume=0.35;
-		// 	document.getElementById('sound').style.backgroundPosition="0 0";
-		// }
-		// else{
-		// 	jumpsnd.volume=0.0;
-		// 	matchSnd.volume=0.0;
-		// 	tap1.volume=0.0;
-		// 	document.getElementById('sound').style.backgroundPosition="42px 0";
-		// }
+		if(soundsOnCnt%2 == 0){
+			jumpsnd.volume=0.25;
+			matchSnd.volume=0.25;
+			tap1.volume=0.35;
+			document.getElementById('sound').style.backgroundPosition="0 0";
+		}
+		else{
+			jumpsnd.volume=0.0;
+			matchSnd.volume=0.0;
+			tap1.volume=0.0;
+			document.getElementById('sound').style.backgroundPosition="42px 0";
+		}
 
 		//update stuff
 		if(!gameTime){ //stuff to happen when game ends within loop
