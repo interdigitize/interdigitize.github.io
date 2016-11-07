@@ -82,19 +82,13 @@
 
 	<div id="score"><div id="scorespan"></div></div>
 
-	<div id='music' onclick="musicSelector()"></div>
-	<div id='sound' onclick="soundSelector()"></div>
+	<!-- <div id='music' onclick="musicSelector()"></div> -->
+	<!-- <div id='sound' onclick="soundSelector()"></div> -->
 
 
 <script >
 //jquery section
-$(document).ready(function(){
-
-
-});
-
-
-
+$(document).ready(function(){});
 
 // document.getElementById('div1').addEventListener('click',function(e){
 //     document.getElementById('div1').style.display = 'none';
@@ -108,19 +102,7 @@ document.getElementById('div3').addEventListener('click',function(e){
     document.getElementById('div3').style.display = 'none';
 });
 
-//background noises code
-	var soundsOnCnt = 0;
-	var soundsOn = true;
-	var jumpsnd = ;//new Audio('bubble.mp3');
-	var matchSnd = ;//new Audio('bonus.mp3');
-	var tap1 = ;//new Audio('click-3.mp3');
-	function soundSelector(){
-		soundsOnCnt++;
-	}
-
 //load sound files
-
-
 
 //background music code
 	// var pauseCount = 0;
@@ -150,17 +132,25 @@ document.getElementById('div3').addEventListener('click',function(e){
 	// }, false);
 	// myAudio.volume = 0.15;
 	// myAudio.play();}
-	//
-
 
 </script>
 
 	<script type='text/javascript'>
-	//create and call  timer
+
+	//background noises code
+		var soundsOnCnt = 0;
+		var soundsOn = true;
+		var jumpsnd = ;//new Audio('bubble.mp3');
+		var matchSnd = ;//new Audio('bonus.mp3');
+		var tap1 = ;//new Audio('click-3.mp3');
+		function soundSelector(){
+			soundsOnCnt++;
+		}
+
+
+	//create and call timer
 	clockTime = 1;
 	gameTime = 1;
-
-
 
 	// function startGameMusic(){
 	// 	//gamestart sound
@@ -168,7 +158,6 @@ document.getElementById('div3').addEventListener('click',function(e){
 	//
 	// if(clockTime == 59){
 	// 	startGameMusic();
-	//
 	//
 	// }
 
