@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Nov 2016 23:08:20 -0800</pubDate>
-    <lastBuildDate>Sun, 06 Nov 2016 23:08:20 -0800</lastBuildDate>
+    <pubDate>Mon, 07 Nov 2016 06:42:35 -0800</pubDate>
+    <lastBuildDate>Mon, 07 Nov 2016 06:42:35 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -272,14 +272,16 @@
     &lt;p&gt;
       This iteration doesn't include a countdown, but the goal was to see how many points you could earn before a timer reached zero. As mixing colors becomes more familiar, focus on which blocks to swipe or click decreases and your score climbs.
     &lt;/p&gt;
+    &lt;p&gt;
+      Here is the MVP demo from Angel Hack LA in May 2014. Taylor, Josh and Kamie jointly worked on the concept. Taylor headed the dev. Kamie mocked up the design.
+    &lt;/p&gt;
 
   &lt;/div&gt;
 
   &lt;div class=&quot;mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
 
-  &lt;iframe src=&quot;http://www.interdigitize.com/additive.html&quot; height=&quot;570&quot;&gt;&lt;/iframe&gt;
-    &lt;br /&gt;
-    The MVP from Angel Hack LA in May 2014. Taylor, Josh and Kamie jointly worked on the concept. Taylor headed the dev. Kamie mocked up the design.
+  &lt;iframe src=&quot;http://www.interdigitize.com/additive.html&quot; height=&quot;590&quot;&gt;&lt;/iframe&gt;
+
   &lt;/div&gt;
 
   &lt;div class=&quot;mdl-cell mdl-cell--12-col&quot;&gt;
