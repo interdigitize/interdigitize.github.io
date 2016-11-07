@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<meta name="author" content="Taylor Nelson, Kamie Robinson, Joshua Chavez ">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<meta name="author" content="Taylor Nelson, Kamie Robinson, Joshua Chavez">
 	<meta property="og:description" content="A mix-and-match color game " />
 	<meta property="og:title" content="Additive color game" />
 
@@ -12,7 +12,7 @@
 	div#wrapper {
 		width: 320px;
 		height:340px;
-		background-image: url('playb.png');
+		/*background-image: url('playb.png');*/
 	}
 	canvas#canvas{
 		position: absolute;
@@ -525,18 +525,18 @@ document.getElementById('div3').addEventListener('click',function(e){
 			else{cube[x].borderColor = 'black';cube[x].borderW = 1;cube[x].cubeShadow ='';cube[x].cubeBlur = 0; }
 			}
 
-		if(soundsOnCnt%2 == 0){
-			jumpsnd.volume=0.25;
-			matchSnd.volume=0.25;
-			tap1.volume=0.35;
-			document.getElementById('sound').style.backgroundPosition="0 0";
-		}
-		else{
-			jumpsnd.volume=0.0;
-			matchSnd.volume=0.0;
-			tap1.volume=0.0;
-			document.getElementById('sound').style.backgroundPosition="42px 0";
-		}
+		// if(soundsOnCnt%2 == 0){
+		// 	jumpsnd.volume=0.25;
+		// 	matchSnd.volume=0.25;
+		// 	tap1.volume=0.35;
+		// 	document.getElementById('sound').style.backgroundPosition="0 0";
+		// }
+		// else{
+		// 	jumpsnd.volume=0.0;
+		// 	matchSnd.volume=0.0;
+		// 	tap1.volume=0.0;
+		// 	document.getElementById('sound').style.backgroundPosition="42px 0";
+		// }
 
 		//update stuff
 		if(!gameTime){ //stuff to happen when game ends within loop
