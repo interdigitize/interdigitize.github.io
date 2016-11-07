@@ -310,3 +310,6 @@ footer .copyright {
   left: 0;
   width: 100%;
   height: 100%; }
+
+.border-gray {
+  border: 1px #e9e9e9 solid; }

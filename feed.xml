@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 06 Nov 2016 14:40:31 -0800</pubDate>
-    <lastBuildDate>Sun, 06 Nov 2016 14:40:31 -0800</lastBuildDate>
+    <pubDate>Sun, 06 Nov 2016 22:57:54 -0800</pubDate>
+    <lastBuildDate>Sun, 06 Nov 2016 22:57:54 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -270,7 +270,7 @@
       Players swipe a red, green or blue square into another square to combine them to make a &lt;a href=&quot;https://en.wikipedia.org/wiki/Secondary_color#Light_.28RGB.29&quot;&gt;secondary&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Tertiary_color&quot;&gt;tertiary&lt;/a&gt; color. (If you are on a computer, instead of swiping, click the first square, then the second.) You earn points if you get two matching secondary or tertiary colors next to each other!
     &lt;/p&gt;
     &lt;p&gt;
-      This iteration doesn't include a countdown, but the goal was to see how many points you could earn before a timer reached zero. As mixing colors becomes more familiar, focus on which blocks to swipe or click decreases and your score increases.
+      This iteration doesn't include a countdown, but the goal was to see how many points you could earn before a timer reached zero. As mixing colors becomes more familiar, focus on which blocks to swipe or click decreases and your score climbs.
     &lt;/p&gt;
 
   &lt;/div&gt;
@@ -281,17 +281,39 @@
     &lt;br /&gt;
     The MVP from Angel Hack LA in May 2014. Taylor, Josh and Kamie jointly worked on the concept. Taylor headed the dev. Kamie mocked up the design.
   &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-1.jpg&quot; alt=&quot;Additive mockup screen 1 - the logo and description, the mix-then-match color game.&quot; /&gt;  
+
+  &lt;div class=&quot;mdl-cell mdl-cell--12-col&quot;&gt;
+    &lt;h4&gt;App mockup to introduce how to play the game:&lt;/h4&gt;
   &lt;/div&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-2.jpg&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-1.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 1 - the logo and description, the mix-then-match color game.&quot; /&gt;  
   &lt;/div&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-3.jpg&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-2.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
   &lt;/div&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-4.jpg&quot; alt=&quot;Additive mockup screen 2 - mix blue with green&quot; /&gt;  
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-3.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-4.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - mix blue with green&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-5.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - content transition&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-6.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - mix blue with green a second time&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-7.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - cyan match&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-8.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - content transition&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-9.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - game description, 'mix red, green and blue squares to create new colors—like cyan. Match new colors for points.'&quot; /&gt;  
+  &lt;/div&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-10.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - challenge, 'How many points can you get in 60 seconds? SWIPE TO PLAY'&quot; /&gt;  
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
