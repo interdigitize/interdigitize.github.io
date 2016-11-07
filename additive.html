@@ -3,16 +3,15 @@
 <html>
 	<head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<meta name="author" content="Taylor Nelson, Kamie Robinson, Joshua Chavez">
-	<meta property="og:description" content="A mix-and-match color game " />
+	<meta name="author" content="Taylor Nelson, Kamie Robinson, Joshua Chavez ">
+	<meta property="og:description" content="A mix and match color game " />
 	<meta property="og:title" content="Additive color game" />
 
-
-		<style>
+	<style>
 	div#wrapper {
 		width: 320px;
-		height:340px;
-		/*background-image: url('playb.png');*/
+		height:568px;
+		background-image: url('playb.png');
 	}
 	canvas#canvas{
 		position: absolute;
@@ -30,35 +29,35 @@
 		height: 40px;
 		font-family: Helvetica;
 	}
-	/*div#sound{
+	div#sound{
 		position: absolute;
 		top: 100px;
 		width:40px;
 		height: 40px;
-	}*/
-	/*div#music{
+	}
+	div#music{
 		position: absolute;
 		top: 100px;
 
 		width:40px;
 		height: 40px;
-	}*/
-	/*div#div1{
+	}
+	div#div1{
 		position: absolute;
 		z-index: 8;
 		width: 320px;
-		/*height: 568px;
-		border: 1px solid #ccc;*/
-		/*background-image: url('screen1.png');
-	}*/
+		/*height: 568px;*/
+		border: 1px solid #ccc;
+		/*background-image: url('screen1.png');*/
+	}
 	div#div2{
 		position: absolute;
 		z-index: 7;
 		width: 320px;
 		/*height: 568px;*/
 		border: 1px solid #ccc;
-		/*background-image: url('instructions.jpg');
-	}*/
+		/*background-image: url('instructions.jpg');*/
+	}
 	div#div3{
 		position: absolute;
 		z-index: 6;
@@ -74,112 +73,123 @@
 <body >
 <div id='wrapper'>
 
-<!-- <div id='div1'></div>
-<div id='div2'></div> -->
+<div id='div1'></div>
+<div id='div2'></div>
 <div id='div3'></div>
 	<canvas id='canvas'></canvas>
 
 
 	<div id="score"><div id="scorespan"></div></div>
 
-	<!-- <div id='music' onclick="musicSelector()"></div> -->
-	<!-- <div id='sound' onclick="soundSelector()"></div> -->
+	<div id='music' onclick="musicSelector()"></div>
+	<div id='sound' onclick="soundSelector()"></div>
 
 
-<script >
+<script>
 //jquery section
-$(document).ready(function(){});
+$(document).ready(function(){
 
-// document.getElementById('div1').addEventListener('click',function(e){
-//     document.getElementById('div1').style.display = 'none';
-// });
-//
-// document.getElementById('div2').addEventListener('click',function(e){
-//     document.getElementById('div2').style.display = 'none';
-// });
+
+});
+
+
+
+
+document.getElementById('div1').addEventListener('click',function(e){
+    document.getElementById('div1').style.display = 'none';
+});
+
+document.getElementById('div2').addEventListener('click',function(e){
+    document.getElementById('div2').style.display = 'none';
+});
 
 document.getElementById('div3').addEventListener('click',function(e){
     document.getElementById('div3').style.display = 'none';
 });
 
+//background noises code
+	var soundsOnCnt = 0;
+	var soundsOn = true;
+	var jumpsnd = new Audio('bubble.mp3');
+	var matchSnd = new Audio('bonus.mp3');
+	var tap1 = new Audio('click-3.mp3');
+	function soundSelector(){
+		soundsOnCnt++;
+	}
+
 //load sound files
 
+
+
 //background music code
-	// var pauseCount = 0;
-	//
-	// function musicSelector(){
-	// 	pauseCount++;
-	// 	if(pauseCount % 2 == 0){
-	// 		resumeMusic();
-	// 		document.getElementById('music').style.backgroundPosition="0px 0";
-	// 	}
-	// 	else{pauseMusic();
-	// 	document.getElementById('music').style.backgroundPosition="42px 0";
-	// 	}
-	// }
+	var pauseCount = 0;
+
+	function musicSelector(){
+		pauseCount++;
+		if(pauseCount % 2 == 0){
+			resumeMusic();
+			document.getElementById('music').style.backgroundPosition="0px 0";
+		}
+		else{pauseMusic();
+		document.getElementById('music').style.backgroundPosition="42px 0";
+		}
+	}
 
 
-	//
-	// function pauseMusic() {
-	// 	myAudio.pause();
-	// }
-	//
-	// function resumeMusic() {
-	// 	myAudio = new Audio('bte.mp3');
-	// 	myAudio.addEventListener('ended', function() {
-	//     this.currentTime = 0;
-	//     this.play();
-	// }, false);
-	// myAudio.volume = 0.15;
-	// myAudio.play();}
+
+	function pauseMusic() {
+		myAudio.pause();
+	}
+
+	function resumeMusic() {
+		myAudio = new Audio('bte.mp3');
+		myAudio.addEventListener('ended', function() {
+	    this.currentTime = 0;
+	    this.play();
+	}, false);
+	myAudio.volume = 0.15;
+	myAudio.play();}
+
+
 
 </script>
 
 	<script type='text/javascript'>
-
-	//background noises code
-		var soundsOnCnt = 0;
-		var soundsOn = true;
-		var jumpsnd = ;//new Audio('bubble.mp3');
-		var matchSnd = ;//new Audio('bonus.mp3');
-		var tap1 = ;//new Audio('click-3.mp3');
-		function soundSelector(){
-			soundsOnCnt++;
-		}
-
-
-	//create and call timer
+	//create and call  timer
 	clockTime = 1;
 	gameTime = 1;
 
-	// function startGameMusic(){
-	// 	//gamestart sound
-	// }
-	//
-	// if(clockTime == 59){
-	// 	startGameMusic();
-	//
-	// }
 
 
-	// function fgameTime(){ gameTime = false;}
-	//
-	//
-	//
-	// function Tick() {
-	// if(clockTime >0){/*clockTime--; ticksnd.play();*/}
-	//
-	// if(clockTime >= 0){
-	// 	window.setTimeout("Tick()", 1000);}
+	function startGameMusic(){
+		//gamestart sound
+	}
+
+	if(clockTime == 59){
+		startGameMusic();
 
 
-	//
-	// if(clockTime == 0){fgameTime();}
-	//
-	// //move counter when it's one digit
-	// if(clockTime <10){document.getElementById('time').style.left = "152px";}
-	//
-	// }
+	}
+
+
+	function fgameTime(){ gameTime = false;}
+
+
+
+	function Tick() {
+	if(clockTime >0){/*clockTime--; ticksnd.play();*/}
+
+	if(clockTime >= 0){
+		window.setTimeout("Tick()", 1000);}
+
+
+
+	if(clockTime == 0){fgameTime();}
+
+	//move counter when it's one digit
+	if(clockTime <10){document.getElementById('time').style.left = "152px";}
+
+	}
 
 
 
@@ -514,18 +524,18 @@ document.getElementById('div3').addEventListener('click',function(e){
 			else{cube[x].borderColor = 'black';cube[x].borderW = 1;cube[x].cubeShadow ='';cube[x].cubeBlur = 0; }
 			}
 
-		// if(soundsOnCnt%2 == 0){
-		// 	jumpsnd.volume=0.25;
-		// 	matchSnd.volume=0.25;
-		// 	tap1.volume=0.35;
-		// 	document.getElementById('sound').style.backgroundPosition="0 0";
-		// }
-		// else{
-		// 	jumpsnd.volume=0.0;
-		// 	matchSnd.volume=0.0;
-		// 	tap1.volume=0.0;
-		// 	document.getElementById('sound').style.backgroundPosition="42px 0";
-		// }
+		if(soundsOnCnt%2 == 0){
+			jumpsnd.volume=0.25;
+			matchSnd.volume=0.25;
+			tap1.volume=0.35;
+			document.getElementById('sound').style.backgroundPosition="0 0";
+		}
+		else{
+			jumpsnd.volume=0.0;
+			matchSnd.volume=0.0;
+			tap1.volume=0.0;
+			document.getElementById('sound').style.backgroundPosition="42px 0";
+		}
 
 		//update stuff
 		if(!gameTime){ //stuff to happen when game ends within loop
