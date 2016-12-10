@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 10 Dec 2016 01:57:09 -0800</pubDate>
-    <lastBuildDate>Sat, 10 Dec 2016 01:57:09 -0800</lastBuildDate>
+    <pubDate>Sat, 10 Dec 2016 02:07:39 -0800</pubDate>
+    <lastBuildDate>Sat, 10 Dec 2016 02:07:39 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -282,7 +282,7 @@
 
     &lt;!-- start form --&gt;
     &lt;div id=&quot;questions&quot;&gt;
-      &lt;h4&gt;Fill out the form below to write yourself here.&lt;/h4&gt;
+      &lt;h4&gt;Fill out this form to write yourself here.&lt;/h4&gt;
 
       &lt;form&gt;
         &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
@@ -331,7 +331,7 @@
     &lt;div id=&quot;story&quot;&gt;
       &lt;h4&gt;A Port Stroll in San Francisco&lt;/h4&gt;
       &lt;hr /&gt;
-      &lt;p&gt;It has been such a &lt;span class=&quot;adjective&quot;&gt;&lt;/span&gt; day. We decided we needed fresh air after hours of &lt;span class=&quot;verb&quot;&gt;&lt;/span&gt; at a conference so I picked up my &lt;span class=&quot;noun&quot;&gt;&lt;/span&gt; and we hit the streets. The &lt;span class=&quot;noun3&quot;&gt;&lt;/span&gt; aroma made me realize my tummy was talking so I pulled you into a &lt;span class=&quot;noun4&quot;&gt;&lt;/span&gt; and ordered &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; to go. We talked as we drifted toward Embarcadero and ended up at the port where we sat and watched the boats pass as we ate &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; and discussed the complexities of &lt;span class=&quot;thought&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
+      &lt;p&gt;It has been such a &lt;span class=&quot;adjective&quot;&gt;&lt;/span&gt; day. We decided we needed fresh air after hours of &lt;span class=&quot;verb&quot;&gt;&lt;/span&gt; at a conference so I picked up my &lt;span class=&quot;noun&quot;&gt;&lt;/span&gt; and we hit the streets. The &lt;span class=&quot;noun3&quot;&gt;&lt;/span&gt; aroma made me realize my tummy was talking so I pulled you into a &lt;span class=&quot;noun4&quot;&gt;&lt;/span&gt; and ordered &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; to go. We talked as we drifted toward Embarcadero and ended up at the port where we sat and watched the boats pass as we ate &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; and discussed complexities of &lt;span class=&quot;thought&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
 
     &lt;/div&gt;
     &lt;!-- end story --&gt;
