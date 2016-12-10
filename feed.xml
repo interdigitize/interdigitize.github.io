@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Dec 2016 23:48:30 -0800</pubDate>
-    <lastBuildDate>Fri, 09 Dec 2016 23:48:30 -0800</lastBuildDate>
+    <pubDate>Sat, 10 Dec 2016 00:09:15 -0800</pubDate>
+    <lastBuildDate>Sat, 10 Dec 2016 00:09:15 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -261,7 +261,14 @@
     
       <item>
         <title>Since I couldn't fit you in my suitcase...</title>
-        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
+        <description>&lt;style&gt;
+  p span {
+  	font-weight: bold;
+  	background-color: #ffff00;
+  }
+&lt;/style&gt;
+
+&lt;div class=&quot;mdl-grid&quot;&gt;
 
   &lt;div class=&quot;mdl-cell mdl-cell--12-col&quot;&gt;
   &lt;div class=&quot;container&quot;&gt;
@@ -272,11 +279,15 @@
       &lt;h3&gt;Write yourself here.&lt;/h3&gt;
       August 12, 2014
       &lt;hr /&gt;
-      &lt;form role=&quot;form&quot;&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;adjective&quot;&gt;Adjective&lt;/label&gt;
-          &lt;input for=&quot;adjective&quot; class=&quot;form-control adjective&quot; type=&quot;text&quot; placeholder=&quot;enter an adjective...&quot; /&gt;
+      &lt;form&gt;
+
+        &lt;div class=&quot;group&quot;&gt;      
+        &lt;label&gt;Adjective&lt;/label&gt;
+          &lt;input type=&quot;text&quot; for=&quot;adjective&quot; class=&quot;form-control adjective&quot; required=&quot;&quot; placeholder=&quot;enter an adjective...&quot; /&gt;
+          &lt;span class=&quot;highlight&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;bar&quot;&gt;&lt;/span&gt;
         &lt;/div&gt;
+
         &lt;div class=&quot;form-group&quot;&gt;
           &lt;label for=&quot;verb&quot;&gt;Verb&lt;/label&gt;
           &lt;input for=&quot;verb&quot; class=&quot;form-control verb&quot; type=&quot;text&quot; placeholder=&quot;enter a verb ending in 'ing'...&quot; /&gt;

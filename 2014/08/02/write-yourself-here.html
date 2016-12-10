@@ -99,7 +99,14 @@
     <p class="post-meta">Aug 2, 2014</p>
   </header>
   <article class="post-content">
-    <div class="mdl-grid">
+    <style>
+  p span {
+  	font-weight: bold;
+  	background-color: #ffff00;
+  }
+</style>
+
+<div class="mdl-grid">
 
   <div class="mdl-cell mdl-cell--12-col">
   <div class="container">
@@ -110,11 +117,15 @@
       <h3>Write yourself here.</h3>
       August 12, 2014
       <hr />
-      <form role="form">
-        <div class="form-group">
-          <label for="adjective">Adjective</label>
-          <input for="adjective" class="form-control adjective" type="text" placeholder="enter an adjective..." />
+      <form>
+
+        <div class="group">      
+        <label>Adjective</label>
+          <input type="text" for="adjective" class="form-control adjective" required="" placeholder="enter an adjective..." />
+          <span class="highlight"></span>
+          <span class="bar"></span>
         </div>
+
         <div class="form-group">
           <label for="verb">Verb</label>
           <input for="verb" class="form-control verb" type="text" placeholder="enter a verb ending in 'ing'..." />
