@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Dec 2016 01:03:58 -0800</pubDate>
-    <lastBuildDate>Mon, 05 Dec 2016 01:03:58 -0800</lastBuildDate>
+    <pubDate>Fri, 09 Dec 2016 23:48:30 -0800</pubDate>
+    <lastBuildDate>Fri, 09 Dec 2016 23:48:30 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -260,6 +260,84 @@
       </item>
     
       <item>
+        <title>Since I couldn't fit you in my suitcase...</title>
+        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
+
+  &lt;div class=&quot;mdl-cell mdl-cell--12-col&quot;&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div id=&quot;video&quot;&gt;&lt;/div&gt;
+
+    &lt;!-- start form --&gt;
+    &lt;div class=&quot;menuspace&quot; id=&quot;questions&quot;&gt;
+      &lt;h3&gt;Write yourself here.&lt;/h3&gt;
+      August 12, 2014
+      &lt;hr /&gt;
+      &lt;form role=&quot;form&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;adjective&quot;&gt;Adjective&lt;/label&gt;
+          &lt;input for=&quot;adjective&quot; class=&quot;form-control adjective&quot; type=&quot;text&quot; placeholder=&quot;enter an adjective...&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;verb&quot;&gt;Verb&lt;/label&gt;
+          &lt;input for=&quot;verb&quot; class=&quot;form-control verb&quot; type=&quot;text&quot; placeholder=&quot;enter a verb ending in 'ing'...&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;noun&quot;&gt;Noun&lt;/label&gt;
+          &lt;input id=&quot;noun&quot; class=&quot;form-control noun&quot; type=&quot;text&quot; placeholder=&quot;enter a noun I wouldn't leave without...&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;noun3&quot;&gt;Noun&lt;/label&gt;
+          &lt;input id=&quot;noun3&quot; class=&quot;form-control noun3&quot; type=&quot;text&quot; placeholder=&quot;sensed by your olfactory system...&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;noun4&quot;&gt;Noun&lt;/label&gt;
+          &lt;input id=&quot;noun4&quot; class=&quot;form-control noun4&quot; type=&quot;text&quot; placeholder=&quot;a name for a building...&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;food&quot;&gt;Noun&lt;/label&gt;
+          &lt;input id=&quot;food&quot; class=&quot;form-control food&quot; type=&quot;text&quot; placeholder=&quot;enter a palate pleaser...&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;thought&quot;&gt;Noun or Gerund&lt;/label&gt;
+          &lt;input id=&quot;thought&quot; class=&quot;form-control thought&quot; type=&quot;text&quot; placeholder=&quot;what is on your mind...&quot; /&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+      &lt;button id=&quot;btn-click&quot; type=&quot;submit&quot; class=&quot;btn btn-info btn-lg&quot;&gt;Ready to read!&lt;/button&gt;
+      &lt;hr /&gt;
+    &lt;/div&gt;
+    &lt;!-- end form --&gt;
+
+    &lt;!-- start story --&gt;
+    &lt;div id=&quot;story&quot;&gt;
+      &lt;h1&gt;A Port Stroll in San Francisco&lt;/h1&gt;
+      &lt;hr /&gt;
+      &lt;p&gt;It has been such a &lt;span class=&quot;adjective&quot;&gt;&lt;/span&gt; day. We decided we needed fresh air after hours of &lt;span class=&quot;verb&quot;&gt;&lt;/span&gt; at a PR News conference so I picked up my &lt;span class=&quot;noun&quot;&gt;&lt;/span&gt; and we hit the streets. The &lt;span class=&quot;noun3&quot;&gt;&lt;/span&gt; aroma made me realize my tummy was talking so I pulled you into a &lt;span class=&quot;noun4&quot;&gt;&lt;/span&gt; and ordered &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; to go. We talked as we drifted toward Embarcadero and ended up at the port where we sat and watched the boats pass as we ate &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; and discussed the complexities of &lt;span class=&quot;thought&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
+
+      &lt;div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-info&quot; id=&quot;play-btn&quot;&gt;again&lt;/button&gt; &amp;nbsp;
+       &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- end story --&gt;
+
+
+  &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;http://www.interdigitize.com/js/jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;http://www.interdigitize.com/js/main.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;http://www.interdigitize.com/js/jquery.backgroundvideo.min.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Sat, 02 Aug 2014 23:16:23 -0700</pubDate>
+        <link>http://www.interdigitize.com/2014/08/02/write-yourself-here.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2014/08/02/write-yourself-here.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Additive Color Game </title>
         <description>&lt;div class=&quot;mdl-grid&quot;&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
@@ -357,53 +435,6 @@
         <pubDate>Wed, 24 Apr 2013 11:12:43 -0700</pubDate>
         <link>http://www.interdigitize.com/2013/04/24/a-laser-cut-record.html</link>
         <guid isPermaLink="true">http://www.interdigitize.com/2013/04/24/a-laser-cut-record.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Learning about biological pest control with GAIA in Israel</title>
-        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;p&gt;
-      Kamie and a classmate, &lt;a href=&quot;http://studioames.com/&quot;&gt;Amy Lee Walton&lt;/a&gt;, received a research grant from Maryland Institute College of Art to attend, observe and learn about the collaborative structure and hands-on teaching methodologies as well as document the trip and create summary posters and videos.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;div class=&quot;embed-container&quot;&gt;
-      &lt;iframe src=&quot;https://www.youtube.com/embed/DE-F8M25FoI?list=PLXLGpLk5RLCWKkMH9PI1a_HCtZX283lll&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;&lt;br /&gt;
-    GAIA (Global Awareness, Investigation and Action) Environmental Youth Collaboration Program completed its eight-week agenda with a four-day investigative trip to the Galilee and Negev in Israel. The trip focus was on scientific discovery regarding biological pest control. Participants included students from five schools in Israel as well two partner schools from the Czech Republic. Leading the trip was Dr. Stuart Fleischer, Director of Project GAIA and Dr. Motti Charter of Haifa University.
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-1.jpg&quot; alt=&quot;Mud bricks and lip balm — service learning at Desert Daughter in the Negev&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt; &lt;br /&gt;&lt;br /&gt;
-    Mud bricks and lip balm — service learning at Desert Daughter in the Negev&lt;br /&gt;&lt;br /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-2.jpg&quot; alt=&quot;The Hula Valley: exploring and learning about bird ringing&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt; &lt;br /&gt;&lt;br /&gt;
-    The Hula Valley: exploring and learning about bird ringing&lt;br /&gt;&lt;br /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-3.jpg&quot; alt=&quot;Building Bird Boxes at Kfar Kama&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt; &lt;br /&gt;&lt;br /&gt;
-    Building Bird Boxes at Kfar Kama&lt;br /&gt;&lt;br /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-4.jpg&quot; alt=&quot;&amp;quot;Working with nature instead of against nature&amp;quot; at Sde Eliyahu&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
-    &quot;Working with nature instead of against nature&quot; at Sde Eliyahu&lt;br /&gt;&lt;br /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-5.jpg&quot; alt=&quot;Prepping for the Year of the Sea&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
-    Prepping for the Year of the Sea&lt;br /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2013-03-26-gaia-map.jpg&quot; alt=&quot;Map of the GAIA trip&quot; style=&quot;border:1px solid #d9d9d9&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
-    Map of the GAIA trip
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Tue, 26 Mar 2013 15:12:04 -0700</pubDate>
-        <link>http://www.interdigitize.com/2013/03/26/gaia.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2013/03/26/gaia.html</guid>
         
         
       </item>
