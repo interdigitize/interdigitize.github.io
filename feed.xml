@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 10 Dec 2016 00:34:50 -0800</pubDate>
-    <lastBuildDate>Sat, 10 Dec 2016 00:34:50 -0800</lastBuildDate>
+    <pubDate>Sat, 10 Dec 2016 01:57:09 -0800</pubDate>
+    <lastBuildDate>Sat, 10 Dec 2016 01:57:09 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -266,112 +266,77 @@
   	font-weight: bold;
   	background-color: #ffff00;
   }
-  #story {
-  background: rgba(255, 255, 255, 0.85);
-  padding:30px;
-  margin: 10% auto;
-  max-width:100%;
-  z-index: 100;
-}
 
-/* Smartphones (portrait and landscape) ----------- */
-@media
-(max-device-width : 767px) {
+    .post{
+          max-width:30em;
+          margin:10px auto;
+    }
+  }
 
-#story {
-  background: rgba(255, 255, 255, 0.85);
-  padding:30px;
-  margin: 10% auto;
-  max-width:100%;
-  z-index: 100;
-}
-
-}
-
-/* ipads, Desktops and laptops, and large screen ----------- */
-@media
-(min-device-width : 768px),
-(min-width : 1224px),
-(min-width : 1824px) {
-
-#story {
-  background: rgba(255, 255, 255, 0.85);
-  padding:30px;
-  margin: 10% auto;
-  max-width:40%;
-}
-}
-
-form {
-max-width: 340px;
-font-family: arial, sans-serif;
-}
 &lt;/style&gt;
 
 &lt;div class=&quot;mdl-grid&quot;&gt;
 
-  &lt;div class=&quot;mdl-cell mdl-cell--12-col&quot;&gt;
-  &lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
     &lt;div id=&quot;video&quot;&gt;&lt;/div&gt;
 
     &lt;!-- start form --&gt;
-    &lt;div class=&quot;menuspace&quot; id=&quot;questions&quot;&gt;
-      &lt;h3&gt;Write yourself here.&lt;/h3&gt;
-      August 12, 2014
-      &lt;hr /&gt;
+    &lt;div id=&quot;questions&quot;&gt;
+      &lt;h4&gt;Fill out the form below to write yourself here.&lt;/h4&gt;
+
       &lt;form&gt;
-
-        &lt;div class=&quot;group&quot;&gt;      
-        &lt;label&gt;Adjective&lt;/label&gt;
-          &lt;input type=&quot;text&quot; for=&quot;adjective&quot; class=&quot;form-control adjective&quot; required=&quot;&quot; placeholder=&quot;enter an adjective...&quot; /&gt;
-          &lt;span class=&quot;highlight&quot;&gt;&lt;/span&gt;
-          &lt;span class=&quot;bar&quot;&gt;&lt;/span&gt;
+        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+          &lt;input class=&quot;mdl-textfield__input adjective&quot; type=&quot;text&quot; id=&quot;adjective&quot; /&gt;
+          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;adjective&quot; placeholder=&quot;&quot;&gt;An adjective&lt;/label&gt;
         &lt;/div&gt;
 
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;verb&quot;&gt;Verb&lt;/label&gt;
-          &lt;input for=&quot;verb&quot; class=&quot;form-control verb&quot; type=&quot;text&quot; placeholder=&quot;enter a verb ending in 'ing'...&quot; /&gt;
+        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+          &lt;input class=&quot;mdl-textfield__input verb&quot; type=&quot;text&quot; id=&quot;verb&quot; /&gt;
+          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;verb&quot; placeholder=&quot;&quot;&gt;A verb ending in 'ing'&lt;/label&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;noun&quot;&gt;Noun&lt;/label&gt;
-          &lt;input id=&quot;noun&quot; class=&quot;form-control noun&quot; type=&quot;text&quot; placeholder=&quot;enter a noun I wouldn't leave without...&quot; /&gt;
+
+        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+          &lt;input class=&quot;mdl-textfield__input noun&quot; type=&quot;text&quot; id=&quot;noun&quot; /&gt;
+          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;noun&quot; placeholder=&quot;&quot;&gt;A noun I wouldn't leave without&lt;/label&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;noun3&quot;&gt;Noun&lt;/label&gt;
-          &lt;input id=&quot;noun3&quot; class=&quot;form-control noun3&quot; type=&quot;text&quot; placeholder=&quot;sensed by your olfactory system...&quot; /&gt;
+
+        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+          &lt;input class=&quot;mdl-textfield__input noun3&quot; type=&quot;text&quot; id=&quot;noun3&quot; /&gt;
+          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;noun3&quot; placeholder=&quot;&quot;&gt;Something sensed by your olfactory system&lt;/label&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;noun4&quot;&gt;Noun&lt;/label&gt;
-          &lt;input id=&quot;noun4&quot; class=&quot;form-control noun4&quot; type=&quot;text&quot; placeholder=&quot;a name for a building...&quot; /&gt;
+
+        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+          &lt;input class=&quot;mdl-textfield__input noun4&quot; type=&quot;text&quot; id=&quot;noun4&quot; /&gt;
+          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;noun4&quot; placeholder=&quot;&quot;&gt;A type of building&lt;/label&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;food&quot;&gt;Noun&lt;/label&gt;
-          &lt;input id=&quot;food&quot; class=&quot;form-control food&quot; type=&quot;text&quot; placeholder=&quot;enter a palate pleaser...&quot; /&gt;
+
+        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+          &lt;input class=&quot;mdl-textfield__input food&quot; type=&quot;text&quot; id=&quot;food&quot; /&gt;
+          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;food&quot; placeholder=&quot;&quot;&gt;A palate pleaser&lt;/label&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-          &lt;label for=&quot;thought&quot;&gt;Noun or Gerund&lt;/label&gt;
-          &lt;input id=&quot;thought&quot; class=&quot;form-control thought&quot; type=&quot;text&quot; placeholder=&quot;what is on your mind...&quot; /&gt;
+
+        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
+          &lt;input class=&quot;mdl-textfield__input thought&quot; type=&quot;text&quot; id=&quot;thought&quot; /&gt;
+          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;thought&quot; placeholder=&quot;&quot;&gt;A noun or gerund on your mind&lt;/label&gt;
         &lt;/div&gt;
       &lt;/form&gt;
-      &lt;button id=&quot;btn-click&quot; type=&quot;submit&quot; class=&quot;btn btn-info btn-lg&quot;&gt;Ready to read!&lt;/button&gt;
+      &lt;button id=&quot;btn-click&quot; type=&quot;submit&quot; class=&quot;mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent&quot;&gt;
+        Ready to read!
+      &lt;/button&gt;&lt;br /&gt;&lt;br /&gt;
       &lt;hr /&gt;
     &lt;/div&gt;
     &lt;!-- end form --&gt;
 
     &lt;!-- start story --&gt;
     &lt;div id=&quot;story&quot;&gt;
-      &lt;h1&gt;A Port Stroll in San Francisco&lt;/h1&gt;
+      &lt;h4&gt;A Port Stroll in San Francisco&lt;/h4&gt;
       &lt;hr /&gt;
-      &lt;p&gt;It has been such a &lt;span class=&quot;adjective&quot;&gt;&lt;/span&gt; day. We decided we needed fresh air after hours of &lt;span class=&quot;verb&quot;&gt;&lt;/span&gt; at a PR News conference so I picked up my &lt;span class=&quot;noun&quot;&gt;&lt;/span&gt; and we hit the streets. The &lt;span class=&quot;noun3&quot;&gt;&lt;/span&gt; aroma made me realize my tummy was talking so I pulled you into a &lt;span class=&quot;noun4&quot;&gt;&lt;/span&gt; and ordered &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; to go. We talked as we drifted toward Embarcadero and ended up at the port where we sat and watched the boats pass as we ate &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; and discussed the complexities of &lt;span class=&quot;thought&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
+      &lt;p&gt;It has been such a &lt;span class=&quot;adjective&quot;&gt;&lt;/span&gt; day. We decided we needed fresh air after hours of &lt;span class=&quot;verb&quot;&gt;&lt;/span&gt; at a conference so I picked up my &lt;span class=&quot;noun&quot;&gt;&lt;/span&gt; and we hit the streets. The &lt;span class=&quot;noun3&quot;&gt;&lt;/span&gt; aroma made me realize my tummy was talking so I pulled you into a &lt;span class=&quot;noun4&quot;&gt;&lt;/span&gt; and ordered &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; to go. We talked as we drifted toward Embarcadero and ended up at the port where we sat and watched the boats pass as we ate &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; and discussed the complexities of &lt;span class=&quot;thought&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
 
-      &lt;div&gt;
-        &lt;button type=&quot;submit&quot; class=&quot;btn btn-info&quot; id=&quot;play-btn&quot;&gt;again&lt;/button&gt; &amp;nbsp;
-       &lt;/div&gt;
     &lt;/div&gt;
     &lt;!-- end story --&gt;
 
 
-  &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;script src=&quot;http://www.interdigitize.com/js/jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;
@@ -381,9 +346,9 @@ font-family: arial, sans-serif;
 &lt;script src=&quot;http://www.interdigitize.com/js/jquery.backgroundvideo.min.js&quot;&gt;&lt;/script&gt;
 
 </description>
-        <pubDate>Sat, 02 Aug 2014 23:16:23 -0700</pubDate>
-        <link>http://www.interdigitize.com/2014/08/02/write-yourself-here.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2014/08/02/write-yourself-here.html</guid>
+        <pubDate>Mon, 11 Aug 2014 23:16:23 -0700</pubDate>
+        <link>http://www.interdigitize.com/2014/08/11/write-yourself-here.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2014/08/11/write-yourself-here.html</guid>
         
         
       </item>
