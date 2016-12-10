@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 10 Dec 2016 00:09:15 -0800</pubDate>
-    <lastBuildDate>Sat, 10 Dec 2016 00:09:15 -0800</lastBuildDate>
+    <pubDate>Sat, 10 Dec 2016 00:18:41 -0800</pubDate>
+    <lastBuildDate>Sat, 10 Dec 2016 00:18:41 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -266,6 +266,46 @@
   	font-weight: bold;
   	background-color: #ffff00;
   }
+  #story {
+  background: rgba(255, 255, 255, 0.85);
+  padding:30px;
+  margin: 10% auto;
+  max-width:100%;
+  z-index: 100;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media
+(max-device-width : 767px) {
+
+#story {
+  background: rgba(255, 255, 255, 0.85);
+  padding:30px;
+  margin: 10% auto;
+  max-width:100%;
+  z-index: 100;
+}
+
+}
+
+/* ipads, Desktops and laptops, and large screen ----------- */
+@media
+(min-device-width : 768px),
+(min-width : 1224px),
+(min-width : 1824px) {
+
+#story {
+  background: rgba(255, 255, 255, 0.85);
+  padding:30px;
+  margin: 10% auto;
+  max-width:40%;
+}
+}
+
+form {
+max-width: 340px;
+font-family: arial, sans-serif;
+}
 &lt;/style&gt;
 
 &lt;div class=&quot;mdl-grid&quot;&gt;
