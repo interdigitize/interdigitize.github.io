@@ -28,7 +28,7 @@ $(function() {
          "align": "centerXY",
          "width": 1280,
          "height": 720,
-         "path": "../assets/video/",
+         "path": "video/",
          "filename": "san-fran-port",
          "types": ["mp4","ogg","webm"],
          "z-index": -100,
