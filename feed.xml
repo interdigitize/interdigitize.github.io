@@ -5,8 +5,8 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Dec 2016 21:29:04 -0800</pubDate>
-    <lastBuildDate>Thu, 15 Dec 2016 21:29:04 -0800</lastBuildDate>
+    <pubDate>Mon, 19 Dec 2016 00:28:29 -0800</pubDate>
+    <lastBuildDate>Mon, 19 Dec 2016 00:28:29 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;div class=&quot;mdl-grid&quot;&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
     &lt;p&gt;
-      Kamie found this &lt;a href=&quot;https://www.npmjs.com/package/jp2a&quot; target=&quot;_blank&quot;&gt;node wrapper for the jp2a CLI tool&lt;/a&gt; and just had to make something with it, so here is an ASCII art music video to go with the new song.
+      Kamie found this &lt;a href=&quot;https://www.npmjs.com/package/jp2a&quot;&gt;node wrapper for the jp2a CLI tool&lt;/a&gt; and just had to make something with it, so here is an ASCII art music video to go with the new song.
     &lt;/p&gt;
   &lt;/div&gt;
 
