@@ -12,8 +12,9 @@
 
     <!-- Material Design Lite CDN -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css">
-<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css">
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="canonical" href="http://www.interdigitize.com/">
@@ -25,46 +26,45 @@
 </head>
 
   <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      
-<div class="layout-transparent mdl-layout mdl-js-layout">
-<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
-  <div class="mdl-layout__header-row portfolio-logo-row ">
-    <span class="mdl-layout__title">
-
-      <div class="portfolio-logo"></div>        
+    <div class="mdl-layout mdl-js-layout">
+      <!-- Always shows a header, even in smaller screens. -->
+<header class="mdl-layout__header mdl-layout__header--scroll">
+  <div class="mdl-layout__header-row">
+    <!-- Title -->
+    <span class="mdl-layout-title">
+      <div class="portfolio-logo"></div>
     </span>
+    <!-- Add spacer, to align navigation to the right -->
     <div class="mdl-layout-spacer"></div>
-    <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
-      <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-        <a class="mdl-navigation__link" href="/">Home</a>
-        
-        
-        
-        
-        
-        
-        <a class="mdl-navigation__link" href="/artists/">Artists</a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <a class="mdl-navigation__link" href="/projects.html">Projects</a>
-        
-        
-        
-        
-      </nav>
-    </div>
+    <!-- Navigation -->
+    <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+      <a class="mdl-navigation__link" href="/">Home</a>
+      
+      
+      
+      
+      
+      
+      <a class="mdl-navigation__link" href="/artists/">Artists</a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a class="mdl-navigation__link" href="/projects.html">Projects</a>
+      
+      
+      
+      
+    </nav>
   </div>
 </header>
-</div>
-<div class="mdl-layout__drawer mdl-layout--small-screen-only">
+<div class="mdl-layout__drawer">
+  <!-- <span class="mdl-layout-title">Title</span> -->
   <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
     <a class="mdl-navigation__link" href="/">Home</a>
     
@@ -95,17 +95,16 @@
         <div class="page-content">
           <div class="wrapper">
                 <!-- <span class="mdl-layout__title"></span> -->
-    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <main class="mdl-layout__content">
+      <main class="site mdl-layout__content">
         <!-- <h3>Collaborative and Cross-diciplinary</h3>
-        <a href="https://www.facebook.com/interdigitize/" target="_blank" class="gray"> <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a> &nbsp;
-        <a href="https://www.instagram.com/interdigitize/"  target="_blank" class="gray"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a> &nbsp;
-        <a href="https://github.com/interdigitize" target="_blank" class="gray"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a> &nbsp;
-        <a href="https://www.youtube.com/channel/UCkMFuJp44dXXfQdfxHevixg" target="_blank" class="gray"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a> -->
-        <!-- <a href="https://twitter.com/kamielynn" target="_blank" class="gray"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/kamie-robinson-88956575" target="_blank" class="gray"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a> -->
+        <a href="https://www.facebook.com/interdigitize/" class="gray"> <i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i></a> &nbsp;
+        <a href="https://www.instagram.com/interdigitize/" class="gray"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a> &nbsp;
+        <a href="https://github.com/interdigitize" class="gray"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a> &nbsp;
+        <a href="https://www.youtube.com/channel/UCkMFuJp44dXXfQdfxHevixg" class="gray"><i class="fa fa-youtube-square fa-lg" aria-hidden="true"></i></a> -->
+        <!-- <a href="https://twitter.com/kamielynn" class="gray"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/kamie-robinson-88956575" class="gray"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a> -->
         <br>
-        <div class="demo-blog__posts mdl-grid">
+        <div class="site__posts mdl-grid">
 
           <div class="mdl-card mdl-cell mdl-cell--8-col">
             <div class="embed-container">
@@ -118,7 +117,7 @@
               <div>
                 <p>Contemporary artists working cross-disciplinary and collaboratively.</p>
                 <p>Started by <a href="http://www.interdigitize.com/artists/karstin/">Kärstin</a>, a classically trained pianist, and <a href="http://www.interdigitize.com/artists/kamie/">Kamie</a>, a storytelling creative.
-</p>
+                </p>
               </div>
             </div>
           </div>
@@ -126,7 +125,7 @@
             <!-- <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
               <i class="material-icons mdl-color-text--white" role="presentation">add</i>
               <span class="visuallyhidden">add</span>
-            </button> -->
+            </button>-->
 
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
               <div>
@@ -134,36 +133,7 @@
               </div>
             </div>
           </div>
-          <!-- <div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">On the road again</a></h3>
-            </div>
-            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
-          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">On the road again</a></h3>
-            </div>
-            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div> -->
+
           <nav class="demo-nav mdl-cell mdl-cell--12-col">
             <div class="section-spacer"></div>
             <a href="projects.html" class="demo-nav__button" title="show more">
@@ -175,23 +145,6 @@
           </nav>
         </div>
       </main>
-      <div class="mdl-layout__obfuscator"></div>
-    </div>
-  <!-- <script>
-    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-      var link = el.querySelector('a');
-      if(!link) {
-        return;
-      }
-      var target = link.getAttribute('href');
-      if(!target) {
-        return;
-      }
-      el.addEventListener('click', function() {
-        location.href = target;
-      });
-    });
-  </script> -->
 
           </div>
         </div>
