@@ -5,9 +5,68 @@
     <description>Collaborative and Cross-diciplinary</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Dec 2016 20:33:51 -0800</pubDate>
-    <lastBuildDate>Wed, 21 Dec 2016 20:33:51 -0800</lastBuildDate>
+    <pubDate>Tue, 24 Jan 2017 00:02:19 -0800</pubDate>
+    <lastBuildDate>Tue, 24 Jan 2017 00:02:19 -0800</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Anywhere You Go – NERVO feat. Timmy Trumpet Remix</title>
+        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;p&gt;
+      An ethereal mix with an eerie edge. I kept the atmospheric vibe of the Nervo original, just restructured it a bit and played with layers, entrances and timing—like changing the intro and outro, shifting Timmy’s fantastic trumpet serenade off the down beat (1:40), and adding rhythmic flavor to percussive elements as they re-enter after the music reduces to a sonar-like ping (2:40).
+    &lt;/p&gt;
+    &lt;p&gt;
+      I also added synths throughout for sound effects, like data and warp speed, and used them to densify the atmosphere—and I threw in a few more vocals and lyrics for variety.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;div class=&quot;embed-container&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube.com/embed/DxPm0YPSzQQ?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 07 Jan 2017 03:12:01 -0800</pubDate>
+        <link>http://www.interdigitize.com/2017/01/07/anywhere-you-go.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2017/01/07/anywhere-you-go.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>How to take and share a 360° photo</title>
+        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
+  &lt;div&gt;
+    &lt;h4&gt;
+      A video tutorial demonstrating how to take and share a 360° photo with the Ricoh Theta SC camera and app.
+    &lt;/h4&gt;&lt;br /&gt;
+
+    &lt;div class=&quot;embed-container&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube.com/embed/QnqTIbbBQBw?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+    &lt;/div&gt;&lt;br /&gt;&lt;br /&gt;
+    &lt;h4&gt;360° Photo Example&lt;/h4&gt;
+    &lt;blockquote class=&quot;ricoh-theta-spherical-image&quot;&gt;A behind-the-scenes theta tutorial photo #MoreThanCode #HackReactor #theta360 - &lt;a href=&quot;https://theta360.com/s/lDmtJJqZWjdmww8I2BPRpCpwu&quot; target=&quot;_blank&quot;&gt;Spherical Image - RICOH THETA&lt;/a&gt;&lt;/blockquote&gt;
+    &lt;script async=&quot;&quot; src=&quot;https://theta360.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+&lt;br /&gt;    &lt;p&gt;
+      If you want to learn more about the camera, you can check it out here.&lt;br /&gt;
+      &lt;a href=&quot;https://theta360.com/en/&quot;&gt;https://theta360.com/en/&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+      If you are curious, yes, they have API and SDK docs.&lt;br /&gt;
+      &lt;a href=&quot;https://developers.theta360.com/en/docs/&quot;&gt; https://developers.theta360.com/en/docs/&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 01 Dec 2016 08:12:01 -0800</pubDate>
+        <link>http://www.interdigitize.com/2016/12/01/360-photo.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/2016/12/01/360-photo.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>A Boy and His Dream</title>
@@ -349,108 +408,6 @@
         <pubDate>Mon, 11 Aug 2014 23:16:23 -0700</pubDate>
         <link>http://www.interdigitize.com/2014/08/11/write-yourself-here.html</link>
         <guid isPermaLink="true">http://www.interdigitize.com/2014/08/11/write-yourself-here.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Additive Color Game </title>
-        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--7-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;p&gt;
-      Taylor Nelson, Joshua Chavez and Kamie came up with this mix-and-match color game to passively teach &lt;a href=&quot;https://en.wikipedia.org/wiki/Additive_color&quot;&gt;additive color theory&lt;/a&gt;.
-    &lt;/p&gt;
-    &lt;p&gt;
-      Players swipe a red, green or blue square into another square to combine them to make a &lt;a href=&quot;https://en.wikipedia.org/wiki/Secondary_color#Light_.28RGB.29&quot;&gt;secondary&lt;/a&gt; or &lt;a href=&quot;https://en.wikipedia.org/wiki/Tertiary_color&quot;&gt;tertiary&lt;/a&gt; color. (If you are on a computer, instead of swiping, click the first square, then the second.) You earn points if you get two matching secondary or tertiary colors next to each other!
-    &lt;/p&gt;
-    &lt;p&gt;
-      The goal is to see how many points you can earn before a timer reaches zero. As mixing colors becomes more familiar, focus on which blocks to swipe or click decreases and your score climbs.
-    &lt;/p&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-angel-hack-additive-color-game.jpg&quot; alt=&quot;Taylor, Kamie and Josh at Angel Hack LA working on Additive&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
-    &lt;p&gt;
-      Taylor, Josh and Kamie jointly worked on the concept. Taylor headed the dev. Kamie mocked up the design.
-    &lt;/p&gt;
-    &lt;p&gt;Here is the MVP demo from Angel Hack LA in May 2014.&lt;/p&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-
-  &lt;iframe src=&quot;http://www.interdigitize.com/additive.html&quot; height=&quot;590&quot;&gt;&lt;/iframe&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mdl-cell mdl-cell--12-col&quot;&gt;
-    &lt;br /&gt;
-    &lt;h4&gt;App mockup to introduce how to play the game:&lt;/h4&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-1.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 1 - the logo and description, the mix-then-match color game.&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-2.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-3.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen transition&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-4.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - mix blue with green&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-5.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - content transition&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-6.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - mix blue with green a second time&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-7.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - cyan match&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-8.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - content transition&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-9.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - game description, 'mix red, green and blue squares to create new colors—like cyan. Match new colors for points.'&quot; /&gt;  
-  &lt;/div&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;img src=&quot;http://www.interdigitize.com/assets/images/2014-05-20-additive-mockup-10.jpg&quot; class=&quot;border-gray&quot; alt=&quot;Additive mockup screen 2 - challenge, 'How many points can you get in 60 seconds? SWIPE TO PLAY'&quot; /&gt;  
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Tue, 20 May 2014 01:24:54 -0700</pubDate>
-        <link>http://www.interdigitize.com/2014/05/20/additive-color-game.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2014/05/20/additive-color-game.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>A Laser Cut Record</title>
-        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;p&gt;
-      In grad school, Kamie and Amy Lee started Cheeky Bean Studio to talk through creative ideas and work on projects and emerging mediums. Here is one of their experiments based on an Instructables tutorial: &lt;a href=&quot;http://www.instructables.com/id/Laser-Cut-Record/step7&quot;&gt; Laser Cut Record&lt;/a&gt;.
-    &lt;/p&gt;
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;div class=&quot;embed-container&quot;&gt;
-      &lt;iframe src=&quot;https://www.youtube.com/embed/W5QsWbUYVLA?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;&lt;br /&gt;
-      At the Maryland Institute College of Art (MICA) in the fabrication studio making the final cut!!&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-
-    &lt;div class=&quot;embed-container&quot;&gt;
-      &lt;iframe src=&quot;https://www.youtube.com/embed/TD8B38_ukk4?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;    
-    &lt;/div&gt;
-    &lt;br /&gt;
-    We chose the song, &lt;em&gt;Somewhere Over the Rainbow&lt;/em&gt; by IZ. It doesn't sound pleasant, but you can kind of hear the ukulele. Next time we will better prepare the board making it slimmer, flatter, smoother and etch the grooves deeper.&lt;br /&gt;&lt;br /&gt;
-    Special thanks to Mrs. Walton for letting us put the needle on the &quot;record&quot;!!
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Wed, 24 Apr 2013 11:12:43 -0700</pubDate>
-        <link>http://www.interdigitize.com/2013/04/24/a-laser-cut-record.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2013/04/24/a-laser-cut-record.html</guid>
         
         
       </item>
