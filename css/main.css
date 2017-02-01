@@ -610,6 +610,15 @@ body .site {
 .mdl-layout {
   height: initial; }
 
+.mdl-button--icon {
+  height: 40px;
+  width: 40px;
+  background-color: deeppink;
+  margin-bottom: 10px; }
+
+.mdl-button .material-icons {
+  color: #fff; }
+
 .site-title {
   color: #000;
   text-decoration: none;
