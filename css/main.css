@@ -619,6 +619,12 @@ body .site {
 .mdl-button .material-icons {
   color: #fff; }
 
+.circ-pic {
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  padding: 15px; }
+
 .site-title {
   color: #000;
   text-decoration: none;
