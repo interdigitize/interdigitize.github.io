@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Interdigitize</title>
-    <description>Collaborative and Cross-diciplinary</description>
+    <description>An artist combining audio visual arts and programming.</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 06 Feb 2017 23:01:41 -0800</pubDate>
-    <lastBuildDate>Mon, 06 Feb 2017 23:01:41 -0800</lastBuildDate>
+    <pubDate>Mon, 20 Feb 2017 06:56:41 +0700</pubDate>
+    <lastBuildDate>Mon, 20 Feb 2017 06:56:41 +0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -28,10 +28,14 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sat, 07 Jan 2017 03:12:01 -0800</pubDate>
-        <link>http://www.interdigitize.com/2017/01/07/anywhere-you-go.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2017/01/07/anywhere-you-go.html</guid>
+        <pubDate>Sat, 07 Jan 2017 18:12:01 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2017/01/07/anywhere-you-go.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2017/01/07/anywhere-you-go.html</guid>
         
+        <category>audio</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -57,10 +61,16 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sun, 01 Jan 2017 02:23:12 -0800</pubDate>
-        <link>http://www.interdigitize.com/2017/01/01/cheers-to-2016.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2017/01/01/cheers-to-2016.html</guid>
+        <pubDate>Sun, 01 Jan 2017 17:23:12 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2017/01/01/cheers-to-2016.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2017/01/01/cheers-to-2016.html</guid>
         
+        <category>video</category>
+        
+        <category>photography</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -90,10 +100,16 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Thu, 01 Dec 2016 08:12:01 -0800</pubDate>
-        <link>http://www.interdigitize.com/2016/12/01/360-photo.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/12/01/360-photo.html</guid>
+        <pubDate>Thu, 01 Dec 2016 08:12:01 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/12/01/360-photo.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/12/01/360-photo.html</guid>
         
+        <category>photography</category>
+        
+        <category>video</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -128,10 +144,18 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sat, 22 Oct 2016 03:28:03 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/10/22/a-boy-and-his-dream.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/10/22/a-boy-and-his-dream.html</guid>
+        <pubDate>Sat, 22 Oct 2016 17:28:03 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/10/22/a-boy-and-his-dream.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/10/22/a-boy-and-his-dream.html</guid>
         
+        <category>songwriting</category>
+        
+        <category>programming</category>
+        
+        <category>audio</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -151,10 +175,16 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Fri, 23 Sep 2016 18:47:21 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/09/23/cycle-cycle-cyc.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/09/23/cycle-cycle-cyc.html</guid>
+        <pubDate>Sat, 24 Sep 2016 08:47:21 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/09/24/cycle-cycle-cyc.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/09/24/cycle-cycle-cyc.html</guid>
         
+        <category>songwriting</category>
+        
+        <category>audio</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -206,15 +236,21 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Thu, 15 Sep 2016 04:32:22 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/09/15/america-the-beautiful.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/09/15/america-the-beautiful.html</guid>
+        <pubDate>Thu, 15 Sep 2016 18:32:22 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/09/15/america-the-beautiful.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/09/15/america-the-beautiful.html</guid>
         
+        <category>songwriting</category>
+        
+        <category>audio</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
       <item>
-        <title>Put Your Records On </title>
+        <title>Put Your Records On</title>
         <description>&lt;div class=&quot;mdl-grid&quot;&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
     &lt;p&gt;
@@ -229,10 +265,14 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Wed, 07 Sep 2016 23:30:10 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/09/07/put-your-records-on.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/09/07/put-your-records-on.html</guid>
+        <pubDate>Thu, 08 Sep 2016 13:30:10 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/09/08/put-your-records-on.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/09/08/put-your-records-on.html</guid>
         
+        <category>audio</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -252,10 +292,14 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Wed, 31 Aug 2016 23:22:43 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/08/31/gone-gone-gone.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/08/31/gone-gone-gone.html</guid>
+        <pubDate>Thu, 01 Sep 2016 13:22:43 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/09/01/gone-gone-gone.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/09/01/gone-gone-gone.html</guid>
         
+        <category>audio</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -313,10 +357,16 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Fri, 26 Aug 2016 23:28:04 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/08/26/200-ok.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/08/26/200-ok.html</guid>
+        <pubDate>Sat, 27 Aug 2016 13:28:04 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/08/27/200-ok.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/08/27/200-ok.html</guid>
         
+        <category>songwriting</category>
+        
+        <category>audio</category>
+        
+        
+        <category>projects</category>
         
       </item>
     
@@ -340,10 +390,14 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Fri, 15 Apr 2016 06:23:43 -0700</pubDate>
-        <link>http://www.interdigitize.com/2016/04/15/reasons-to-smile.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/2016/04/15/reasons-to-smile.html</guid>
+        <pubDate>Fri, 15 Apr 2016 20:23:43 +0700</pubDate>
+        <link>http://www.interdigitize.com/projects/2016/04/15/reasons-to-smile.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/04/15/reasons-to-smile.html</guid>
         
+        <category>video</category>
+        
+        
+        <category>projects</category>
         
       </item>
     

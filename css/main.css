@@ -625,6 +625,18 @@ body .site {
   margin: auto;
   padding: 15px; }
 
+.post {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.post-header {
+  padding: 2em; }
+
+.tag {
+  font-size: .8em;
+  background-color: #fff;
+  font-weight: normal; }
+
 .site-title {
   color: #000;
   text-decoration: none;
