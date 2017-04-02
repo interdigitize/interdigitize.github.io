@@ -5,8 +5,8 @@
     <description>An artist combining audio visual arts and programming.</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Mar 2017 23:11:20 -0800</pubDate>
-    <lastBuildDate>Tue, 07 Mar 2017 23:11:20 -0800</lastBuildDate>
+    <pubDate>Sun, 02 Apr 2017 15:08:09 -0700</pubDate>
+    <lastBuildDate>Sun, 02 Apr 2017 15:08:09 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -116,6 +116,41 @@
         
         
         <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>The Playful Wonderland Behind Great Inventions</title>
+        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
+  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;h4&gt;&quot;Necessity isn't always the mother of invention. The playful state of mind is fundamentally exploritory. Seeking out new possibilities in the world around us.&quot;&lt;/h4&gt;
+    &lt;p&gt;
+    I love this TED talk by Steve Johnson, a writer examining the intersection of science, technology and personal experience. He intriguingly reframes the motivation behind inventions from bone flutes to organs, musical keyboards, the first typewriter (the writing harpsihord), and programmable music boxes and looms.
+    &lt;/p&gt;
+
+  &lt;/div&gt;
+
+  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
+    &lt;div class=&quot;embed-container&quot;&gt;
+      &lt;iframe src=&quot;https://embed.ted.com/talks/steven_johnson_how_play_leads_to_great_inventions&quot; width=&quot;640&quot; height=&quot;360&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitallowfullscreen=&quot;&quot; mozallowfullscreen=&quot;&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
+    Necessity is the mother of invention, right? Well, not always. Steven Johnson shows us how some of the most transformative ideas and technologies, like the computer, didn't emerge out of necessity at all but instead from the strange delight of play. Share this captivating, illustrated exploration of the history of invention. Turns out, you'll find the future wherever people are having the most fun.
+
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 11 Dec 2016 08:21:35 -0800</pubDate>
+        <link>http://www.interdigitize.com/resonance/2016/12/11/playful-wonderland.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/resonance/2016/12/11/playful-wonderland.html</guid>
+        
+        <category>audio</category>
+        
+        <category>prototyping</category>
+        
+        
+        <category>resonance</category>
         
       </item>
     
@@ -384,37 +419,6 @@
         <category>songwriting</category>
         
         <category>audio</category>
-        
-        
-        <category>projects</category>
-        
-      </item>
-    
-      <item>
-        <title>What makes employees smile at TowerJazz</title>
-        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;p&gt;
-      To celebrate &lt;a href=&quot;http://www.towerjazz.com&quot;&gt;TowerJazz&lt;/a&gt; reaching a $1 billion run rate, employees were asked what they like about working at the company and what makes them smile. Here are a few of their answers.
-    &lt;/p&gt;
-    &lt;p&gt;
-      Kamie worked on the concept for this video with Ela Pappo and Felize Richens then shot and edited it for the celebration.
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe src=&quot;https://www.youtube.com/embed/wewrWSICmM0?rel=0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-  &lt;/div&gt;&lt;br /&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 15 Apr 2016 06:23:43 -0700</pubDate>
-        <link>http://www.interdigitize.com/projects/2016/04/15/reasons-to-smile.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/04/15/reasons-to-smile.html</guid>
-        
-        <category>video</category>
         
         
         <category>projects</category>
