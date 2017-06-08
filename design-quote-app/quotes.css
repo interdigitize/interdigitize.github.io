@@ -1,0 +1,51 @@
+
+
+#box {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(255, 255, 255, 1);
+  width:50%;
+  margin:40px auto;
+  padding:30px;
+
+}
+
+#quote-content {
+  text-align: center;
+  max-width: 100%;
+  font-size: 2em;
+  color: #333;
+  font-family: 'Merriweather', serif;
+  line-height: 1.2em;
+
+}
+
+#person {
+  text-align: center;
+  max-width: 100%;
+  font-size: 1.2em;
+  color: #333;
+}
+
+#source {
+  text-align: center;
+  max-width: 100%;
+  font-size: 1em;
+  color: #333;
+}
+#get-a-quote {
+  text-align: center;
+  /*border: 2px solid rgba(0, 0, 0, .3);*/
+  padding: 15px;
+  font-size: 1.2em;
+  color: #333;
+  width:150px;
+  margin:40px auto;
+  font-family: 'Lato', sans-serif;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 5px;
+}
+
+#get-a-quote:hover {
+  background-color: rgba(255, 255, 255, .8);
+}
