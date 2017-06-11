@@ -52,9 +52,12 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  #quote-content {
+    font-size: 1.6em;
+  }
   #get-a-quote {
     padding: 30px;
-    font-size: 2em;
+    font-size: 1.5em;
     width:75%;
   }
   #box {
