@@ -51,7 +51,7 @@ a {
   color:rgb(1, 162, 176);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   #get-a-quote {
     padding: 30px;
     font-size: 2em;
