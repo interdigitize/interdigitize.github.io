@@ -1,51 +1,51 @@
-
-
 #box {
   position: relative;
   font-family: 'Lato', sans-serif;
-  background-color: rgba(255, 255, 255, 1);
-  width:50%;
-  margin:40px auto;
-  padding:30px;
-
+  background-color: rgb(255, 255, 255);
+  width:60%;
+  margin:10% auto 5%;
+  padding:36px;
+  color: #333;
+  text-align: center;
 }
 
 #quote-content {
-  text-align: center;
   max-width: 100%;
   font-size: 2em;
-  color: #333;
   font-family: 'Merriweather', serif;
-  line-height: 1.2em;
-
+  line-height: 1.3em;
 }
 
 #person {
-  text-align: center;
   max-width: 100%;
   font-size: 1.2em;
-  color: #333;
 }
 
 #source {
-  text-align: center;
   max-width: 100%;
   font-size: 1em;
-  color: #333;
 }
+
 #get-a-quote {
   text-align: center;
-  /*border: 2px solid rgba(0, 0, 0, .3);*/
   padding: 15px;
   font-size: 1.2em;
-  color: #333;
   width:150px;
   margin:40px auto;
   font-family: 'Lato', sans-serif;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .4);
   border-radius: 5px;
+  cursor: pointer;
 }
 
 #get-a-quote:hover {
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .7);
+}
+
+#get-a-quote:active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+a {
+  color:rgb(1, 162, 176);
 }
