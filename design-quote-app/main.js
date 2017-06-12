@@ -16,7 +16,6 @@ $('#get-a-quote').on('click', function(e) {
       // If the Source is available, use it. Otherwise hide it.
       if (typeof post.custom_meta !== 'undefined' && typeof post.custom_meta.Source !== 'undefined') {
         $('#source').html('source: ' + post.custom_meta.Source);
-        $('#source').css('color' + `${colorSurprise()}`);
       } else {
         $('#quote-source').text('');
       }
