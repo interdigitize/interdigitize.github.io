@@ -1,6 +1,9 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 #box {
   position: relative;
-  font-family: 'Lato', sans-serif;
   background-color: rgb(255, 255, 255);
   width:60%;
   margin:10% auto 5%;
@@ -32,7 +35,6 @@
   font-size: 1.2em;
   width:150px;
   margin:40px auto;
-  font-family: 'Lato', sans-serif;
   background-color: rgba(255, 255, 255, .4);
   border-radius: 5px;
   border: 1px #999 solid;
@@ -51,6 +53,16 @@ a {
   color:rgb(1, 162, 176);
 }
 
+#blogLink {
+  position: absolute;
+  top:2%;
+  right:2%;
+  font-size: .8em;
+}
+#blogLink > a {
+  color: #333;
+}
+
 @media only screen and (max-width: 768px) {
   #quote-content {
     font-size: 1.6em;
@@ -63,6 +75,6 @@ a {
   #box {
     width:75%;
     padding-top:15px;
-    margin:7% auto 5%;
+    margin:10% auto 5%;
   }
 }
