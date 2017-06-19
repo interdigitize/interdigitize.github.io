@@ -32,8 +32,8 @@ img {
 
 #text {
   position: absolute;
-  left: 41%;
-  top: 35%;
+  left: 34%;
+  top: 24%;
   display: inline;
   justify-content: center;
   align-items: center;
@@ -51,22 +51,10 @@ img {
 }
 
 #a-note {
-  max-width:800px;
+  max-width:200px;
   margin: auto;
   font-family: 'Architects Daughter', cursive;
   line-height: 1.3em;
-  padding: 45px;
+  padding: 10px;
 
-}
-
-@media screen and (max-width: 768px) {
-    .env{
-      padding:0;
-    }
-    h1 {
-      font-size: 2em;
-    }
-    span {
-      font-size: 1em;
-    }
 }
