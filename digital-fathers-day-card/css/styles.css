@@ -1,0 +1,72 @@
+body, html{
+  height:100%;
+  margin:0px;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color:#d5dee5;
+
+}
+
+h1{
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#text {
+  position: absolute;
+  left: 41%;
+  top: 35%;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+}
+
+#env {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sudoku {
+  margin: auto;
+  width: 200px;
+}
+
+#a-note {
+  max-width:800px;
+  margin: auto;
+  font-family: 'Architects Daughter', cursive;
+  line-height: 1.3em;
+  padding: 45px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .env{
+      padding:0;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    span {
+      font-size: 1em;
+    }
+}
