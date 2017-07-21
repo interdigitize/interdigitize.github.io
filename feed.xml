@@ -5,8 +5,8 @@
     <description>An artist combining audio visual arts and programming.</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Jul 2017 01:00:54 -0700</pubDate>
-    <lastBuildDate>Sat, 15 Jul 2017 01:00:54 -0700</lastBuildDate>
+    <pubDate>Fri, 21 Jul 2017 00:20:45 -0700</pubDate>
+    <lastBuildDate>Fri, 21 Jul 2017 00:20:45 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -223,29 +223,14 @@
         <description>&lt;div class=&quot;mdl-grid&quot;&gt;
   &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
     &lt;p&gt;
-      I found this &lt;a href=&quot;https://www.npmjs.com/package/jp2a&quot;&gt;node wrapper for the jp2a CLI tool&lt;/a&gt; and just had to make something with it, so here is an ASCII art music video to go with the new song.
+      I found this &lt;a href=&quot;https://www.npmjs.com/package/jp2a&quot;&gt;node wrapper for the jp2a CLI tool&lt;/a&gt; and had to make something with it, so here is an ASCII art music video to go with the song.
     &lt;/p&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
     &lt;div class=&quot;embed-container&quot;&gt;
-      &lt;iframe src=&quot;https://www.youtube.com/embed/hisN42FsL8o?list=PL4mnkjwvuSmIryET13Qv-riGC-qKtd4yS&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;    
+    &lt;iframe src=&quot;https://www.youtube.com/embed/hisN42FsL8o?rel=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
-    &lt;br /&gt;&lt;br /&gt;
-    LYRICS:&lt;br /&gt;&lt;br /&gt;
-    I hear it in your voice&lt;br /&gt;
-    I see it in your eyes&lt;br /&gt;
-    If they got any brighter&lt;br /&gt;
-    It would look like a sunrise&lt;br /&gt;
-    How could I say anything but, &quot;that's great&quot;&lt;br /&gt;
-    With that smile on your face&lt;br /&gt;&lt;br /&gt;
-
-    But why does it still hurt&lt;br /&gt;
-    Why do I care&lt;br /&gt;
-    Why do I find myself wishing you were still here&lt;br /&gt;
-    After you told me all about your dream like it was all you could see&lt;br /&gt;
-    And this girl wouldn't want to get between&lt;br /&gt;
-    A boy and his dream
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -285,7 +270,7 @@
     LYRICS:&lt;br /&gt;&lt;br /&gt;
 
     Hello&lt;br /&gt;
-    var Kamie;&lt;br /&gt;
+    var INSERT_NAME;&lt;br /&gt;
     Treat me like an object and I won't callback&lt;br /&gt;
     What's that?&lt;br /&gt;
     You think I'm funny&lt;br /&gt;
@@ -342,7 +327,7 @@
       To celebrate &lt;a href=&quot;http://www.towerjazz.com&quot;&gt;TowerJazz&lt;/a&gt; reaching a $1 billion run rate, employees were asked what they like about working at the company and what makes them smile. Here are a few of their answers.
     &lt;/p&gt;
     &lt;p&gt;
-      Kamie worked on the concept for this video with Ela Pappo and Felize Richens then shot and edited it for the celebration.
+      I worked on the concept for this video with Ela Pappo and Felize Richens then shot and edited it for the celebration.
     &lt;/p&gt;
   &lt;/div&gt;
 
