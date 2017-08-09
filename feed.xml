@@ -5,9 +5,35 @@
     <description>An artist combining audio visual arts and programming.</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 21 Jul 2017 00:20:45 -0700</pubDate>
-    <lastBuildDate>Fri, 21 Jul 2017 00:20:45 -0700</lastBuildDate>
+    <pubDate>Wed, 09 Aug 2017 14:23:53 -0700</pubDate>
+    <lastBuildDate>Wed, 09 Aug 2017 14:23:53 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Madeon's Adventure Machine</title>
+        <description>&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;title&gt;Redirecting…&lt;/title&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;http://www.madeon.fr/adventuremachine/?t=9,11,20,35&quot; /&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=http://www.madeon.fr/adventuremachine/?t=9,11,20,35&quot; /&gt;
+&lt;h1&gt;Redirecting…&lt;/h1&gt;
+&lt;a href=&quot;http://www.madeon.fr/adventuremachine/?t=9,11,20,35&quot;&gt;Click here if you are not redirected.&lt;/a&gt;
+&lt;script&gt;location=&quot;http://www.madeon.fr/adventuremachine/?t=9,11,20,35&quot;&lt;/script&gt;
+&lt;/html&gt;
+</description>
+        <pubDate>Wed, 09 Aug 2017 01:54:33 -0700</pubDate>
+        <link>http://www.interdigitize.com/resonance/2017/08/09/madeons-adenture-machine.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/resonance/2017/08/09/madeons-adenture-machine.html</guid>
+        
+        <category>programming</category>
+        
+        <category>music</category>
+        
+        
+        <category>resonance</category>
+        
+      </item>
     
       <item>
         <title>A Design Quote App</title>
@@ -344,104 +370,6 @@
         <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/04/15/reasons-to-smile.html</guid>
         
         <category>video</category>
-        
-        
-        <category>projects</category>
-        
-      </item>
-    
-      <item>
-        <title>Since I couldn't fit you in my suitcase...</title>
-        <description>&lt;style&gt;
-  p span {
-  	font-weight: bold;
-  	background-color: #ffff00;
-  }
-
-    .post{
-          max-width:30em;
-          margin:10px auto;
-    }
-  }
-
-&lt;/style&gt;
-
-&lt;div class=&quot;mdl-grid&quot;&gt;
-
-  &lt;div class=&quot;mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;div id=&quot;video&quot;&gt;&lt;/div&gt;
-
-    &lt;!-- start form --&gt;
-    &lt;div id=&quot;questions&quot;&gt;
-      &lt;h4&gt;Fill out this form to write yourself here.&lt;/h4&gt;
-
-      &lt;form&gt;
-        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
-          &lt;input class=&quot;mdl-textfield__input adjective&quot; type=&quot;text&quot; id=&quot;adjective&quot; /&gt;
-          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;adjective&quot; placeholder=&quot;&quot;&gt;An adjective&lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
-          &lt;input class=&quot;mdl-textfield__input verb&quot; type=&quot;text&quot; id=&quot;verb&quot; /&gt;
-          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;verb&quot; placeholder=&quot;&quot;&gt;A verb ending in 'ing'&lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
-          &lt;input class=&quot;mdl-textfield__input noun&quot; type=&quot;text&quot; id=&quot;noun&quot; /&gt;
-          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;noun&quot; placeholder=&quot;&quot;&gt;A noun I wouldn't leave without&lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
-          &lt;input class=&quot;mdl-textfield__input noun3&quot; type=&quot;text&quot; id=&quot;noun3&quot; /&gt;
-          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;noun3&quot; placeholder=&quot;&quot;&gt;Something sensed by your olfactory system&lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
-          &lt;input class=&quot;mdl-textfield__input noun4&quot; type=&quot;text&quot; id=&quot;noun4&quot; /&gt;
-          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;noun4&quot; placeholder=&quot;&quot;&gt;A type of building&lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
-          &lt;input class=&quot;mdl-textfield__input food&quot; type=&quot;text&quot; id=&quot;food&quot; /&gt;
-          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;food&quot; placeholder=&quot;&quot;&gt;A palate pleaser&lt;/label&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;mdl-textfield mdl-js-textfield&quot;&gt;
-          &lt;input class=&quot;mdl-textfield__input thought&quot; type=&quot;text&quot; id=&quot;thought&quot; /&gt;
-          &lt;label class=&quot;mdl-textfield__label&quot; for=&quot;thought&quot; placeholder=&quot;&quot;&gt;A noun or gerund on your mind&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-      &lt;button id=&quot;btn-click&quot; type=&quot;submit&quot; class=&quot;mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent&quot;&gt;
-        Ready to read!
-      &lt;/button&gt;&lt;br /&gt;&lt;br /&gt;
-      &lt;hr /&gt;
-    &lt;/div&gt;
-    &lt;!-- end form --&gt;
-
-    &lt;!-- start story --&gt;
-    &lt;div id=&quot;story&quot;&gt;
-      &lt;h4&gt;A Port Stroll in San Francisco&lt;/h4&gt;
-      &lt;hr /&gt;
-      &lt;p&gt;It has been such a &lt;span class=&quot;adjective&quot;&gt;&lt;/span&gt; day. We decided we needed fresh air after hours of &lt;span class=&quot;verb&quot;&gt;&lt;/span&gt; at a conference so I picked up my &lt;span class=&quot;noun&quot;&gt;&lt;/span&gt; and we hit the streets. The &lt;span class=&quot;noun3&quot;&gt;&lt;/span&gt; aroma made me realize my tummy was talking so I pulled you into a &lt;span class=&quot;noun4&quot;&gt;&lt;/span&gt; and ordered &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; to go. We talked as we drifted toward Embarcadero and ended up at the port where we sat and watched the boats pass as we ate &lt;span class=&quot;food&quot;&gt;&lt;/span&gt; and discussed complexities of &lt;span class=&quot;thought&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
-
-    &lt;/div&gt;
-    &lt;!-- end story --&gt;
-
-
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;script src=&quot;http://www.interdigitize.com/js/jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;http://www.interdigitize.com/js/main.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;http://www.interdigitize.com/js/jquery.backgroundvideo.min.js&quot;&gt;&lt;/script&gt;
-
-</description>
-        <pubDate>Mon, 11 Aug 2014 23:16:23 -0700</pubDate>
-        <link>http://www.interdigitize.com/projects/2014/08/11/write-yourself-here.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/projects/2014/08/11/write-yourself-here.html</guid>
-        
-        <category>programming</category>
         
         
         <category>projects</category>
