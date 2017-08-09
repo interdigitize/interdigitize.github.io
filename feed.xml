@@ -5,8 +5,8 @@
     <description>An artist combining audio visual arts and programming.</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Aug 2017 14:23:53 -0700</pubDate>
-    <lastBuildDate>Wed, 09 Aug 2017 14:23:53 -0700</lastBuildDate>
+    <pubDate>Wed, 09 Aug 2017 14:41:18 -0700</pubDate>
+    <lastBuildDate>Wed, 09 Aug 2017 14:41:18 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -25,6 +25,32 @@
         <pubDate>Wed, 09 Aug 2017 01:54:33 -0700</pubDate>
         <link>http://www.interdigitize.com/resonance/2017/08/09/madeons-adenture-machine.html</link>
         <guid isPermaLink="true">http://www.interdigitize.com/resonance/2017/08/09/madeons-adenture-machine.html</guid>
+        
+        <category>programming</category>
+        
+        <category>music</category>
+        
+        
+        <category>resonance</category>
+        
+      </item>
+    
+      <item>
+        <title>The Infinite Drum Machine</title>
+        <description>&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;title&gt;Redirecting…&lt;/title&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;https://aiexperiments.withgoogle.com/drum-machine/view/&quot; /&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=https://aiexperiments.withgoogle.com/drum-machine/view/&quot; /&gt;
+&lt;h1&gt;Redirecting…&lt;/h1&gt;
+&lt;a href=&quot;https://aiexperiments.withgoogle.com/drum-machine/view/&quot;&gt;Click here if you are not redirected.&lt;/a&gt;
+&lt;script&gt;location=&quot;https://aiexperiments.withgoogle.com/drum-machine/view/&quot;&lt;/script&gt;
+&lt;/html&gt;
+</description>
+        <pubDate>Tue, 08 Aug 2017 19:01:12 -0700</pubDate>
+        <link>http://www.interdigitize.com/resonance/2017/08/08/infinite-drum-machine.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/resonance/2017/08/08/infinite-drum-machine.html</guid>
         
         <category>programming</category>
         
@@ -339,37 +365,6 @@
         <category>songwriting</category>
         
         <category>audio</category>
-        
-        
-        <category>projects</category>
-        
-      </item>
-    
-      <item>
-        <title>What makes employees smile at TowerJazz</title>
-        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;p&gt;
-      To celebrate &lt;a href=&quot;http://www.towerjazz.com&quot;&gt;TowerJazz&lt;/a&gt; reaching a $1 billion run rate, employees were asked what they like about working at the company and what makes them smile. Here are a few of their answers.
-    &lt;/p&gt;
-    &lt;p&gt;
-      I worked on the concept for this video with Ela Pappo and Felize Richens then shot and edited it for the celebration.
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-cell--12-col-phone&quot;&gt;
-  &lt;div class=&quot;embed-container&quot;&gt;
-    &lt;iframe src=&quot;https://www.youtube.com/embed/wewrWSICmM0?rel=0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-  &lt;/div&gt;&lt;br /&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 15 Apr 2016 06:23:43 -0700</pubDate>
-        <link>http://www.interdigitize.com/projects/2016/04/15/reasons-to-smile.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/04/15/reasons-to-smile.html</guid>
-        
-        <category>video</category>
         
         
         <category>projects</category>
