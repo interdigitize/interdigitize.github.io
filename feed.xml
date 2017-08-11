@@ -5,9 +5,35 @@
     <description>An artist combining audio visual arts and programming.</description>
     <link>http://www.interdigitize.com/</link>
     <atom:link href="http://www.interdigitize.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 09 Aug 2017 14:41:18 -0700</pubDate>
-    <lastBuildDate>Wed, 09 Aug 2017 14:41:18 -0700</lastBuildDate>
+    <pubDate>Thu, 10 Aug 2017 23:16:02 -0700</pubDate>
+    <lastBuildDate>Thu, 10 Aug 2017 23:16:02 -0700</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Patatap</title>
+        <description>&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot; /&gt;
+&lt;title&gt;Redirecting…&lt;/title&gt;
+&lt;link rel=&quot;canonical&quot; href=&quot;http://patatap.com/&quot; /&gt;
+&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=http://patatap.com/&quot; /&gt;
+&lt;h1&gt;Redirecting…&lt;/h1&gt;
+&lt;a href=&quot;http://patatap.com/&quot;&gt;Click here if you are not redirected.&lt;/a&gt;
+&lt;script&gt;location=&quot;http://patatap.com/&quot;&lt;/script&gt;
+&lt;/html&gt;
+</description>
+        <pubDate>Thu, 10 Aug 2017 10:12:04 -0700</pubDate>
+        <link>http://www.interdigitize.com/resonance/2017/08/10/patatap.html</link>
+        <guid isPermaLink="true">http://www.interdigitize.com/resonance/2017/08/10/patatap.html</guid>
+        
+        <category>programming</category>
+        
+        <category>music</category>
+        
+        
+        <category>resonance</category>
+        
+      </item>
     
       <item>
         <title>Madeon's Adventure Machine</title>
@@ -297,74 +323,6 @@
         <category>audio</category>
         
         <category>video</category>
-        
-        
-        <category>projects</category>
-        
-      </item>
-    
-      <item>
-        <title>200 OK</title>
-        <description>&lt;div class=&quot;mdl-grid&quot;&gt;
-  &lt;div class=&quot;mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;p&gt;
-      A JavaScript inspired song that I wrote making it's open mic debut at The Songwriting School of Los Angeles.
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-cell--12-col-phone&quot;&gt;
-    &lt;div class=&quot;embed-container&quot;&gt;
-
-      &lt;iframe src=&quot;https://www.youtube.com/embed/atg0BV-T47E?rel=0&amp;amp;showinfo=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;&lt;br /&gt;&lt;br /&gt;
-
-
-    LYRICS:&lt;br /&gt;&lt;br /&gt;
-
-    Hello&lt;br /&gt;
-    var INSERT_NAME;&lt;br /&gt;
-    Treat me like an object and I won't callback&lt;br /&gt;
-    What's that?&lt;br /&gt;
-    You think I'm funny&lt;br /&gt;
-    I think I'm okay with that&lt;br /&gt;&lt;br /&gt;
-
-    CHORUS:&lt;br /&gt;
-    If you query me about who I am&lt;br /&gt;
-    I'll return enough to make you think&lt;br /&gt;
-    Query me about where I've been&lt;br /&gt;
-    I'll serve up sweet stories&lt;br /&gt;
-    Query me about my plans&lt;br /&gt;
-    I'll return an array of possibilities&lt;br /&gt;
-    You say you want to be a part of them&lt;br /&gt;
-    It's 200 OK with me.&lt;br /&gt;&lt;br /&gt;
-
-    I think too much I'm always mulling it over&lt;br /&gt;
-    You're plagued with anxiety&lt;br /&gt;
-    But when it slips your mind and you focus in real time&lt;br /&gt;
-    I wish you could see what I see&lt;br /&gt;&lt;br /&gt;
-
-    CHORUS&lt;br /&gt;&lt;br /&gt;
-
-    A little bridge nudge followed by an exuberant gush&lt;br /&gt;
-    And a detailed explanation of&lt;br /&gt;
-    What befuddled you for a while&lt;br /&gt;
-    Then a question or a gaze&lt;br /&gt;
-    Asking for my take&lt;br /&gt;
-    That look on your face&lt;br /&gt;
-    I can't help but smile&lt;br /&gt;&lt;br /&gt;
-
-    CHORUS
-
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 26 Aug 2016 23:28:04 -0700</pubDate>
-        <link>http://www.interdigitize.com/projects/2016/08/26/200-ok.html</link>
-        <guid isPermaLink="true">http://www.interdigitize.com/projects/2016/08/26/200-ok.html</guid>
-        
-        <category>songwriting</category>
-        
-        <category>audio</category>
         
         
         <category>projects</category>
