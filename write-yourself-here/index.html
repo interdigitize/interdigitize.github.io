@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Write Yourself Here</title>
+    <meta name="description" content="A mad lib-esque app to experience moments with someone traveling.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <style>
+      p {
+        font-size: 1.1em;
+      }
+      p span {
+      	font-weight: bold;
+      	background-color: #ffff00;
+      }
+      #bg {
+        background-color: #333333;
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        padding: 10px 30px 40px;
+        background-color: white;
+        margin: 30px auto;
+      }
+      #story {
+        padding: 1px 30px 5px;
+        background-color: rgba(255, 255, 255, .8);
+      }
+      .mdl-textfield {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="mdl-grid" id="bg" >
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+      <div id="video"></div>
+
+      <!-- start form -->
+      <div id="questions" class="mdl-cell mdl-cell--5-col mdl-cell--8-col-tablet mdl-cell--12-col-phone box">
+        <h2>Since I couldn't fit you in my suitcase...</h2>
+        <hr>
+        <h4>Fill out this form to write yourself here.</h4>
+        <form>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input adjective" type="text" id="adjective">
+            <label class="mdl-textfield__label" for="adjective" placeholder="">An adjective</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input verb" type="text" id="verb">
+            <label class="mdl-textfield__label" for="verb" placeholder="">A verb ending in 'ing'</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input noun" type="text" id="noun">
+            <label class="mdl-textfield__label" for="noun" placeholder="">A noun I wouldn't leave without</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input noun3" type="text" id="noun3">
+            <label class="mdl-textfield__label" for="noun3" placeholder="">Something sensed by your olfactory system</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input noun4" type="text" id="noun4">
+            <label class="mdl-textfield__label" for="noun4" placeholder="">A type of building</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input food" type="text" id="food">
+            <label class="mdl-textfield__label" for="food" placeholder="">A palate pleaser</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input thought" type="text" id="thought">
+            <label class="mdl-textfield__label" for="thought" placeholder="">A noun or gerund on your mind</label>
+          </div>
+        </form>
+        <button id="btn-click" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+          Ready to read!
+        </button>
+      </div>
+      <!-- end form -->
+
+      <!-- start story -->
+      <div id="story">
+        <h4>A Port Stroll in San Francisco</h4>
+        <hr>
+        <p>It has been such a <span class="adjective"></span> day. We decided we needed fresh air after hours of <span class="verb"></span> at a conference so I picked up my <span class="noun"></span> and we hit the streets. The <span class="noun3"></span> aroma made me realize my tummy was talking so I pulled you into a <span class="noun4"></span> and ordered <span class="food"></span> to go. We talked as we drifted toward Embarcadero and ended up at the port where we sat and watched the boats pass as we ate <span class="food"></span> and discussed complexities of <span class="thought"></span>.</p>
+
+      </div>
+      <!-- end story -->
+
+    </div>
+  </div>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/jquery-1.9.1.min.js"></script> <!-- {{ site.url }}-->
+    <script src="./js/jquery.backgroundvideo.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
