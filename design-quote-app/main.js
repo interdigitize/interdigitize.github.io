@@ -17,7 +17,7 @@ $('#get-a-quote').on('click', function(e) {
       if (typeof post.custom_meta !== 'undefined' && typeof post.custom_meta.Source !== 'undefined') {
         $('#source').html('source: ' + post.custom_meta.Source);
       } else {
-        $('#quote-source').text('');
+        $('#source').text('');
       }
     },
     cache: false
