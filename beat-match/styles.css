@@ -32,6 +32,8 @@ button {
   transition:all 1s ease;
   color: #003366;
   font-weight: bold;
+  background-color: #e9e9e9;
+
 }
 
 button:disabled, button[disabled] {
