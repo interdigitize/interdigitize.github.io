@@ -14931,7 +14931,7 @@ var App = function (_React$Component) {
                     random: true,
                     anim: {
                       enable: false,
-                      speed: 80,
+                      speed: 25,
                       size_min: 0.1,
                       sync: false
                     }
@@ -14945,7 +14945,7 @@ var App = function (_React$Component) {
                   },
                   move: {
                     enable: true,
-                    speed: 3,
+                    speed: 1,
                     direction: 'none',
                     random: false,
                     straight: false,
