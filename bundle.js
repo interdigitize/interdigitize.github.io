@@ -14893,112 +14893,114 @@ var App = function (_React$Component) {
               btnRoute: this.state.btnRoute,
               toggleBtn: this.toggleBtn
             }),
-            _react2.default.createElement(_reactParticlesJs2.default, { params: {
-                "particles": {
-                  "number": {
-                    "value": 60,
-                    "density": {
-                      "enable": true,
-                      "value_area": 800
+            _react2.default.createElement(_reactParticlesJs2.default, {
+              params: {
+                particles: {
+                  number: {
+                    value: 60,
+                    density: {
+                      enable: true,
+                      value_area: 800
                     }
                   },
                   // "color": {
                   //   "value": "#ffffff"
                   // },
-                  "shape": {
-                    "type": "polygon",
-                    "stroke": {
-                      "width": 0,
-                      "color": "#000000"
+                  shape: {
+                    type: 'polygon',
+                    stroke: {
+                      width: 0,
+                      color: '#000000'
                     },
-                    "polygon": {
-                      "nb_sides": 0
+                    polygon: {
+                      nb_sides: 0
                     }
                   },
-                  "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                      "enable": false,
-                      "speed": 1,
-                      "opacity_min": 0.1,
-                      "sync": false
+                  opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: {
+                      enable: false,
+                      speed: 1,
+                      opacity_min: 0.1,
+                      sync: false
                     }
                   },
-                  "size": {
-                    "value": 10,
-                    "random": true,
-                    "anim": {
-                      "enable": false,
-                      "speed": 80,
-                      "size_min": 0.1,
-                      "sync": false
+                  size: {
+                    value: 10,
+                    random: true,
+                    anim: {
+                      enable: false,
+                      speed: 80,
+                      size_min: 0.1,
+                      sync: false
                     }
                   },
-                  "line_linked": {
-                    "enable": true,
-                    "distance": 100,
-                    "color": "#000000",
-                    "opacity": 0.2,
-                    "width": 1
+                  line_linked: {
+                    enable: true,
+                    distance: 100,
+                    color: '#000000',
+                    opacity: 0.1,
+                    width: 1
                   },
-                  "move": {
-                    "enable": true,
-                    "speed": 3,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                      "enable": false,
-                      "rotateX": 600,
-                      "rotateY": 1200
+                  move: {
+                    enable: true,
+                    speed: 3,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                    attract: {
+                      enable: false,
+                      rotateX: 600,
+                      rotateY: 1200
                     }
                   }
                 },
-                "interactivity": {
-                  "detect_on": "canvas",
-                  "events": {
-                    "onhover": {
-                      "enable": true,
-                      "mode": "repulse"
+                interactivity: {
+                  detect_on: 'canvas',
+                  events: {
+                    onhover: {
+                      enable: true,
+                      mode: 'repulse'
                     },
-                    "onclick": {
-                      "enable": true,
-                      "mode": "push"
+                    onclick: {
+                      enable: true,
+                      mode: 'push'
                     },
-                    "resize": true
+                    resize: true
                   },
-                  "modes": {
-                    "grab": {
-                      "distance": 800,
-                      "line_linked": {
-                        "opacity": 1
+                  modes: {
+                    grab: {
+                      distance: 800,
+                      line_linked: {
+                        opacity: 1
                       }
                     },
-                    "bubble": {
-                      "distance": 800,
-                      "size": 80,
-                      "duration": 2,
-                      "opacity": 0.8,
-                      "speed": 3
+                    bubble: {
+                      distance: 800,
+                      size: 80,
+                      duration: 2,
+                      opacity: 0.8,
+                      speed: 3
                     },
-                    "repulse": {
-                      "distance": 40,
-                      "duration": 1
+                    repulse: {
+                      distance: 40,
+                      duration: 1
                     },
-                    "push": {
-                      "particles_nb": 4,
-                      "duration": 1
+                    push: {
+                      particles_nb: 4,
+                      duration: 1
                     },
-                    "remove": {
-                      "particles_nb": 2
+                    remove: {
+                      particles_nb: 2
                     }
                   }
                 },
-                "retina_detect": true
-              } })
+                retina_detect: true
+              }
+            })
           )
         )
       );
@@ -35998,11 +36000,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var MainContent = function MainContent(props) {
   return _react2.default.createElement(
     'div',
-    { id: 'portfolio', style: { position: 'absolute', top: '36%', left: '0', right: '0', margin: '0 auto' } },
+    {
+      id: 'portfolio',
+      style: {
+        position: 'absolute',
+        top: '32%',
+        left: '0',
+        right: '0',
+        margin: '0 auto'
+      } },
     _react2.default.createElement(
       _reactRouterDom.Switch,
       null,
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render() {
+      _react2.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: '/',
+        render: function render() {
           return _react2.default.createElement(_Home2.default, {
             clear: props.clear,
             portfolio: props.portfolio,
@@ -36012,7 +36025,8 @@ var MainContent = function MainContent(props) {
             btnRoute: props.btnRoute,
             toggleBtn: props.toggleBtn
           });
-        } }),
+        }
+      }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', component: _About2.default })
     )
   );
@@ -36084,7 +36098,7 @@ var Home = function Home(props) {
               fontSize: '1.2em',
               lineHeight: '1.2em'
             } },
-          'Selected work from more than ten years of concepting, problem-solving and creating.'
+          'Software Engineer and Digital Designer rooted as a Creative Strategist'
         )
       )
     ),
@@ -47273,16 +47287,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Overlay = function Overlay(props) {
   return _react2.default.createElement(
     'div',
-    { style: { position: 'absolute', maxWidth: '250px', top: '9%', left: '0', right: '0', marginLeft: 'auto', marginRight: 'auto' } },
+    {
+      style: {
+        position: 'absolute',
+        maxWidth: '250px',
+        top: '9%',
+        left: '0',
+        right: '0',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+      } },
     _react2.default.createElement(
       'h1',
-      { className: 'center', style: { fontFamily: 'Open Sans, sans-serif', fontSize: '1.7em' } },
+      {
+        className: 'center',
+        style: { fontFamily: 'Open Sans, sans-serif', fontSize: '1.7em' } },
       'Kamie Robinson'
-    ),
-    _react2.default.createElement(
-      'p',
-      { className: 'center', style: { fontFamily: 'Dosis, sans-serif' } },
-      'Software Engineer and Digital Designer rooted as a Creative Strategist'
     ),
     _react2.default.createElement('hr', { style: { marginBottom: '10px', color: 'rgba(0, 0, 0, 0.7)' } }),
     _react2.default.createElement(
@@ -47291,24 +47311,45 @@ var Overlay = function Overlay(props) {
       _react2.default.createElement(
         'span',
         { className: 'center' },
-        _react2.default.createElement(_medium2.default, { className: 'icon', onClick: function onClick() {
+        _react2.default.createElement(_medium2.default, {
+          className: 'icon',
+          onClick: function onClick() {
             window.open('https://medium.com/@interdigitizer', '_blank');
-          } }),
-        _react2.default.createElement(_twitter2.default, { className: 'icon', onClick: function onClick() {
+          }
+        }),
+        _react2.default.createElement(_twitter2.default, {
+          className: 'icon',
+          onClick: function onClick() {
             window.open('https://twitter.com/interdigitizer', '_blank');
-          } }),
-        _react2.default.createElement(_github2.default, { className: 'icon', onClick: function onClick() {
+          }
+        }),
+        _react2.default.createElement(_github2.default, {
+          className: 'icon',
+          onClick: function onClick() {
             window.open('https://github.com/interdigitize', '_blank');
-          } }),
-        _react2.default.createElement(_linkedin2.default, { className: 'icon', onClick: function onClick() {
+          }
+        }),
+        _react2.default.createElement(_linkedin2.default, {
+          className: 'icon',
+          onClick: function onClick() {
             window.open('https://www.linkedin.com/in/kamie-robinson', '_blank');
-          } }),
-        _react2.default.createElement(_instagram2.default, { className: 'icon', onClick: function onClick() {
+          }
+        }),
+        _react2.default.createElement(_instagram2.default, {
+          className: 'icon',
+          onClick: function onClick() {
             window.open('https://www.instagram.com/interdigitizer/', '_blank');
-          } }),
+          }
+        }),
         _react2.default.createElement(
           'div',
-          { style: { fontSize: '13px', color: 'rgba(0, 0, 0, 0.7)', paddingTop: '5px', paddingBottom: '10px' } },
+          {
+            style: {
+              fontSize: '13px',
+              color: 'rgba(0, 0, 0, 0.7)',
+              paddingTop: '5px',
+              paddingBottom: '10px'
+            } },
           'Like what you see? Let\'s connect!'
         )
       )
